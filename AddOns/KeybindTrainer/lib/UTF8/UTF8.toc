@@ -1,0 +1,11 @@
+## Interface: 30000
+## Title: UTF8
+## Notes: A library for manipulating UTF-8 strings
+## Author: Pastamancer
+## X-Curse-Packaged-Version: r9
+## X-Curse-Project-Name: KeybindTrainer
+## X-Curse-Project-ID: keybindtrainer
+## X-Curse-Repository-ID: wow/keybindtrainer/mainline
+
+utf8data.lua
+utf8.lua

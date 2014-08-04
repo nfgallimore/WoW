@@ -1,0 +1,58 @@
+
+Quartz3DB = {
+	["namespaces"] = {
+		["Swing"] = {
+		},
+		["Buff"] = {
+		},
+		["Interrupt"] = {
+		},
+		["Flight"] = {
+		},
+		["Pet"] = {
+			["profiles"] = {
+				["Default"] = {
+					["x"] = 540,
+				},
+			},
+		},
+		["EnemyCasts"] = {
+		},
+		["Player"] = {
+			["profiles"] = {
+				["Default"] = {
+					["x"] = 515,
+				},
+			},
+		},
+		["GCD"] = {
+		},
+		["Focus"] = {
+			["profiles"] = {
+				["Default"] = {
+					["x"] = 540,
+				},
+			},
+		},
+		["Target"] = {
+			["profiles"] = {
+				["Default"] = {
+					["x"] = 540,
+				},
+			},
+		},
+		["Range"] = {
+		},
+		["Mirror"] = {
+		},
+		["Latency"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Darkrizen - Tichondrius"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

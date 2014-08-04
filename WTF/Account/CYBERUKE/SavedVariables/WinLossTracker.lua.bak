@@ -1,0 +1,15 @@
+
+player = {
+	{
+		["threeEnemyArenaTeams"] = {
+		},
+		["playerRealm"] = "Tichondrius",
+		["specificPlayer"] = {
+		},
+		["playerName"] = "Darkrizen",
+		["twoEnemyArenaTeams"] = {
+		},
+		["fiveEnemyArenaTeams"] = {
+		},
+	}, -- [1]
+}

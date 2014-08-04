@@ -1,0 +1,23 @@
+## Interface: 40100
+## Title: Ceaphyrel's Auto Accept Invite
+## Author: Ceaphyrel
+## Version: 1.2
+## Notes: Ceaphyrel's Auto Accept Invite, based on include/exclude list, friends list and guild roster.
+## Dependencies: 
+## SavedVariables: CeaphAAIVars
+## X-Curse-Packaged-Version: v.1.2.10 release
+## X-Curse-Project-Name: Ceaphyrel's Auto Accept Invite
+## X-Curse-Project-ID: ceaphyrels_auto_accept_invite
+## X-Curse-Repository-ID: wow/ceaphyrels_auto_accept_invite/mainline
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+Locale\enUS.lua
+Locale\frFR.lua
+Locale\zhCN.lua
+Locale\ruRU.lua
+Locale\deDE.lua
+
+CeaphAAI.lua

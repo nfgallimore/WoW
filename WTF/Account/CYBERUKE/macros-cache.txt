@@ -1,0 +1,109 @@
+VER 3 0000000000000049 "1" "INV_MISC_QUESTIONMARK"
+/use [@party1] Hand of Sacrifice
+END
+VER 3 0000000000000051 "2" "INV_MISC_QUESTIONMARK"
+/use [@party2] Hand of Freedom
+END
+VER 3 0000000000000046 "2" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@party2] Hand of Sacrifice
+END
+VER 3 0000000000000050 "bark 2" "INV_MISC_QUESTIONMARK"
+/use [@party2] Ironbark
+/use [@party2] Cenarion Ward
+END
+VER 3 000000000000002B "BoP 3" "INV_MISC_QUESTIONMARK"
+/use [@party3] Hand of Protection
+END
+VER 3 000000000000002C "BoP 4" "INV_MISC_QUESTIONMARK"
+/use [@party4] Hand of Protection
+END
+VER 3 000000000000002D "den" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/targetenemy [noharm]
+/use [noharm][] Denounce
+/targetlasttarget [harm]
+END
+VER 3 000000000000002E "Disp" "INV_MISC_QUESTIONMARK"
+/cast [@player] Cleanse
+END
+VER 3 0000000000000031 "Disp 3" "INV_MISC_QUESTIONMARK"
+/cast [@party3] Cleanse
+END
+VER 3 0000000000000032 "Disp 4" "INV_MISC_QUESTIONMARK"
+/cast [@party4] Cleanse
+END
+VER 3 0000000000000038 "Focus" "ABILITY_WARRIOR_REVENGE"
+/targetenemy
+/focus target
+/focus [@mouseover,nodead,exists]
+END
+VER 3 000000000000003B "Glad" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [flyable]Deadly Gladiator's Frost Wyrm
+/use [flyable]Ironbound Proto-Drake
+/use [noflyable]Summon Thalassian Charger;Dreadsteed;Pinto
+/dismount [mounted]
+END
+VER 3 0000000000000053 "gr" "INV_MISC_QUESTIONMARK"
+#show [mod:ctrl] Rupture; Garrote
+/targetenemyplayer [notarget]
+/cast [nomod,nostealth] Shadow Dance
+/cast [nomod] Garrote; [mod:ctrl] Rupture
+/cast [mod:shift, target=focus] Garrote
+/use [stance:3] 13
+/cast [nomod] Premeditation;
+/startattack
+END
+VER 3 0000000000000041 "MacroPoster" "INV_HAMMER_03"
+Resto Druid LF No-Voice 1500 mmr 2's partner
+END
+VER 3 0000000000000044 "Party3" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/focus
+/tar Party2
+/castsequence reset=3 Beacon of Light, Cleanse
+/use [@focus] Beacon of Light
+END
+VER 3 0000000000000045 "Party4" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/focus
+/tar Party4
+/castsequence reset=3 Beacon of Light, Cleanse
+/use [@focus] Beacon of Light
+END
+VER 3 0000000000000054 "sap" "INV_MISC_QUESTIONMARK"
+#show Sap
+/tar nearestenemy
+/cast [nostealth] Shadow Dance
+/cast [mod:shift, target=focus] Sap
+/cast [notarget, target=nearestenemy] Sap; Sap
+END
+VER 3 0000000000000052 "self" "INV_MISC_QUESTIONMARK"
+/use [@player] Hand of freedom
+END
+VER 3 0000000000000055 "Step1" "INV_MISC_QUESTIONMARK"
+/target arena1
+/cast [target=arena1] Shadowstep
+/startattack
+END
+VER 3 0000000000000056 "Step2" "INV_MISC_QUESTIONMARK"
+/target arena2
+/cast [target=arena2] Shadowstep
+/startattack
+END
+VER 3 0000000000000057 "Step3" "INV_MISC_QUESTIONMARK"
+/target arena3
+/cast [target=arena3] Shadowstep
+/startattack
+END
+VER 3 000000000000004F "trink" "INV_MISC_TOKEN_ARGENTDAWN3"
+#showtooltip 13
+/use 13
+/use 14
+/use 10
+END
+VER 3 0000000000000058 "vate" "INV_MISC_QUESTIONMARK"
+/use 13
+/use [@player] Innervate
+END

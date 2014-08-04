@@ -1,0 +1,28 @@
+------------------------------------------------------------------------
+r71 | Odlaw | 2012-09-03 23:36:55 +0000 (Mon, 03 Sep 2012) | 1 line
+Changed paths:
+   M /trunk/MacroBank.lua
+
+Fix error when it builds icon table
+------------------------------------------------------------------------
+r70 | Odlaw | 2012-09-03 01:58:29 +0000 (Mon, 03 Sep 2012) | 2 lines
+Changed paths:
+   M /trunk/MacroBank.lua
+
+Fixed some variables that were not defined local.
+Changed some StaticPopupDialogs to use a preferred index.
+------------------------------------------------------------------------
+r69 | Odlaw | 2012-08-28 09:24:18 +0000 (Tue, 28 Aug 2012) | 1 line
+Changed paths:
+   M /trunk/MacroBank.lua
+   M /trunk/MacroBank.toc
+
+Update for 5.0
+------------------------------------------------------------------------
+r68 | oscarucb | 2012-05-31 23:50:39 +0000 (Thu, 31 May 2012) | 2 lines
+Changed paths:
+   M /trunk/MacroBank.lua
+
+fix a trailing control character appended to macro receives
+
+------------------------------------------------------------------------

@@ -1,0 +1,16 @@
+------------------------------------------------------------------------
+r60 | ceaphyrel | 2011-04-29 10:52:16 +0000 (Fri, 29 Apr 2011) | 1 line
+Changed paths:
+   A /tags/v.1.2.10 release (from /trunk:59)
+
+Tagging as v.1.2.10 release
+------------------------------------------------------------------------
+r59 | ceaphyrel | 2011-04-28 13:24:40 +0000 (Thu, 28 Apr 2011) | 2 lines
+Changed paths:
+   M /trunk/CeaphAAI.lua
+   M /trunk/Ceaphyrels_AutoAcceptInvite.toc
+   A /trunk/Locale/deDE.lua
+
+Added German localization.
+Edited TOC to match current WoW version.
+------------------------------------------------------------------------

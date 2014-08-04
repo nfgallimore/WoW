@@ -1,0 +1,6 @@
+
+ArenaSpyDB = {
+	["interval"] = 1,
+	["announce"] = "party",
+	["enabled"] = true,
+}

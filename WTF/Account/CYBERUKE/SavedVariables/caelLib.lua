@@ -1,0 +1,4 @@
+
+caelLibDB = {
+	["scale"] = 1,
+}

@@ -1,0 +1,7 @@
+## Interface: 52000
+
+## Title: AutoInvite MoP
+## Version: 5.2000
+## Notes: Allow others to invite themselves to your party.
+
+AutoInvite MoP.lua

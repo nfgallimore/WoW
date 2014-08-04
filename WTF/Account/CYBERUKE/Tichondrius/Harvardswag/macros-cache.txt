@@ -1,0 +1,91 @@
+VER 3 010000000000003E "AF" "INV_MISC_QUESTIONMARK"
+/run LoadAddOn("Blizzard_ArenaUI") ArenaEnemyFrames:Show() ArenaEnemyFrame1:Show() ArenaEnemyFrame2:Show() ArenaEnemyFrame3:Show() ArenaEnemyFrame1CastingBar:Show() ArenaEnemyFrame2CastingBar:Show() ArenaEnemyFrame3CastingBar:Show()
+END
+VER 3 010000000000003F "AF Hide" "INV_MISC_QUESTIONMARK"
+/run LoadAddOn("Blizzard_ArenaUI") ArenaEnemyFrames:Hide() ArenaEnemyFrame1:Hide() ArenaEnemyFrame2:Hide() ArenaEnemyFrame3:Hide() ArenaEnemyFrame1CastingBar:Hide() ArenaEnemyFrame2CastingBar:Hide() ArenaEnemyFrame3CastingBar:Hide()
+END
+VER 3 0100000000000032 "cs" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/focus [nomod]
+/use [mod:alt, @focus][] Fear
+/script SetRaidTarget("focus", 7)
+/script SetRaidTarget("focus", 8)
+END
+VER 3 010000000000003C "f" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [pet:Observer] Optical Blast
+/cast [pet:Shivarra] Mesmerize
+/cast [pet:Wrathguard] Axe Toss
+/cast [pet:Voidlord] Disarm
+/cast [pet:Fel Imp] Flee
+END
+VER 3 0100000000000004 "Fear" "INV_Misc_QuestionMark"
+#showtooltip
+/use [mod:alt, @focus][] Fear
+END
+VER 3 0100000000000017 "focus" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@focus] Optical Blast
+END
+VER 3 010000000000002D "focus" "INV_MISC_QUESTIONMARK"
+#showtooltip Optical Blast
+/use [@focus] Optical Blast
+END
+VER 3 0100000000000015 "Focus" "INV_MISC_QUESTIONMARK"
+/use [@focus] Fear
+END
+VER 3 0100000000000040 "gr" "INV_MISC_QUESTIONMARK"
+#show [mod:ctrl] Rupture; Garrote
+/targetenemyplayer [notarget]
+/cast [nomod,nostealth] Shadow Dance
+/cast [nomod] Garrote; [mod:ctrl] Rupture
+/cast [mod:shift, target=focus] Garrote
+/use [stance:3] 13
+/cast [nomod] Premeditation;
+/startattack
+END
+VER 3 0100000000000001 "Howl" "Spell_Shadow_DeathScream"
+#showtooltip
+/cast Howl of Terror
+END
+VER 3 0100000000000024 "mnt" "INV_MISC_QUESTIONMARK"
+/use [flyable] Ironbound Proto-Drake
+/use [noflyable] Dreadsteed
+END
+VER 3 010000000000003A "o" "INV_MISC_QUESTIONMARK"
+#showtooltip Summon Observer
+/use Soulburn
+/use Summon Observer
+END
+VER 3 0100000000000041 "sap" "INV_MISC_QUESTIONMARK"
+#show Sap
+/tar nearestenemy
+/cast [nostealth] Shadow Dance
+/cast [mod:shift, target=focus] Sap
+/cast [notarget, target=nearestenemy] Sap; Sap
+END
+VER 3 0100000000000016 "soulburn" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [mouseover,exists,harm][] Soulburn
+/use [target=mouseover,exists,harm][] Soul Swap
+/target mouseover
+END
+VER 3 010000000000003D "sp" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [pet:Observer] Clone Magic
+/cast [pet:Shivarra] Fellash
+/cast [pet:Wrathguard] Wrathstorm
+END
+VER 3 0100000000000042 "Step1" "INV_MISC_QUESTIONMARK"
+/target arena1
+/cast [target=arena1] Shadowstep
+/startattack
+END
+VER 3 0100000000000043 "Step2" "INV_MISC_QUESTIONMARK"
+/target arena2
+/cast [target=arena2] Shadowstep
+/startattack
+END
+VER 3 0100000000000039 "tar" "INV_Misc_QuestionMark"
+/use Whiplash
+END

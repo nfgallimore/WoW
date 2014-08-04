@@ -1,0 +1,54 @@
+
+TenTonHammer_Settings = {
+	["minimap_button"] = 0,
+	["addonMode"] = -1,
+	["color"] = "Yellow",
+	["ExperienceTab"] = 0,
+	["anchor"] = "TOPRIGHT",
+	["inspect"] = 0,
+	["Theme"] = "Neon",
+	["usertips"] = 1,
+	["ratingOnTip"] = 0,
+	["collapse"] = 1,
+	["TalentTab"] = false,
+	["DDL"] = 1,
+	["raidOnTip"] = 0,
+	["database"] = 0,
+	["target_inspect1"] = 1,
+	["scale"] = 5,
+	["chat"] = 0,
+	["GroupTab"] = 0,
+	["pveOnTip"] = 1,
+	["SVR"] = "Sargeras",
+	["NewsTab"] = false,
+	["REG"] = "us",
+	["itemtips"] = 1,
+	["panel"] = 0,
+	["masterloot"] = 0,
+	["delay"] = 500,
+	["button_hammer"] = 0,
+	["pvpOnTip"] = 0,
+	["ailOnTip"] = 0,
+	["quickrate"] = 0,
+	["foobar"] = 0,
+	["update"] = 0,
+	["online"] = 0,
+	["PvPTab"] = 0,
+	["filter"] = 1,
+	["gearOnTip"] = 1,
+	["verbose"] = 1,
+	["EquipTab"] = 0,
+	["showOffSpec"] = 0,
+}
+TenTonHammer_Database = {
+	["Version"] = 4500,
+	["Sargeras"] = {
+		["Coredron"] = "201402042158:0:0:0:4:0:0:9:0:0:0",
+		["Darkrizen"] = "201402042158:11857:170:14540:3757:0:0:4:0:0:0",
+	},
+}
+TenTonHammer_Elite = {
+}
+TenTonHammer_OnlineDatabase = nil
+TTHD = nil
+TenTonHammer_News = nil

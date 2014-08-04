@@ -1,0 +1,12 @@
+## Interface: 40100
+## Title: PvP Helper
+## Title-esMX: Ayudante de JcJ
+## Author: Jason Luka
+## Version: Season-9
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariablesPerCharacter: AnnounceRaid,AnnounceSelf,Achievement,PrimarySpec,SecondarySpec,GearTrack,ShowZero,ShowMeta
+localization.en.lua
+localization.es.lua
+itemid.lua
+PvPHelper.lua

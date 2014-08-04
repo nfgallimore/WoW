@@ -1,0 +1,9 @@
+## Title: Guild Recruiter
+## Version: 3.0
+## Author: Yottabyte
+## Interface: 40000
+## Notes: Helps recruit players, while keeping track of players you have already recruited.
+## SavedVariables: DNItSave, GRInviteSave, GRSendSave, GRlvlrangeSave, GRAllRaceSave, GRDraeneiSave, GRDwarfSave, GRGnomeSave, GRHumanSave, GRNightelfSave, GRWorgenSave, GRBloodelfSave, GRGoblinSave, GROrcSave, GRTaurenSave, GRTrollSave, GRUndeadSave, GRAllClassSave, GRDeathknightSave, GRDruidSave, GRHunterSave, GRMageSave, GRPaladinSave, GRPriestSave, GRRogueSave, GRShamanSave, GRWarlockSave, GRWarriorSave
+
+GRMain.xml
+GRLoad.lua

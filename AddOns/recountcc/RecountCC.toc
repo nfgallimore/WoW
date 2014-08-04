@@ -1,0 +1,10 @@
+## Interface: 50400
+## Title: RecountCC
+## Notes: Adds a CC counter to recount.
+## Author: Cowpwned@US-Darkspear, 0wn3d
+## X-Curse-Packaged-Version: 1.1.1
+## X-Curse-Project-Name: RecountCC
+## X-Curse-Project-ID: recountcc
+## X-Curse-Repository-ID: wow/recountcc/mainline
+
+RecountCC.lua

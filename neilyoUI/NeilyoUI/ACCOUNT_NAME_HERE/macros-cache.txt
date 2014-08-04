@@ -1,0 +1,196 @@
+VER 3 00000000000000D9 " " "INV_Misc_QuestionMark"
+#show Insignia of the Alliance
+-show Vicious Gladiator's Medallion of Tenacity
+/use Every Man for Himself(Racial)
+/cast !Stealth
+END
+VER 3 0000000000000093 " " "Spell_Shadow_Possession"
+#showtooltip Premeditation
+/target focus
+/cast Deadly Throw
+/targetlasttarget
+END
+VER 3 000000000000008B " " "Spell_Shadow_SoulLeech_2"
+/cancelaura hand of protection
+/use Pine Nut Bread
+/use Sweet Potato Bread
+/use Conjured Mana Cake
+/use Buttery Wheat Roll
+END
+VER 3 0000000000000087 " d" "INV_Misc_QuestionMark"
+#show Dismantle
+/cast [mod:shift,target=focus] Dismantle; Dismantle
+END
+VER 3 00000000000000BD " sap" "INV_MISC_QUESTIONMARK"
+#show shadowstep
+/stopattack
+/cleartarget
+/targetenemyplayer
+/cast Sap
+END
+VER 3 00000000000000DC "1" "INV_Misc_QuestionMark"
+/cast [@rzn, nodead, exists] [@regrettable] Tricks of the Trade
+-/targetfriendplayer
+-/cast Tricks of the Trade
+-/targetlastenemy
+END
+VER 3 00000000000000A4 "2" "INV_Misc_QuestionMark"
+-#show Tricks of the Trade
+/cast [@name,help,nodead,exists]!Tricks of the Trade;!Tricks of the Trade
+/targetfriendplayer
+/cast Tricks of the Trade
+/targetlastenemy
+END
+VER 3 00000000000000BA "a" "INV_Misc_QuestionMark"
+#show Sprint
+/targetenemyplayer [notarget]
+/cast Premeditation
+/cast Ambush
+END
+VER 3 00000000000000C6 "B1" "INV_Misc_QuestionMark"
+#/focus arena4
+/cast [target=arena1] Blind
+END
+VER 3 00000000000000C7 "B2" "INV_Misc_QuestionMark"
+#/focus arena5
+/cast [target=arena2] Blind
+END
+VER 3 00000000000000F8 "bind" "Ability_Creature_Cursed_04"
+/run SetBindingMacro("CTRL-BUTTON3","Step3") SaveBindings(GetCurrentBindingSet())
+END
+VER 3 00000000000000D3 "cs" "INV_Misc_QuestionMark"
+#show Stealth
+/targetenemyplayer [notarget]
+/stopattack
+/cast !Stealth
+/cast Premeditation
+/cast Cheap Shot
+END
+VER 3 00000000000000B0 "cs" "INV_Misc_QuestionMark"
+#show Vanish
+/targetenemyplayer [notarget]
+/cast Vanish
+/cast Premeditation
+/cast Cheap Shot
+END
+VER 3 00000000000000DD "dfc" "INV_Misc_QuestionMark"
+#show Cloak of Shadows
+/cast Shadow Dance
+/target focus
+/cast Cheap Shot
+/targetlasttarget
+/startattack
+END
+VER 3 00000000000000CD "dfs" "INV_MISC_QUESTIONMARK"
+#show Blind
+/cast Shadow Dance
+/cast [target=focus] Sap
+END
+VER 3 00000000000000F9 "evade" "INV_MISC_QUESTIONMARK"
+/cast Evasion
+/cast Feint
+END
+VER 3 00000000000000F4 "F1" "INV_Misc_QuestionMark"
+/focus arena1
+/focus [@mouseover,nodead,exists]
+END
+VER 3 00000000000000C1 "F2" "INV_Misc_QuestionMark"
+/focus arena2
+END
+VER 3 00000000000000C2 "F3" "INV_Misc_QuestionMark"
+/focus arena3
+END
+VER 3 00000000000000E5 "fc" "INV_Misc_QuestionMark"
+#show Cloak of Shadows
+/target focus
+/cast Premeditation
+/cast Cheap Shot
+/targetlasttarget
+END
+VER 3 00000000000000E9 "fshiv" "INV_MISC_QUESTIONMARK"
+/target focus
+/cast Shiv
+/cast Throw
+/targetlasttarget
+END
+VER 3 0000000000000084 "g" "INV_Misc_QuestionMark"
+#show Kick
+/target focus
+/cast Gouge
+/targetlasttarget
+END
+VER 3 0000000000000096 "gr" "INV_Misc_QuestionMark"
+#show Gouge
+/targetenemyplayer [notarget]
+/cast Premeditation
+/cast Garrote
+END
+VER 3 00000000000000E3 "gr" "INV_Misc_QuestionMark"
+#show Kick
+/target focus
+/cast Premeditation
+/cast Garrote
+/targetlasttarget
+END
+VER 3 00000000000000CF "h" "INV_MISC_QUESTIONMARK"
+#show Shadowstep
+#show Vendetta
+/targetenemyplayer [notarget]
+/startattack [stance:0][stance:3]
+#/cast Mutilate
+/cast Hemorrhage
+/use [stance:3] 13
+/use [stance:3] 14
+/use [stance:3] 10
+END
+VER 3 00000000000000EF "k" "INV_Misc_QuestionMark"
+/cast Kidney Shot
+/targetenemyplayer [notarget]
+END
+VER 3 0000000000000015 "Mount" "Ability_Mount_NetherDrakeElite"
+/run if IsMounted()then return end local t,m m=GetRealZoneText() if m=="Dalaran" and GetSubZoneText()~="Krasus' Landing" or m=="Wintergrasp" or not IsFlyableArea() then t=4 else t=13 end CallCompanion("MOUNT",t)
+/dismount
+END
+VER 3 00000000000000E8 "s" "INV_Misc_QuestionMark"
+#show Shadow Dance
+/targetenemyplayer [notarget]
+/cast Shadow Dance
+/cast Sap
+END
+VER 3 0000000000000095 "s" "INV_Misc_QuestionMark"
+#show Kidney Shot
+/cast Kidney Shot
+/sw 23
+/sw play
+END
+VER 3 00000000000000E4 "SdG" "INV_MISC_QUESTIONMARK"
+/cast Shadow Dance
+/cast Garrote
+/cast Shadow Blades
+/use Tyrannical Gladiator's Badge of Conquest
+/cast Premeditation
+/cast Slice and Dice
+END
+VER 3 00000000000000F0 "Step1" "INV_Misc_QuestionMark"
+#/cast [target=arena1] Blind
+/cast [target=arena1] Shadowstep
+/target arena1
+END
+VER 3 00000000000000F1 "Step2" "INV_Misc_QuestionMark"
+#/cast [target=arena2] Blind
+/cast [target=arena2] Shadowstep
+/target arena2
+END
+VER 3 00000000000000F7 "T" "INV_Misc_QuestionMark"
+#show Tyrannical Gladiator's Badge of Conquest
+/use 13
+/use 10
+END
+VER 3 00000000000000F2 "tot" "Ability_Creature_Cursed_04"
+/run local f = GetMouseFocus(); f:SetUserPlaced(true) f:SetMovable(true) f:EnableMouse(true) f:RegisterForDrag("LeftButton") f:SetScript("OnDragStart",f.StartMoving) f:SetScript("OnDragStop",f.StopMovingOrSizing)
+END
+VER 3 00000000000000CA "UF2" "Ability_Creature_Cursed_04"
+/run ArenaEnemyFrames:SetScale(1.1)
+/run ArenaEnemyFrame1:ClearAllPoints() ArenaEnemyFrame1:SetPoint("TOPLEFT", -571, -35)
+/run for i=1,58 do _G["t"..i]:Hide() end
+END

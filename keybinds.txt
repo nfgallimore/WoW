@@ -1,0 +1,48 @@
+17 Instant Spells:
+
+W:  Shift-W: 
+	Control-W: 
+	Alt-Q
+
+S:	Shift-S: 
+	Control-S: 
+	S: 
+	Alt-S
+
+D:	Shift-D: 
+	Control-D: 
+	Alt-D
+
+A:	Shift-A: 
+	Control-A: 
+	Alt-A
+
+3:	Shift-3: 
+	Control-3: 
+	3:
+	Alt-3
+
+
+
+
+16 Channeled Spells
+
+F:	Shift-F: 
+	Control-F: 
+	F: 
+	Alt-F
+
+E:	Shift-E: 
+	Control-E: 
+	E: 
+	Alt-E
+
+Q:	Shift-Q: 
+	Control-Q: 
+	Q: 
+	Alt-Q
+
+R:	Shift-R: 
+	Control-R: 
+	R: 
+	Alt-R

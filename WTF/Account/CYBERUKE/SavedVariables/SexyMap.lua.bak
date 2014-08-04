@@ -1,0 +1,146 @@
+
+SexyMap2DB = {
+	["Darkrizen-Tichondrius"] = {
+		["ping"] = {
+			["showPing"] = true,
+			["showAt"] = "map",
+		},
+		["coordinates"] = {
+			["enabled"] = false,
+			["fontColor"] = {
+			},
+			["borderColor"] = {
+			},
+			["locked"] = false,
+			["backgroundColor"] = {
+			},
+		},
+		["buttons"] = {
+			["radius"] = 10,
+			["lockDragging"] = false,
+			["allowDragging"] = true,
+			["visibilitySettings"] = {
+				["MinimapZoomIn"] = "never",
+				["MinimapZoneTextButton"] = "always",
+				["MiniMapMailFrame"] = "always",
+				["TimeManagerClockButton"] = "always",
+				["MinimapZoomOut"] = "never",
+				["MiniMapWorldMapButton"] = "never",
+			},
+			["dragPositions"] = {
+				["QueueStatusMinimapButton"] = 199.392094120919,
+			},
+			["controlVisibility"] = true,
+		},
+		["hudmap"] = {
+			["scale"] = 1.4,
+			["textColor"] = {
+				["a"] = 1,
+				["b"] = 0.5,
+				["g"] = 1,
+				["r"] = 0.5,
+			},
+			["alpha"] = 0.7,
+			["hudColor"] = {
+			},
+		},
+		["zonetext"] = {
+			["bgColor"] = {
+				["a"] = 1,
+				["b"] = 0,
+				["g"] = 0,
+				["r"] = 0,
+			},
+			["fontColor"] = {
+			},
+			["borderColor"] = {
+				["a"] = 1,
+				["b"] = 0,
+				["g"] = 0,
+				["r"] = 0,
+			},
+			["xOffset"] = 0,
+			["yOffset"] = 0,
+		},
+		["clock"] = {
+			["bgColor"] = {
+				["a"] = 1,
+				["b"] = 0,
+				["g"] = 0,
+				["r"] = 0,
+			},
+			["fontColor"] = {
+			},
+			["borderColor"] = {
+				["a"] = 1,
+				["b"] = 0,
+				["g"] = 0,
+				["r"] = 0,
+			},
+			["xOffset"] = 0,
+			["yOffset"] = 0,
+		},
+		["borders"] = {
+			["applyPreset"] = false,
+			["borders"] = {
+				{
+					["disableRotation"] = true,
+					["rotSpeed"] = 10,
+					["name"] = "Square Overlay",
+					["r"] = 0.3411764705882353,
+					["scale"] = 0.73,
+					["rotation"] = 66,
+					["g"] = 0.4705882352941176,
+					["texture"] = "World\\GENERIC\\ACTIVEDOODADS\\WORLDTREEPORTALS\\TWISTEDNETHER8.BLP",
+				}, -- [1]
+				{
+					["disableRotation"] = true,
+					["rotSpeed"] = -14,
+					["name"] = "Circle 2",
+					["r"] = 0.3607843137254902,
+					["scale"] = 1.9,
+					["drawLayer"] = "BACKGROUND",
+					["g"] = 0.7215686274509804,
+					["texture"] = "World\\GENERIC\\ACTIVEDOODADS\\INSTANCEPORTAL\\GENERICGLOW2.BLP",
+				}, -- [2]
+			},
+			["backdrop"] = {
+				["show"] = false,
+				["textureColor"] = {
+				},
+				["settings"] = {
+					["bgFile"] = "Interface\\Tooltips\\UI-Tooltip-Background",
+					["edgeFile"] = "Interface\\Tooltips\\UI-Tooltip-Border",
+					["tile"] = false,
+					["edgeSize"] = 16,
+					["insets"] = {
+						["top"] = 4,
+						["right"] = 4,
+						["left"] = 4,
+						["bottom"] = 4,
+					},
+				},
+				["borderColor"] = {
+				},
+				["scale"] = 1,
+			},
+			["hideBlizzard"] = true,
+		},
+		["core"] = {
+			["clamp"] = true,
+			["lock"] = false,
+			["shape"] = "Interface\\BUTTONS\\WHITE8X8",
+			["northTag"] = true,
+			["autoZoom"] = 5,
+			["rightClickToConfig"] = true,
+		},
+		["movers"] = {
+			["enabled"] = false,
+			["framePositions"] = {
+			},
+			["lock"] = false,
+		},
+	},
+	["presets"] = {
+	},
+}

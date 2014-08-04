@@ -1,0 +1,110 @@
+
+GladiusExDB = {
+	["namespaces"] = {
+		["party_CastBar"] = {
+		},
+		["Highlight"] = {
+		},
+		["LibDualSpec-1.0"] = {
+		},
+		["party_Alerts"] = {
+		},
+		["party_HealthBar"] = {
+		},
+		["party_ClassIcon"] = {
+		},
+		["party_Highlight"] = {
+		},
+		["party_DRTracker"] = {
+		},
+		["DRTracker"] = {
+		},
+		["party_PowerBar"] = {
+		},
+		["SkillHistory"] = {
+		},
+		["party_TargetBar"] = {
+		},
+		["Cooldowns"] = {
+		},
+		["arena"] = {
+			["profiles"] = {
+				["Darkrizen - Tichondrius"] = {
+					["y"] = {
+						["anchor_arena"] = 569.2800458693491,
+						["arena2"] = 592.7999867498875,
+						["arena3"] = 505.4399887025356,
+						["arena1"] = 680.160043390988,
+					},
+					["x"] = {
+						["anchor_arena"] = 785.2797480726294,
+						["arena2"] = 825.5996299839098,
+						["arena3"] = 825.5996299839098,
+						["arena1"] = 825.5996299839098,
+					},
+				},
+			},
+		},
+		["Auras"] = {
+		},
+		["CastBar"] = {
+		},
+		["party"] = {
+			["profiles"] = {
+				["Darkrizen - Tichondrius"] = {
+					["y"] = {
+						["anchor_party"] = 582.7200455689417,
+						["player"] = 693.6001016843293,
+						["party2"] = 518.8800469958769,
+						["party1"] = 606.2400450432287,
+					},
+					["x"] = {
+						["anchor_party"] = 17.27999595165261,
+						["player"] = 57.59993645668169,
+						["party2"] = 57.59993645668169,
+						["party1"] = 57.59993645668169,
+					},
+				},
+			},
+		},
+		["party_SkillHistory"] = {
+		},
+		["PowerBar"] = {
+		},
+		["party_Announcements"] = {
+		},
+		["HealthBar"] = {
+		},
+		["party_PetBar"] = {
+		},
+		["party_Cooldowns"] = {
+		},
+		["party_Clicks"] = {
+		},
+		["PetBar"] = {
+		},
+		["Announcements"] = {
+		},
+		["Alerts"] = {
+		},
+		["TargetBar"] = {
+		},
+		["party_Tags"] = {
+		},
+		["party_Auras"] = {
+		},
+		["Tags"] = {
+		},
+		["Clicks"] = {
+		},
+		["ClassIcon"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Darkrizen - Tichondrius"] = "Darkrizen - Tichondrius",
+	},
+	["profiles"] = {
+		["Darkrizen - Tichondrius"] = {
+		},
+	},
+}

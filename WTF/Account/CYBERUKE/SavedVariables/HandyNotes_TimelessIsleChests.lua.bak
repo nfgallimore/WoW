@@ -1,0 +1,10 @@
+
+TimelessIsleChestsDB = {
+	["profileKeys"] = {
+		["Darkrísen - Mal'Ganis"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

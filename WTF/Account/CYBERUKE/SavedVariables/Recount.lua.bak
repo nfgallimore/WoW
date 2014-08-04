@@ -1,0 +1,54 @@
+
+RecountDB = {
+	["profileKeys"] = {
+		["Neilyoirl - Tichondrius"] = "Neilyoirl - Tichondrius",
+	},
+	["profiles"] = {
+		["Neilyoirl - Tichondrius"] = {
+			["GraphWindowY"] = 0,
+			["MainWindow"] = {
+				["AutoHide"] = true,
+				["Position"] = {
+					["y"] = -335.1117416718533,
+					["x"] = 732.446916354405,
+					["w"] = 243.1109683489495,
+					["h"] = 292.4446169018652,
+				},
+			},
+			["Colors"] = {
+				["Bar"] = {
+					["Bar Text"] = {
+						["a"] = 1,
+					},
+					["Total Bar"] = {
+						["a"] = 1,
+					},
+				},
+			},
+			["DetailWindowY"] = 0,
+			["DetailWindowX"] = 0,
+			["MainWindowWidth"] = 243.1109683489495,
+			["HideCollect"] = true,
+			["MainWindowHeight"] = 292.4446169018652,
+			["Filters"] = {
+				["Show"] = {
+					["Pet"] = true,
+				},
+			},
+			["GraphWindowX"] = 0,
+			["CurDataSet"] = "OverallData",
+			["RealtimeWindows"] = {
+				["Realtime_!RAID_DAMAGE"] = {
+					"!RAID", -- [1]
+					"DAMAGE", -- [2]
+					"Raid DPS", -- [3]
+					0, -- [4]
+					3.501426657039244e-005, -- [5]
+					200.0000027354896, -- [6]
+					232.0000136774479, -- [7]
+					false, -- [8]
+				},
+			},
+		},
+	},
+}

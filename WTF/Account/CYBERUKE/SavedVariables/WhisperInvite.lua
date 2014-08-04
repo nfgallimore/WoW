@@ -1,0 +1,2 @@
+
+WhisperInviteGlobal = nil

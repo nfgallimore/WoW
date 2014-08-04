@@ -1,0 +1,12 @@
+BattlegroundTargets: enabled
+BGAutoRelease: enabled
+ActionBarSaver: enabled
+Auc-Advanced: enabled
+Auc-Filter-Basic: enabled
+Auc-ScanData: enabled
+Auc-Stat-Histogram: enabled
+Auc-Stat-iLevel: enabled
+Auc-Stat-Purchased: enabled
+Auc-Stat-Simple: enabled
+Auc-Stat-StdDev: enabled
+Auc-Util-FixAH: enabled

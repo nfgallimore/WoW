@@ -1,0 +1,77 @@
+VER 3 0100000000000042 "b" "INV_MISC_QUESTIONMARK"
+#showtooltip Divine Shield
+/use [nomod] Divine Shield
+/use [mod:shift,@party1][mod:ctrl,@party2] Hand of Protection
+END
+VER 3 010000000000003D "cd" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/castsequence Avenging Wrath, Divine Favor, Guardian of Ancient Kings, Divine Favor
+/use [@player] Holy Prism
+END
+VER 3 010000000000002B "cds" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use Guardian of Ancient Kings
+/use Holy Avenger
+/use Divine Favor
+/use Avenging Wrath
+/use [@player] Holy Prism
+END
+VER 3 0100000000000049 "disp1" "INV_MISC_QUESTIONMARK"
+/use [@party1] Cleanse
+END
+VER 3 010000000000004A "disp2" "INV_MISC_QUESTIONMARK"
+/use [@party2] Cleanse
+END
+VER 3 0100000000000006 "fear" "INV_MISC_QUESTIONMARK"
+/tar Gargoyle
+/use [@focus][] Turn evil
+END
+VER 3 010000000000004B "Free" "INV_MISC_QUESTIONMARK"
+/use [mod:shift,@party1][mod:ctrl,@party2][nomod:@player] Hand of Freedom
+END
+VER 3 010000000000000B "HoJ" "INV_Misc_QuestionMark"
+/use [@focus, exists][] Hammer of Justice
+END
+VER 3 0100000000000036 "hp" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use 14
+/use Healthstone
+END
+VER 3 010000000000004C "hs" "INV_MISC_QUESTIONMARK"
+#showtootlip
+/castsequence [mod:alt, @player][] reset=2, Holy Shock, Holy Prism
+/use [mod:alt, @player][] Beacon of Light
+END
+VER 3 010000000000004D "j" "INV_MISC_QUESTIONMARK"
+/targetnearestenemyplayer
+/use Judgment
+END
+VER 3 0100000000000013 "Kick" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/targetenemy
+/use Rebuke
+/targetlasttarget
+END
+VER 3 0100000000000047 "party1" "INV_MISC_QUESTIONMARK"
+/tar party1
+END
+VER 3 0100000000000048 "party2" "INV_MISC_QUESTIONMARK"
+/tar party2
+/use Beacon of Light
+END
+VER 3 010000000000003B "rep" "INV_MISC_QUESTIONMARK"
+#showtooltip Repentance
+/use [@focus] Repentance
+END
+VER 3 0100000000000034 "self" "INV_MISC_QUESTIONMARK"
+/use [@player] Hand of Protection
+END
+VER 3 0100000000000041 "self" "INV_MISC_QUESTIONMARK"
+/use [@player] Beacon of Light
+END
+VER 3 0100000000000022 "wall" "INV_MISC_QUESTIONMARK"
+/cast Divine Protection
+/use Devotion Aura
+/use [@player] Holy Shock
+/use [@player] Holy Prism
+END

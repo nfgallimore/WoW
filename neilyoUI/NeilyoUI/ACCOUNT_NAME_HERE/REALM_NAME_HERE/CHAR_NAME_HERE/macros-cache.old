@@ -1,0 +1,96 @@
+MACRO 16777245 " b" INV_Misc_QuestionMark
+#showtooltip blind
+/cast [mod:shift,target=focus] Blind; Blind
+END
+MACRO 16777241 " cs" INV_Misc_QuestionMark
+#showtooltip Shadow Dance
+/cast Shadow Dance
+/cast Premeditation
+/cast Cheap Shot
+/startattack
+/sw 23
+/sw play
+END
+MACRO 16777259 " rk" INV_Misc_QuestionMark
+#show Redirect
+/castsequence reset=59 Redirect, Kidney Shot
+/sw 23 
+/sw play
+END
+MACRO 16777257 "ab" INV_Misc_QuestionMark
+#show Shadow Dance
+/startattack [stance:0]
+/startattack [stance:3]
+/cast Premeditation
+/use [stance:3] 13
+/use [stance:3] 10
+/cast [stance:3] Ambush 
+/cast [stance:0] Backstab
+END
+MACRO 16777237 "b3" INV_Misc_QuestionMark
+/cast [target=arena3] Blind
+END
+MACRO 16777226 "e" INV_Misc_QuestionMark
+#show Redirect
+/startattack
+/cast Eviscerate
+/use [stance:3] Vicious Gladiator's Badge of Conquest
+/use [stance:3] Vicious Gladiator's Leather Gloves
+END
+MACRO 16777254 "Frd" INV_Misc_QuestionMark
+/target focus
+/castsequence reset=59 Redirect, Kidney Shot
+/sw 25
+/sw play
+END
+MACRO 16777236 "Fshs" INV_Misc_QuestionMark
+/target focus
+/cast Shadowstep
+/cast Sap
+#Show Cold Blood
+#/cast Cold Blood
+#/use Vicious Gladiator's Leather Gloves
+END
+MACRO 16777234 "k" INV_Misc_QuestionMark
+/startattack
+/cast [mod:shift,target=focus] Kick; Kick
+/cancelaura hand of protection
+END
+MACRO 16777248 "Mh" INV_Misc_QuestionMark
+/use 0 1
+END
+MACRO 16777238 "OH" INV_Misc_QuestionMark
+/use 0 2
+END
+MACRO 16777256 "psn" INV_Misc_QuestionMark
+/use [mod:ctrl]Deadly Poison;[mod:altl]Mind-numbing Poison;[mod:shift]Wound Poison;Crippling Poison
+/use [button:1]16;[button:2]17;[button:3]18
+/click StaticPopup1Button1
+END
+MACRO 16777249 "s" INV_Misc_QuestionMark
+#show Redirect
+/cancelaura Stealth
+END
+MACRO 16777235 "s" INV_Misc_QuestionMark
+#show Sprint
+/cast [target=focus] Sap
+END
+MACRO 16777258 "SdFs" INV_Misc_QuestionMark
+/cast Shadow Dance
+/cast [target=focus] Sap
+END
+MACRO 16777243 "SdGar" INV_Misc_QuestionMark
+/cast Shadow Dance
+/cast Premeditation
+/cast Garrote
+/startattack
+END
+MACRO 16777252 "sh" INV_Misc_QuestionMark
+#show Kidney Shot
+/cast Shiv
+/cast Throw
+END
+MACRO 16777260 "Step3" INV_Misc_QuestionMark
+/target arena3
+/cast Shadowstep
+END

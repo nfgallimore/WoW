@@ -1,0 +1,16 @@
+caelNameplates: disabled
+caelMedia: disabled
+caelLib: disabled
+CharacterOwnedCount: disabled
+TBandWG: disabled
+SafeQueue: enabled
+Raven_Options: disabled
+Raven: disabled
+Pawn: disabled
+OPie: disabled
+nUI: disabled
+MarketWatcher: disabled
+JukedParty: disabled
+Recount: disabled
+ActionBarSaver: disabled
+AutoScript: disabled

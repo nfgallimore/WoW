@@ -1,0 +1,5 @@
+## Interface: 50400
+## Title: Cycle Arena
+## Notes: Adds key bindings to cycle focus or target through arena enemies
+## Version: 1.0.0
+Cycle Arena.lua

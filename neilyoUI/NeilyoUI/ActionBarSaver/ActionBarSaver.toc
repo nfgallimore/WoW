@@ -1,0 +1,10 @@
+## Interface: 40000
+## Title: Action Bar Saver 2c
+## Notes: Saves and restores your action bars
+## Author: Shadowed, boomboo
+## SavedVariables: ActionBarSaverDB
+## LoadManagers: AddonLoader
+## X-LoadOn-Slash: /actionbarsaver, /abs
+
+localization.enUS.lua
+ActionBarSaver.lua

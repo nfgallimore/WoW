@@ -1,0 +1,49 @@
+VER 3 010000000000000D "Attack" "Spell_Holy_BlessingOfAgility"
+/petattack
+END
+VER 3 010000000000000B "bark" "Spell_Nature_StoneClawTotem"
+#showtooltip
+/use Blood Horror
+END
+VER 3 0100000000000002 "Curse" "INV_Misc_QuestionMark"
+#showtooltip
+/cast [mod:alt] Curse of the Elements; [mod:shift] Fel Flame; Agony
+END
+VER 3 0100000000000004 "Fear" "INV_Misc_QuestionMark"
+#showtooltip
+/cast [mod:alt, @focus][] Fear
+END
+VER 3 010000000000000A "haste" "Ability_Rogue_SliceDice"
+/use Dark Soul: Misery
+END
+VER 3 0100000000000001 "Howl" "Spell_Shadow_DeathScream"
+#showtooltip
+/cast Howl of Terror
+END
+VER 3 0100000000000003 "MG" "INV_Misc_QuestionMark"
+#showtooltip
+/cast [mod:shift] Malefic Grasp; Corruption
+END
+VER 3 010000000000000C "Port" "Spell_Arcane_Blink"
+#showtooltip
+/use Demonic Circle: Teleport
+END
+VER 3 0100000000000006 "Sac" "Spell_Holy_SealOfSacrifice"
+#showtooltip
+/use Unending Resolve
+END
+VER 3 0100000000000007 "Shdw" "Spell_Holy_BlessingOfProtection"
+#showtooltip
+/use Twilight Ward
+END
+VER 3 010000000000000E "Stop" "Spell_Holy_BlessingOfStrength"
+/petpassive
+END
+VER 3 0100000000000008 "stun" "Ability_Paladin_BlindingLight2"
+#showtooltip
+/use Shadowfury
+END
+VER 3 0100000000000009 "swap" "ability_rogue_redirect"
+#showtooltip
+/use Soul Swap
+END

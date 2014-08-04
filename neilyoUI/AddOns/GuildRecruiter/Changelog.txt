@@ -1,0 +1,10 @@
+1.0: Add-on Released
+
+2.0: Interface is more compact, and movable. 
+Pressing Tab & Enter while an Edit-box has focus now serves a function.
+Guided Invite, and DNIL Bypass mode created.
+Will no longer tell you when each person is invited or not invited, but will instead tell you how many people were invited, how many were not invited and way.
+Invite Message Edit-Box, no longer receives focus by default to preserve your messages.
+
+3.0: Slash commands! "/gr", "/grecruiter", "/guildrecruiter"
+Will no longer load if you are not in a guild, or if you do not have guild invite permissions. 

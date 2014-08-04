@@ -1,0 +1,47 @@
+## Interface: 40000
+## Title: KeybindTrainer
+## Author: Fitzcairn
+## Notes: A simulator to help you learn your keybinds quickly.
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: KT_SavedCustomTrials
+## SavedVariablesPerCharacter: KT_SavedStats, KT_SavedUIConfigVals
+## Version: 1.1
+## X-Curse-Packaged-Version: r9
+## X-Curse-Project-Name: KeybindTrainer
+## X-Curse-Project-ID: keybindtrainer
+## X-Curse-Repository-ID: wow/keybindtrainer/mainline
+
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+lib\UTF8\utf8data.lua
+lib\UTF8\utf8.lua
+
+lib\FitzUtils\Util.lua
+lib\FitzUtils\FifoList.lua
+
+lib\ActionBindManager\Localization.lua
+lib\ActionBindManager\SlotPool.lua
+lib\ActionBindManager\ActionBindManager.lua
+
+lib\json4lua\json.lua
+
+lib\Defs.lua
+
+localization\html\Help_US-en.lua
+localization\Text.lua
+
+lib\UI.lua
+lib\Config.lua
+lib\Stats.lua
+lib\Timer.lua
+lib\ParserJson.lua
+lib\Trial.lua
+lib\Run.lua
+
+KeybindTrainer.lua
+KeybindTrainer.xml
+

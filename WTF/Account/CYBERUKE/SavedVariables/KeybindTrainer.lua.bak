@@ -1,0 +1,4 @@
+
+KT_SavedCustomTrials = {
+	["Rogue: Cloak and Vanish"] = "{\"desc\":\"An example custom KeybindTrainer trial.\", \"name\":\"Rogue: Cloak and Vanish\", \"gcd\":1.5, \"binds\":[{\"action\":\"Stealth\"}, [{\"action\":\"Cloak of Shadows\", \"cd\":0}, {\"action\":\"Vanish\"}]]}",
+}

@@ -1,0 +1,7 @@
+## Interface: 40300
+## Version: 1.3
+## Title: BGAutoRelease
+## Notes: BGAutoRelease will release your corpse automatically in PvP Instances.
+## URL: http://wow.curse.com/downloads/wow-addons/details/bgautorelease.aspx
+## Author: kevinlabs
+BGAutoRelease.lua

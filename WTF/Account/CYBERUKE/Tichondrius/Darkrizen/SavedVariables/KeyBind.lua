@@ -1,0 +1,4 @@
+
+KeyBindSettings = {
+	["currentboard"] = "Laptop",
+}

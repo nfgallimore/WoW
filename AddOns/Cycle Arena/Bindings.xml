@@ -1,0 +1,6 @@
+<Bindings>
+	<Binding name="CLICK CycleArenaTarget:LeftButton" header="CYCLEARENA"/>
+	<Binding name="CLICK CycleArenaTarget:RightButton"/>
+	<Binding name="CLICK CycleArenaFocus:LeftButton"/>
+	<Binding name="CLICK CycleArenaFocus:RightButton"/>
+</Bindings>

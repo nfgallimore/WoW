@@ -1,0 +1,6 @@
+
+BattlefieldMinimapOptions = {
+	["locked"] = true,
+	["opacity"] = 0.3626756966114044,
+	["showPlayers"] = true,
+}

@@ -1,0 +1,5 @@
+v1.2
+*Anything that can be converted to a number will be by CSVDecode.
+
+v1.1
+*Added CSV support.

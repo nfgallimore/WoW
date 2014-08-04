@@ -1,0 +1,1015 @@
+﻿<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="GRMain.lua" />
+	<Frame name="GRMain" parent="UIParent" toplevel="true" enableMouse="true" movable="true">
+		<Size>
+			<AbsDimension x="390" y="350" />
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER">
+				<Offset x="-77" y="40" />
+			</Anchor>
+		</Anchors>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11" />
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32" />
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32" />
+			</EdgeSize>
+		</Backdrop>
+		<Frames>
+			<EditBox name="GRInvite" inherits="InputBoxTemplate" letters="255" autoFocus="false">
+				<Size>
+					<AbsDimension x="350" y="32" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="20" y="-76" />
+					</Anchor>
+				</Anchors>
+			</EditBox>
+			<CheckButton name="GRDNIBypass" inherits="UICheckButtonTemplate" text="DNI Bypass">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="70" y="-114" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRDNIBypassfont" inherits="GameFontNormal" text="DNIL Bypass">
+							<Size>
+								<AbsDimension x="122" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="5" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>DNIBypassWarning()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRIG" inherits="UICheckButtonTemplate" text="Invite Guilded">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="185" y="-114" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRIGfont" inherits="GameFontNormal" text="Invite Guilded">
+							<Size>
+								<AbsDimension x="122" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRIGWarning()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRSend" inherits="UICheckButtonTemplate" text="Send Guild Invite">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="220" y="-55" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRsendfont" inherits="GameFontNormal" text="Send Guild Invite">
+							<Size>
+								<AbsDimension x="122" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="15" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+			</CheckButton>
+			<EditBox name="GRlvlrange" inherits="InputBoxTemplate" letters="5" autoFocus="true">
+				<Size>
+					<AbsDimension x="50" y="32" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="215" y="-145" />
+					</Anchor>
+				</Anchors>
+			</EditBox>
+			<CheckButton name="GRAllRace" inherits="UICheckButtonTemplate" text="All Races">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="70" y="-180" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRAllRacefont" inherits="GameFontNormal" text="All Races">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRAllRaceCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRDraenei" inherits="UICheckButtonTemplate" text="Draenei">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="25" y="-202" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRDraeneifont" inherits="GameFontNormal" text="Draenei">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRDraeneiCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRDwarf" inherits="UICheckButtonTemplate" text="Dwarf">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="25" y="-217" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRDwarffont" inherits="GameFontNormal" text="Dwarf">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRDwarfCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRGnome" inherits="UICheckButtonTemplate" text="Gnome">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="25" y="-232" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRGnomefont" inherits="GameFontNormal" text="Gnome">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRGnomeCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRHuman" inherits="UICheckButtonTemplate" text="Human">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="25" y="-247" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRHumanfont" inherits="GameFontNormal" text="Human">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRHumanCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRNightelf" inherits="UICheckButtonTemplate" text="Night Elf">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="25" y="-262" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRNightelffont" inherits="GameFontNormal" text="Night Elf">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRNightelfCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRWorgen" inherits="UICheckButtonTemplate" text="Worgen">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="25" y="-277" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRWorgenfont" inherits="GameFontNormal" text="Worgen">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRWorgenCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRBloodelf" inherits="UICheckButtonTemplate" text="Blood Elf">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="105" y="-202" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRBloodelffont" inherits="GameFontNormal" text="Blood Elf">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRBloodelfCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRGoblin" inherits="UICheckButtonTemplate" text="Goblin">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="105" y="-217" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRGoblinfont" inherits="GameFontNormal" text="Goblin">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRGoblinCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GROrc" inherits="UICheckButtonTemplate" text="Orc">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="105" y="-232" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GROrcfont" inherits="GameFontNormal" text="Orc">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GROrcCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRTauren" inherits="UICheckButtonTemplate" text="Tauren">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="105" y="-247" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRTaurenfont" inherits="GameFontNormal" text="Tauren">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRTaurenCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRTroll" inherits="UICheckButtonTemplate" text="Troll">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="105" y="-262" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRTrollfont" inherits="GameFontNormal" text="Troll">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRTrollCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRUndead" inherits="UICheckButtonTemplate" text="Undead">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="105" y="-277" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRUndeadfont" inherits="GameFontNormal" text="Undead">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRUndeadCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRAllClass" inherits="UICheckButtonTemplate" text="All Classes">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="240" y="-180" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRAllClassfont" inherits="GameFontNormal" text="All Classes">
+							<Size>
+								<AbsDimension x="100" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRAllClassCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRDeathknight" inherits="UICheckButtonTemplate" text="Death Knight">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="205" y="-202" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRDeathknightfont" inherits="GameFontNormal" text="DK">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="7" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRDeathknightCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRDruid" inherits="UICheckButtonTemplate" text="Druid">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="205" y="-217" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRDruidfont" inherits="GameFontNormal" text="Druid">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRDruidCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRHunter" inherits="UICheckButtonTemplate" text="Hunter">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="205" y="-232" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRHunterfont" inherits="GameFontNormal" text="Hunter">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRHunterCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRMage" inherits="UICheckButtonTemplate" text="Mage">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="205" y="-247" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRMagefont" inherits="GameFontNormal" text="Mage">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRMageCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRPaladin" inherits="UICheckButtonTemplate" text="Paladin">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="205" y="-262" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRPaladinfont" inherits="GameFontNormal" text="Paladin">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRPaladinCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRPriest" inherits="UICheckButtonTemplate" text="Priest">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="285" y="-202" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRPriestfont" inherits="GameFontNormal" text="Priest">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRPriestCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRRogue" inherits="UICheckButtonTemplate" text="Rogue">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="285" y="-217" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRRoguefont" inherits="GameFontNormal" text="Rogue">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRRogueCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRShaman" inherits="UICheckButtonTemplate" text="Shaman">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="285" y="-232" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRShamanfont" inherits="GameFontNormal" text="Shaman">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRShamanCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRWarlock" inherits="UICheckButtonTemplate" text="Warlock">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="285" y="-247" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRWarlockfont" inherits="GameFontNormal" text="Warlock">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRWarlockCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="GRWarrior" inherits="UICheckButtonTemplate" text="Warrior">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="285" y="-262" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRWarriorfont" inherits="GameFontNormal" text="Warrior">
+							<Size>
+								<AbsDimension x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="6" y="0" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>GRWarriorCheckControl()</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Button name="GRSEARCH" inherits="UIPanelButtonTemplate" text="Search">
+				<Size>
+					<AbsDimension x="90" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="70" y="-305" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>GRSearch()</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GRDNIL" inherits="UIPanelButtonTemplate" text="DNI List">
+				<Size>
+					<AbsDimension x="90" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="260" y="-305" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>DNIFrameShow()</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GRRecruit" inherits="UIPanelButtonTemplate" text="Recruit">
+				<Size>
+					<AbsDimension x="90" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="163" y="-305" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						GRInviteControl()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Frame name="GRDNI" parent="UIParent" toplevel="true" enableMouse="true" movable="true">
+				<Size>
+					<AbsDimension x="239" y="120" />
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset x="265" y="-110" />
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+					<BackgroundInsets>
+						<AbsInset left="11" right="12" top="12" bottom="11" />
+					</BackgroundInsets>
+					<TileSize>
+						<AbsValue val="32" />
+					</TileSize>
+					<EdgeSize>
+						<AbsValue val="32" />
+					</EdgeSize>
+				</Backdrop>
+				<Frames>
+					<Button name="GRPurgeList" inherits="UIPanelButtonTemplate" text="Purge List">
+						<Size>
+							<AbsDimension x="101" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset x="123" y="-80" />
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>DNIPurge()</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="GRAddName" inherits="UIPanelButtonTemplate" text="Add Name">
+						<Size>
+							<AbsDimension x="101" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset x="15" y="-35" />
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>DNIAddNamefunc()</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="GRRemoveName" inherits="UIPanelButtonTemplate" text="Remove Name">
+						<Size>
+							<AbsDimension x="101" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset x="122" y="-35" />
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>DNIRemoveNamefunc()</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="GRShowDNIL" inherits="UIPanelButtonTemplate" text="Show List">
+						<Size>
+							<AbsDimension x="101" y="20" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset x="16" y="-80" />
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								DNIShow()
+							</OnClick>
+						</Scripts>
+					</Button>
+					<EditBox name="GRAddNameEditBox" inherits="InputBoxTemplate" autoFocus="false">
+						<Size>
+							<AbsDimension x="100" y="32" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset x="16" y="-50" />
+							</Anchor>
+						</Anchors>
+					</EditBox>
+					<EditBox name="GRRemoveNameEditBox" inherits="InputBoxTemplate" numeric="true" autoFocus="false">
+						<Size>
+							<AbsDimension x="100" y="32" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset x="122" y="-50" />
+							</Anchor>
+						</Anchors>
+					</EditBox>
+				</Frames>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="GRDNItitle" inherits="GameFontNormal" text="Do Not Invite List Controls">
+							<Size>
+								<AbsDimension x="208" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="15" y="-15" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>
+						tinsert(UISpecialFrames,GRDNI);
+						GRDNI:RegisterEvent("ADDON_LOADED");
+					</OnLoad>
+					<OnShow>
+						GRAddNameEditBox:SetFocus()
+						PlaySound("igCharacterInfoOpen");
+					</OnShow>
+					<OnHide>
+				PlaySound("igCharacterInfoClose");
+			</OnHide>
+					<OnMouseDown>
+						if button == "LeftButton" and not self.isMoving then
+						self:StartMoving();
+						self.isMoving = true;
+						end
+					</OnMouseDown>
+					<OnMouseUp>
+						if button == "LeftButton" and self.isMoving then
+						self:StopMovingOrSizing();
+						self.isMoving = false;
+						end
+					</OnMouseUp>
+					<OnEvent>
+						GRLoadSettings();
+					</OnEvent>
+				</Scripts>
+			</Frame>
+		</Frames>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="GRInvitefont" inherits="GameFontNormal" text="Invite Message:">
+					<Size>
+						<AbsDimension x="140" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="20" y="-61" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="GRlvlfont" inherits="GameFontNormal" text="Level Range:">
+					<Size>
+						<AbsDimension x="100" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="110" y="-150" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="GRMAINtitle" inherits="GameFontNormal" text="Guild Recruiter 3.0  By: Yottabyte">
+					<Size>
+						<AbsDimension x="230" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="80" y="-20" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				tinsert(UISpecialFrames,GRMain);
+				GRMain:RegisterEvent("PLAYER_LOGOUT");
+				GRLoader();
+			</OnLoad>
+				<OnMouseDown>
+					if button == "LeftButton" and not self.isMoving then
+					self:StartMoving();
+					self.isMoving = true;
+					end
+				</OnMouseDown>
+				<OnMouseUp>
+					if button == "LeftButton" and self.isMoving then
+					self:StopMovingOrSizing();
+					self.isMoving = false;
+					end
+				</OnMouseUp>
+			<OnShow>
+				PlaySound("igCharacterInfoOpen");
+				GRDNI:Hide();
+			</OnShow>
+			<OnHide>
+				PlaySound("igCharacterInfoClose");
+			</OnHide>
+			<OnEvent>
+				GRSaveSettings();
+			</OnEvent>
+		</Scripts>
+	</Frame>
+</Ui>

@@ -1,0 +1,6 @@
+## Interface: 50001
+## Title: BlizzRaidFrameHider
+## Notes: Attempts to Hide The Standard Blizzard Raid Frame and the Arrow Menu.
+## Author: Remadon
+## Version: 1.1
+BlizzRaidFrameHider.lua

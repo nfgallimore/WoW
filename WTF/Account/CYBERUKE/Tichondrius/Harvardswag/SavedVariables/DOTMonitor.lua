@@ -1,0 +1,4 @@
+
+DOTMonitorPreferences = {
+	["quantity"] = 5,
+}

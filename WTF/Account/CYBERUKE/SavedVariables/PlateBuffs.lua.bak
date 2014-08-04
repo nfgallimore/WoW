@@ -1,0 +1,10 @@
+
+PB_DB = {
+	["profileKeys"] = {
+		["Darkrísen - Mal'Ganis"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

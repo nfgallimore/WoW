@@ -1,0 +1,92 @@
+
+IceCoreDB = {
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Darkrizen - Sargeras"] = "Default",
+	},
+	["global"] = {
+		["lastRunVersion"] = 961,
+	},
+	["profiles"] = {
+		["Default"] = {
+			["modules"] = {
+				["TargetCast"] = {
+					["updatedInverseExpand"] = true,
+					["updatedReverseInverse"] = true,
+					["myTagVersion"] = 3,
+				},
+				["PetHealth"] = {
+					["myTagVersion"] = 3,
+					["updatedInverseExpand"] = true,
+					["updatedReverseInverse"] = true,
+				},
+				["PlayerHealth"] = {
+					["updatedInverseExpand"] = true,
+					["updatedReverseInverse"] = true,
+					["myTagVersion"] = 3,
+				},
+				["PlayerAbsorb"] = {
+					["myTagVersion"] = 3,
+					["updatedInverseExpand"] = true,
+					["updatedReverseInverse"] = true,
+				},
+				["PlayerAlternatePower"] = {
+					["myTagVersion"] = 3,
+					["updatedInverseExpand"] = true,
+					["updatedReverseInverse"] = true,
+				},
+				["TargetInfo"] = {
+					["debuffSizeFixup"] = true,
+					["myTagVersion"] = 3,
+					["updateAurasIntoTable"] = true,
+				},
+				["TargetAbsorb"] = {
+					["myTagVersion"] = 3,
+					["updatedInverseExpand"] = true,
+					["updatedReverseInverse"] = true,
+				},
+				["SunderCount"] = {
+				},
+				["CastBar"] = {
+					["updatedInverseExpand"] = true,
+					["updatedReverseInverse"] = true,
+					["myTagVersion"] = 3,
+				},
+				["TargetHealth"] = {
+					["updatedInverseExpand"] = true,
+					["updatedReverseInverse"] = true,
+					["myTagVersion"] = 3,
+				},
+				["FocusAbsorb"] = {
+					["myTagVersion"] = 3,
+					["updatedInverseExpand"] = true,
+					["updatedReverseInverse"] = true,
+				},
+				["PetMana"] = {
+					["myTagVersion"] = 3,
+					["updatedInverseExpand"] = true,
+					["updatedReverseInverse"] = true,
+				},
+				["LacerateCount"] = {
+				},
+				["TargetMana"] = {
+					["myTagVersion"] = 3,
+					["updatedInverseExpand"] = true,
+					["updatedReverseInverse"] = true,
+				},
+				["MaelstromCount"] = {
+				},
+				["PlayerMana"] = {
+					["myTagVersion"] = 3,
+					["updatedInverseExpand"] = true,
+					["updatedReverseInverse"] = true,
+				},
+			},
+			["bShouldUseDogTags"] = false,
+			["updatedOocNotFull"] = true,
+		},
+	},
+}

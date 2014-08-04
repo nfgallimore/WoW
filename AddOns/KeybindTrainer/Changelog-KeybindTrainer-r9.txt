@@ -1,0 +1,74 @@
+------------------------------------------------------------------------
+r9 | fitzcc | 2011-02-20 01:20:15 +0000 (Sun, 20 Feb 2011) | 1 line
+Changed paths:
+   D /trunk/UI.lua
+   D /trunk/localization/Core.lua
+   D /trunk/localization/html/About_US-En.lua
+   D /trunk/test/TestEnv.lua
+   D /trunk/test/test_Run.lua
+   D /trunk/test/test_StatsList.lua
+
+Removing deprecated/unneeded files.
+------------------------------------------------------------------------
+r8 | fitzcc | 2011-02-20 01:15:43 +0000 (Sun, 20 Feb 2011) | 7 lines
+Changed paths:
+   M /trunk/KeybindTrainer.lua
+   M /trunk/KeybindTrainer.toc
+   M /trunk/KeybindTrainer.xml
+   A /trunk/lib/ActionBindManager
+   A /trunk/lib/ActionBindManager/ActionBindManager.lua
+   A /trunk/lib/ActionBindManager/ActionBindManager.toc
+   A /trunk/lib/ActionBindManager/Localization.lua
+   A /trunk/lib/ActionBindManager/SlotPool.lua
+   A /trunk/lib/ActionBindManager/test
+   A /trunk/lib/ActionBindManager/test/TestTools.lua
+   A /trunk/lib/ActionBindManager/test/luaunit
+   A /trunk/lib/ActionBindManager/test/luaunit/LICENSE.txt
+   A /trunk/lib/ActionBindManager/test/luaunit/README.txt
+   A /trunk/lib/ActionBindManager/test/luaunit/luaunit.lua
+   A /trunk/lib/ActionBindManager/test/luaunit/test_luaunit.lua
+   A /trunk/lib/ActionBindManager/test/luaunit/use_luaunit.lua
+   A /trunk/lib/ActionBindManager/test/runall.sh
+   A /trunk/lib/ActionBindManager/test/test_SlotPool.lua
+   M /trunk/lib/Config.lua
+   M /trunk/lib/Defs.lua
+   A /trunk/lib/FitzUtils
+   A /trunk/lib/FitzUtils/ApiEmulation.lua
+   A /trunk/lib/FitzUtils/FifoList.lua
+   A /trunk/lib/FitzUtils/TestUtil.lua
+   A /trunk/lib/FitzUtils/Util.lua
+   A /trunk/lib/FitzUtils/test
+   A /trunk/lib/FitzUtils/test/luaunit
+   A /trunk/lib/FitzUtils/test/luaunit/LICENSE.txt
+   A /trunk/lib/FitzUtils/test/luaunit/README.txt
+   A /trunk/lib/FitzUtils/test/luaunit/luaunit.lua
+   A /trunk/lib/FitzUtils/test/luaunit/test_luaunit.lua
+   A /trunk/lib/FitzUtils/test/luaunit/use_luaunit.lua
+   A /trunk/lib/FitzUtils/test/runall.sh
+   A /trunk/lib/FitzUtils/test/test_FifoList.lua
+   A /trunk/lib/FitzUtils/test/test_Utils.lua
+   M /trunk/lib/ParserJson.lua
+   M /trunk/lib/Run.lua
+   M /trunk/lib/Stats.lua
+   M /trunk/lib/Timer.lua
+   M /trunk/lib/Trial.lua
+   A /trunk/lib/UI.lua
+   A /trunk/localization/Text.lua
+   A /trunk/test/TestBase.lua
+   M /trunk/test/test_Action.lua
+   M /trunk/test/test_ActionTuple.lua
+   M /trunk/test/test_Config.lua
+   M /trunk/test/test_JSON.lua
+   M /trunk/test/test_JsonParser.lua
+   M /trunk/test/test_Stats.lua
+   M /trunk/test/test_Trial.lua
+   M /trunk/tools/cut_release.pl
+
+Minor version update to version 1.1.  A nearly complete re-write.  Significant changes:
+  - UI completely redone to be less cluttered and more intuitive.
+  - Support for Blizzard stance and pet binds added
+  - Explicit support for Bartender4 added.
+  - Explicit support for Dominos added.
+  - Explicit support for BindPad added.
+
+------------------------------------------------------------------------

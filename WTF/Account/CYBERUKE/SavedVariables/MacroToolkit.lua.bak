@@ -1,0 +1,10 @@
+
+MacroToolkitDB = {
+	["profileKeys"] = {
+		["Darkrizen - Tichondrius"] = "profile",
+	},
+	["profiles"] = {
+		["profile"] = {
+		},
+	},
+}

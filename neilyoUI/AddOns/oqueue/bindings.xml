@@ -1,0 +1,8 @@
+<Bindings>
+  <Binding name="TOGGLE_OQUEUE" header="OQUEUE">
+    OQ_UI_Toggle() ;
+  </Binding>
+  <Binding name="AUTO_INSPECT" header="OQUEUE">
+    OQ_AutoInspect() ;
+  </Binding>
+</Bindings>

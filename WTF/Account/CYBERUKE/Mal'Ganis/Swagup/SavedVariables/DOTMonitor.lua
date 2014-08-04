@@ -1,0 +1,2 @@
+
+DOTMonitorPreferences = nil

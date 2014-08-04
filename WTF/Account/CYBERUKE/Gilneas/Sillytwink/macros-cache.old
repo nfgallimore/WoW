@@ -1,0 +1,34 @@
+MACRO 16777224 " " INV_Misc_QuestionMark
+/cast [target=Fluffypanda, exists] Hand of Protection; Hand of Protection;
+END
+MACRO 16777225 " " INV_Misc_QuestionMark
+/cast [target=Fluffypanda, exists] Hand of Sacrifice; Hand of Sacrifice;
+END
+MACRO 16777223 " " INV_Misc_QuestionMark
+/use Deadly Gladiator's Ornamented Gloves
+/use Gnomish Lightning Generator
+END
+MACRO 16777220 " " INV_Misc_QuestionMark
+/cast [target=focus] Turn Evil
+END
+MACRO 16777219 " " INV_Misc_QuestionMark
+/cast [target=focus, exists] Repentance; Repentance;
+END
+MACRO 16777226 " " INV_Misc_QuestionMark
+/cast [target=focus, exists] Judgement of Light; Judgement of Light;
+END
+MACRO 16777227 " " INV_Misc_QuestionMark
+/w amaretta Running into cloud
+END
+MACRO 16777221 "Focus" Spell_Shadow_SacrificialShield
+/focus
+END
+MACRO 16777218 "HP" INV_Misc_QuestionMark
+/use Battlemaster's Bravery
+/use Battlemaster's Avidity
+/use Battlemaster's Conviction
+/use Endless Healing Potion
+/use Fel Healthstone
+/use Living Ice Crystals
+/cast Lifeblood
+END

@@ -1,0 +1,36 @@
+## Interface: 50400
+## Title: clcInfo_Options
+## Notes: Configuration window for clcInfo
+## Author: Calcute
+## Dependencies: clcInfo
+## LoadOnDemand: 1
+## X-Curse-Packaged-Version: v.1.5.40.002
+## X-Curse-Project-Name: clcInfo
+## X-Curse-Project-ID: clctracker
+## X-Curse-Repository-ID: wow/clctracker/mainline
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+core.lua
+
+code_templates\index.xml
+
+templates.lua
+activeTemplate.lua
+simpledocs.lua
+debug.lua
+
+display\grids.lua
+display\icons.lua
+display\bars.lua
+display\micons.lua
+display\mbars.lua
+display\alerts.lua
+display\texts.lua
+
+data\global.lua
+data\custom.lua
+
+data\classes.xml

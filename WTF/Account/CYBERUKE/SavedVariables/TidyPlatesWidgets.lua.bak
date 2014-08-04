@@ -1,0 +1,28 @@
+
+TidyPlatesWidgetData = {
+	["CachedAuraDurations"] = {
+		[130609] = 0,
+		[8679] = 3600.052,
+		[21562] = 3600.004,
+		[138643] = 0,
+		[153489] = 0,
+		[5761] = 3600.052,
+		[63956] = 0,
+	},
+	["UnitClass"] = {
+		["Turbojamzz"] = "PRIEST",
+		["Chrispbakón"] = "DRUID",
+		["Toetum"] = "SHAMAN",
+		["Warhole"] = "WARRIOR",
+		["Darkrizen"] = "ROGUE",
+	},
+	["UnitDescriptions"] = {
+	},
+	["UnitGuild"] = {
+		["Turbojamzz"] = "Garrison",
+		["Chrispbakón"] = "Quiet Storm",
+		["Toetum"] = "Battlemaster",
+		["Warhole"] = "Insurmountable Odds",
+		["Darkrizen"] = "LQQT",
+	},
+}

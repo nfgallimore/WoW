@@ -1,0 +1,63 @@
+MACRO 16777228 " " "SPELL_DEATHKNIGHT_SCOURGESTRIKE"
+/cast Scourge Strike
+/use Relentless Gladiator's Dreadplate Gauntlets
+/startattack
+END
+MACRO 16777232 " " "SPELL_DEATHKNIGHT_DEATHSTRIKE"
+/cast Rune Strike
+/cast Festering Strike
+/startattack
+END
+MACRO 16777238 " " "INV_MISC_QUESTIONMARK"
+#showtooltip Pillar of frost
+/use Ruthless Gladiator's Badge of Victory
+/cast pillar of frost
+END
+MACRO 16777224 " " "INV_MISC_QUESTIONMARK"
+#showtooltip Gnaw
+/cast Gnaw
+/cast Leap
+/petattack
+END
+MACRO 16777242 " " "Ability_Druid_SkinTeeth"
+/run if not(IsFlyableArea()and IsMounted())then CallCompanion("Mount",3) else Dismount()end
+END
+MACRO 16777236 " " "Ability_BullRush"
+/petattack
+END
+MACRO 16777244 " " "INV_MISC_QUESTIONMARK"
+/cast Frost Fever
+/cast Blood Plague
+END
+MACRO 16777227 " " "SPELL_DEATHKNIGHT_EMPOWERRUNEBLADE"
+/cast Plague Strike
+/startattack
+END
+MACRO 16777229 "Focus" "INV_MISC_QUESTIONMARK"
+/cast [target=focus] Mind Freeze
+END
+MACRO 16777226 "Focus" "INV_MISC_QUESTIONMARK"
+/cast [target=focus] Strangulate
+END
+MACRO 16777237 "Focus" "Ability_CheapShot"
+/focus
+END
+MACRO 16777241 "Focus" "INV_MISC_QUESTIONMARK"
+/cast [target=focus] Chains of Ice
+END
+MACRO 16777231 "Focus" "INV_MISC_QUESTIONMARK"
+/cast [target=focus] Death Grip
+END
+MACRO 16777235 "Focus" "INV_MISC_QUESTIONMARK"
+/cast [target=focus] Leap
+/cast [target=focus] Gnaw
+END
+MACRO 16777233 "Heal" "INV_MISC_QUESTIONMARK"
+/cast [target=swagup] Death Coil
+END
+MACRO 16777234 "Lich" "Ability_Druid_Cower"
+/cancelaura Lichborne
+END
+MACRO 16777243 "Stop" "Ability_Defend"
+/petfollow
+END

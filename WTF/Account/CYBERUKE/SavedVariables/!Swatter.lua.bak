@@ -1,0 +1,45 @@
+
+SwatterData = {
+	["enabled"] = true,
+	["warning"] = true,
+	["combat"] = false,
+	["errors"] = {
+		{
+			["message"] = "Interface\\AddOns\\AutoScript\\AutoScript.lua:81: attempt to index global 'ShapeshiftBarFrame' (a nil value)",
+			["count"] = 1,
+			["addons"] = "  Swatter, v5.19.5445 (QuiescentQuoll)\n  ActionBarSaver, v\n  Anticipation, v0.1\n  ArenaRaidIcons, v\n  Assassin, v5.4.2-0\n  AutoScript, v\n  BlizRuntimeLib_enUS v5.4.2.50400 <us>\n  (ck=b1)\n",
+			["locals"] = "trinkets = <table> {\n}\nevents = <unnamed> {\n 0 = <userdata>\n PLAYER_ENTERING_WORLD = <function> defined @Interface\\AddOns\\AutoScript\\AutoScript.lua:37\n ADDON_LOADED = <function> defined @Interface\\AddOns\\AutoScript\\AutoScript.lua:4\n UNIT_SPELLCAST_SUCCEEDED = <function> defined @Interface\\AddOns\\AutoScript\\AutoScript.lua:26\n}\nFrameOnUpdate = <function> defined @Interface\\AddOns\\AutoScript\\AutoScript.lua:77\ng = <unnamed> {\n 0 = <userdata>\n}\nFrameOnUpdate = <function> defined @Interface\\AddOns\\AutoScript\\AutoScript.lua:79\ng = <unnamed> {\n 0 = <userdata>\n}\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"OnUpdate\"\n(*temporary) = <function> defined @Interface\\AddOns\\AutoScript\\AutoScript.lua:79\n(*temporary) = nil\n(*temporary) = <userdata>\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index global 'ShapeshiftBarFrame' (a nil value)\"\n",
+			["timestamp"] = "2014-01-28 04:11:11",
+			["context"] = "Global",
+			["stack"] = "Interface\\AddOns\\AutoScript\\AutoScript.lua:81: in main chunk\n",
+		}, -- [1]
+		{
+			["message"] = "Interface\\AddOns\\SantaUI\\Actionbars.lua:21: attempt to index field '?' (a nil value)",
+			["count"] = 1,
+			["addons"] = "  Swatter, v5.19.5445 (QuiescentQuoll)\n  ActionBarSaver, v\n  Anticipation, v0.1\n  ArenaRaidIcons, v\n  Assassin, v5.4.2-0\n  AutoScript, v\n  BattlegroundTargets, v50400-1\n  ClawResources, v4.0.6\n  GladiatorlosSA, v2.0\n  Gladius, v3.0.1\n  HealersHaveToDie, v2.3\n  IceHUD, v1.8.18.1 (Revision: 961)\n  KeybindTrainer, v1.1\n  LoseControl, v5.41\n  MoveAnything, v13.8.7\n  NameplateCooldowns, v\n  OmniCC, v5.4.3\n  Postal, v3.5.1\n  Recount, v\n  ReforgeLite, v1.37\n  SantaUI, v\n  BlizRuntimeLib_enUS v5.4.2.50400 <us>\n  (ck=1fc)\n",
+			["locals"] = "(for index) = 1\n(for limit) = 4\n(for step) = 1\ni = 1\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"1\"\n(*temporary) = <userdata>\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index field '?' (a nil value)\"\n",
+			["timestamp"] = "2014-01-28 04:11:18",
+			["context"] = "Global",
+			["stack"] = "Interface\\AddOns\\SantaUI\\Actionbars.lua:21: in main chunk\n",
+		}, -- [2]
+		{
+			["message"] = "Interface\\AddOns\\SantaUI\\Mouseover.lua:25: attempt to index local 'frame' (a nil value)",
+			["count"] = 1,
+			["addons"] = "  Swatter, v5.19.5445 (QuiescentQuoll)\n  ActionBarSaver, v\n  Anticipation, v0.1\n  ArenaRaidIcons, v\n  Assassin, v5.4.2-0\n  AutoScript, v\n  BattlegroundTargets, v50400-1\n  ClawResources, v4.0.6\n  GladiatorlosSA, v2.0\n  Gladius, v3.0.1\n  HealersHaveToDie, v2.3\n  IceHUD, v1.8.18.1 (Revision: 961)\n  KeybindTrainer, v1.1\n  LoseControl, v5.41\n  MoveAnything, v13.8.7\n  NameplateCooldowns, v\n  OmniCC, v5.4.3\n  Postal, v3.5.1\n  Recount, v\n  ReforgeLite, v1.37\n  SantaUI, v\n  BlizRuntimeLib_enUS v5.4.2.50400 <us>\n  (ck=1fc)\n",
+			["locals"] = "frame = nil\nincludeChildren = true\nshow = <function> defined @Interface\\AddOns\\SantaUI\\Mouseover.lua:16\nhide = <function> defined @Interface\\AddOns\\SantaUI\\Mouseover.lua:20\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = <table> {\n}\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index local 'frame' (a nil value)\"\n",
+			["timestamp"] = "2014-01-28 04:11:18",
+			["context"] = "Global",
+			["stack"] = "Interface\\AddOns\\SantaUI\\Mouseover.lua:25: in function `enableMouseOver'\nInterface\\AddOns\\SantaUI\\Mouseover.lua:54: in main chunk\n",
+		}, -- [3]
+		{
+			["message"] = "Interface\\AddOns\\SantaUI\\UnitFrames.lua:112: attempt to call global 'TextStatusBar_CapDisplayOfNumericValue' (a nil value)",
+			["count"] = 1000,
+			["addons"] = "  Swatter, v5.19.5445 (QuiescentQuoll)\n  ActionBarSaver, v\n  Anticipation, v0.1\n  ArenaRaidIcons, v\n  Assassin, v5.4.2-0\n  AutoScript, v\n  Babylonian, v5.1.DEV.332(/embedded)\n  BattlegroundTargets, v50400-1\n  ClawResources, v4.0.6\n  Configator, v5.1.DEV.359(/embedded)\n  DebugLib, v5.1.DEV.337(/embedded)\n  GladiatorlosSA, v2.0\n  Gladius, v3.0.1\n  HealersHaveToDie, v2.3\n  IceHUD, v1.8.18.1 (Revision: 961)\n  Informant, v5.19.5445 (QuiescentQuoll)\n  KeybindTrainer, v1.1\n  LibExtraTip, v5.12.DEV.355(/embedded)\n  LoseControl, v5.41\n  MoveAnything, v13.8.7\n  NameplateCooldowns, v\n  OmniCC, v5.4.3\n  Postal, v3.5.1\n  Recount, v\n  ReforgeLite, v1.37\n  SantaUI, v\n  SlideBar, v5.19.5445 (QuiescentQuoll)\n  stealthalert, v\n  Stubby, v5.19.5445 (QuiescentQuoll)\n  TidyPlates, v6.13.3\n  TidyPlatesGraphite, v\n  TidyPlatesHub, v\n  TidyPlatesWidgets, v\n  TipHelper, v5.12.DEV.351(/embedded)\n  BlizRuntimeLib_enUS v5.4.2.50400 <us>\n  (ck=39b)\n",
+			["locals"] = "self = <unnamed> {\n 0 = <userdata>\n}\ne = 2.5030000209808\nMana = 0\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = TargetFrameTextureFrameManaBarText {\n 0 = <userdata>\n}\n(*temporary) = nil\n(*temporary) = 0\n(*temporary) = \"attempt to call global 'TextStatusBar_CapDisplayOfNumericValue' (a nil value)\"\n",
+			["timestamp"] = "2014-01-28 04:12:05",
+			["context"] = "Global",
+			["stack"] = "Interface\\AddOns\\SantaUI\\UnitFrames.lua:112: in function <Interface\\AddOns\\SantaUI\\UnitFrames.lua:110>\n",
+		}, -- [4]
+	},
+	["autoshow"] = true,
+}

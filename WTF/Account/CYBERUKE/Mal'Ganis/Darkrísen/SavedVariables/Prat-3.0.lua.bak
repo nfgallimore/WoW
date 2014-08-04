@@ -1,0 +1,5 @@
+
+Prat3CharDB = {
+	["history"] = {
+	},
+}

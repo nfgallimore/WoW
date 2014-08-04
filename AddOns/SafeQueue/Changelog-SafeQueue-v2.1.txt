@@ -1,0 +1,12 @@
+tag v2.1
+dc35a85238f46886c08db0fad95d00e455fc0b4d
+Jordon <jordon@localhost>
+2013-09-13 19:35:15 -0700
+
+Tagging as v2.1
+
+
+--------------------
+
+Jordon:
+	- update toc to 5.4

@@ -1,0 +1,41 @@
+
+AucAdvancedConfig = {
+	["version"] = 1,
+	["profile.Default"] = {
+		["stat"] = {
+			["sales"] = {
+				["ignoredsigs"] = {
+				},
+			},
+		},
+		["util"] = {
+			["automagic"] = {
+				["SavedMailButtons"] = {
+				},
+			},
+			["pricelevel"] = {
+			},
+		},
+	},
+	["users.Sargeras.Darkrizen"] = "Default",
+}
+AucAdvancedData = {
+	["AserArbitrageRealms"] = {
+		["Sargeras"] = "Darkrizen",
+	},
+	["Stats"] = {
+	},
+	["UtilSearchUiData"] = {
+		["Global"] = {
+			["configator.left"] = 190.0000305175781,
+			["configator.top"] = 650,
+		},
+		["Current"] = {
+			["snatch.itemsList"] = {
+			},
+		},
+		["Version"] = 1,
+		["SavedSearches"] = {
+		},
+	},
+}

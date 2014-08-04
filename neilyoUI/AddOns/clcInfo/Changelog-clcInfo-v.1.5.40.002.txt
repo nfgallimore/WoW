@@ -1,0 +1,53 @@
+------------------------------------------------------------------------
+r295 | abija | 2013-09-28 16:01:47 +0000 (Sat, 28 Sep 2013) | 1 line
+Changed paths:
+   A /tags/v.1.5.40.002 (from /trunk:294)
+
+Tagging as v.1.5.40.002
+------------------------------------------------------------------------
+r294 | abija | 2013-09-27 13:30:56 +0000 (Fri, 27 Sep 2013) | 1 line
+Changed paths:
+   M /trunk/retmodule/rotation.lua
+
+- ret 4t16 test
+------------------------------------------------------------------------
+r293 | abija | 2013-09-27 05:54:17 +0000 (Fri, 27 Sep 2013) | 1 line
+Changed paths:
+   M /trunk/retmodule/rotation.lua
+
+- ret 4t16 test
+------------------------------------------------------------------------
+r291 | abija | 2013-09-11 16:49:32 +0000 (Wed, 11 Sep 2013) | 1 line
+Changed paths:
+   M /trunk/retmodule/rotation.lua
+
+- ds_4t16_5hp
+------------------------------------------------------------------------
+r290 | abija | 2013-09-11 11:56:51 +0000 (Wed, 11 Sep 2013) | 1 line
+Changed paths:
+   M /trunk/data/paladin/protection.lua
+
+- paladin/protection: removed cs -> hotr when weakened blow debuff was less than 5s on target
+------------------------------------------------------------------------
+r289 | abija | 2013-09-11 05:52:33 +0000 (Wed, 11 Sep 2013) | 2 lines
+Changed paths:
+   M /trunk/clcInfo.toc
+   M /trunk/clcInfo_Options/clcInfo_Options.toc
+   M /trunk/retmodule/rotation.lua
+
+- toc update for 5.4
+- 4pt16 (not tested)
+------------------------------------------------------------------------
+r288 | abija | 2013-09-08 06:30:13 +0000 (Sun, 08 Sep 2013) | 1 line
+Changed paths:
+   M /trunk/retmodule/options.lua
+
+- minor example text update
+------------------------------------------------------------------------
+r287 | abija | 2013-09-07 21:46:35 +0000 (Sat, 07 Sep 2013) | 2 lines
+Changed paths:
+   M /trunk/data/global_micon.lua
+
+- added option to show only a buff, specified as 3rd input, to MIconRaidUnitAuras
+- smartsvn test
+------------------------------------------------------------------------

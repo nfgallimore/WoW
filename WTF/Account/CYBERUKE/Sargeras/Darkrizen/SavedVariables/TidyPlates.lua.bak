@@ -1,0 +1,10 @@
+
+TidyPlatesOptions = {
+	["WelcomeShown"] = true,
+	["DisableSoftTransitions"] = false,
+	["FriendlyAutomation"] = "No Automation",
+	["EnemyAutomation"] = "No Automation",
+	["primary"] = "Blizzard",
+	["CompatibilityMode"] = false,
+	["secondary"] = "Neon/|cFF3782D1Tank",
+}

@@ -1,0 +1,105 @@
+VER 3 010000000000001D " b" "INV_Misc_QuestionMark"
+#showtooltip blind
+/cast [nomod] Blind
+/cast [mod:shift,target=focus] Blind
+/cast [mod:ctrl,target=arena4] Blind
+/cast [mod:alt,target=arena5] Blind
+END
+VER 3 0100000000000019 " cs" "INV_Misc_QuestionMark"
+#showtooltip Shadow Dance
+/cast Shadow Dance
+/cast Premeditation
+/cast Cheap Shot
+/startattack
+END
+VER 3 010000000000002B " rk" "INV_Misc_QuestionMark"
+#show Redirect
+/castsequence reset=59 Redirect, Kidney Shot
+END
+VER 3 0100000000000029 "ab" "INV_Misc_QuestionMark"
+#show Sprint
+/startattack [stance:0]
+/startattack [stance:3]
+/cast Premeditation
+/use [stance:3] 13
+/use [stance:3] 14
+/use [stance:3] 10
+/cast [stance:3] Ambush 
+/cast [stance:0] Backstab
+END
+VER 3 0100000000000015 "b3" "INV_Misc_QuestionMark"
+/cast [target=arena3] Blind
+END
+VER 3 010000000000000A "e" "INV_Misc_QuestionMark"
+#show Redirect
+/targetenemyplayer [notarget]
+/startattack [stance:0][stance:3]
+/cast [nomod][stance:0][stance:3] Eviscerate
+/use [stance:3] 13
+/use [stance:3] 14
+/use [stance:3] 10
+END
+VER 3 0100000000000026 "Frd" "INV_Misc_QuestionMark"
+/stopattack
+/target focus
+/castsequence reset=59 Redirect, Kidney Shot
+END
+VER 3 0100000000000013 "fs" "INV_Misc_QuestionMark"
+#show Blind
+/cast [target=focus] Sap
+END
+VER 3 0100000000000014 "Fshs" "INV_Misc_QuestionMark"
+/cast [target=focus] Shadowstep
+/target focus
+/cast Sap
+#Show Cold Blood
+#/cast Cold Blood
+#/use Vicious Gladiator's Leather Gloves
+END
+VER 3 0100000000000012 "k" "INV_Misc_QuestionMark"
+/startattack
+/targetenemyplayer [notarget]
+/cast [mod:shift,target=focus] Kick; Kick
+/cancelaura hand of protection
+END
+VER 3 0100000000000020 "Mh" "INV_Misc_QuestionMark"
+/use 0 1
+END
+VER 3 0100000000000016 "OH" "INV_Misc_QuestionMark"
+/use 0 2
+END
+VER 3 0100000000000028 "psn" "INV_Misc_QuestionMark"
+/use [mod:ctrl]Deadly Poison;[mod:altl]Mind-numbing Poison;[mod:shift]Wound Poison;Crippling Poison
+/use [button:1]16;[button:2]17;[button:3]18
+/click StaticPopup1Button1
+END
+VER 3 0100000000000021 "s" "INV_Misc_QuestionMark"
+#show Redirect
+/cancelaura Stealth
+END
+VER 3 010000000000001B "SdGar" "INV_Misc_QuestionMark"
+/cast Shadow Dance
+/use 13
+/use 14
+/use 10
+/cast Premeditation
+/cast Garrote
+/startattack
+END
+VER 3 010000000000002A "SdS" "INV_Misc_QuestionMark"
+/cast Shadow Dance
+/cleartarget
+/targetenemyplayer
+/cast Sap
+END
+VER 3 0100000000000024 "shiv" "INV_MISC_QUESTIONMARK"
+#show Kidney Shot
+/targetenemyplayer [notarget]
+/cast Shiv
+/cast Throw
+END
+VER 3 010000000000002C "Step3" "INV_Misc_QuestionMark"
+-/cast [target=arena3] Blind
+/cast [target=arena3] Shadowstep
+/target arena3
+END

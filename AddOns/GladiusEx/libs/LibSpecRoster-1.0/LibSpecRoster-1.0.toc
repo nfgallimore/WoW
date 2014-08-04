@@ -1,0 +1,14 @@
+## Interface: 50400
+## Title: LibSpecRoster-1.0
+## Notes: Tracks specialization and talent data for group members
+## Author: msaint
+## Version: r23
+## X-Curse-Packaged-Version: r23
+## X-Curse-Project-Name: LibSpecRoster
+## X-Curse-Project-ID: libspecroster
+## X-Curse-Repository-ID: wow/libspecroster/mainline
+
+
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+lib.xml

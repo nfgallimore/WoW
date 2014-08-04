@@ -1,0 +1,17 @@
+
+Postal3DB = {
+	["global"] = {
+		["BlackBook"] = {
+			["alts"] = {
+				"Darkrizen|Sargeras|Alliance|90|ROGUE", -- [1]
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Darkrizen - Sargeras"] = "Darkrizen - Sargeras",
+	},
+	["profiles"] = {
+		["Darkrizen - Sargeras"] = {
+		},
+	},
+}

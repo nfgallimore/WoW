@@ -1,0 +1,66 @@
+VER 3 010000000000000E " " "INV_MISC_QUESTIONMARK"
+/cast Hammer of Justice
+END
+VER 3 010000000000000F " " "INV_MISC_QUESTIONMARK"
+/cast [target=party2] hand of Freedom
+/p Hand of Freedom on mmh!
+END
+VER 3 0100000000000011 " LOCK" "INV_MISC_QUESTIONMARK"
+/cast [target=Åstaroth] hand of Freedom
+/p Hand of Freedom on mmh!
+END
+VER 3 0100000000000010 " LOCK" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [target=Åstaroth] Hand of Protection
+END
+VER 3 010000000000000D "Focus" "INV_MISC_QUESTIONMARK"
+/cast [target=focus] Rebuke
+END
+VER 3 0100000000000006 "Focus" "INV_MISC_QUESTIONMARK"
+/cast [target=mmh] Sacred Shield
+/rw Casting Sacred Shield on Mmh!
+END
+VER 3 0100000000000007 "Focus" "INV_MISC_QUESTIONMARK"
+/cast [target=mmh] Flash of Light
+/rw Flash of Light om Mmh
+END
+VER 3 0100000000000008 "Focus" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [target=focus] Repentance
+/rw Casting Repentance on %f
+END
+VER 3 010000000000000B "Focus" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [target=focus] hammer of justice
+/rw Hammer of Justice on %f
+END
+VER 3 0100000000000005 "Focus" "INV_MISC_QUESTIONMARK"
+/cast [target=party1] word of glory
+/rw Casting Word of Glory on Mmh
+END
+VER 3 0100000000000002 "GetEM" "INV_MISC_QUESTIONMARK"
+/cast Guardian of Ancient Kings
+/cast Avenging Wrath
+/cast Divine Protection
+/cast Holy Avenger
+/cast Dreadful Gladiator's Badge of Victory
+/cast Execution Sentence
+END
+VER 3 010000000000000A "SHAM" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [target=Sóx] Hand of Protection
+END
+VER 3 0100000000000009 "SHAM" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/tar party1
+/cast [target=Sóx] Hand of Sacrifice
+/p Hand of Sacrifice
+END
+VER 3 0100000000000003 "SOX" "INV_MISC_QUESTIONMARK"
+/cast [target=Sóx] hand of Freedom
+/p Hand of Freedom on mmh!
+END
+VER 3 0100000000000004 "SOX" "INV_MISC_QUESTIONMARK"
+#showtooltip Cleanse
+/cast [target=Sóx] Cleanse
+END

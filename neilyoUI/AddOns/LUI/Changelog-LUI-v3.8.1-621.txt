@@ -1,0 +1,49 @@
+------------------------------------------------------------------------
+r622 | chaoslux | 2013-09-28 16:01:54 +0000 (Sat, 28 Sep 2013) | 1 line
+Changed paths:
+   A /tags/v3.8.1-621 (from /trunk:621)
+
+Tagging as v3.8.1-621
+------------------------------------------------------------------------
+r621 | chaoslux | 2013-09-14 08:39:05 +0000 (Sat, 14 Sep 2013) | 2 lines
+Changed paths:
+   M /trunk/LUI.lua
+   M /trunk/modules/micromenu.lua
+   M /trunk/modules/tooltip.lua
+
+- Typing /lui no longer open the option menu in combat. (Unless previously loaded)
+- Fixed a few more tooltip errors such as spectating pet battles. (Hack-ish implementation)
+------------------------------------------------------------------------
+r620 | kitkeh | 2013-09-13 22:51:22 +0000 (Fri, 13 Sep 2013) | 1 line
+Changed paths:
+   M /trunk/modules/threatbar.lua
+
+- Threat Bar: make Gradient color work for the bar while in Experience and Reputation mode
+------------------------------------------------------------------------
+r619 | chaoslux | 2013-09-12 18:17:09 +0000 (Thu, 12 Sep 2013) | 1 line
+Changed paths:
+   M /trunk/modules/tooltip.lua
+
+- Quick fix to tooltips in Heal/Tank Proving Grounds. Blizzard forgot to give them any race information. 
+------------------------------------------------------------------------
+r618 | kitkeh | 2013-09-10 11:03:18 +0000 (Tue, 10 Sep 2013) | 6 lines
+Changed paths:
+   M /trunk/LUI.toc
+   A /trunk/media/templates/v3/micro_store.blp
+   M /trunk/modules/bags.lua
+   M /trunk/modules/datatext.lua
+   M /trunk/modules/micromenu.lua
+
+First update for WoW 5.4:
+- Micro Menu: Add a button to show the in game Store frame. NOTE: this is temporarily disabled until I can test it on the live version of 5.4.
+- Bags: Handle highlighting (and clearing the highlight) of items purchased from the in game Store.
+- Info Text: Update Raid info display to handle displaying LFR and Flexible raid information. NOTE: Flexible info dry coded and not tested.
+
+NOTE: This update is designed for WoW 5.4 and you will probably get errors if you try to use it with WoW 5.3.
+------------------------------------------------------------------------
+r617 | chaoslux | 2013-08-22 21:02:57 +0000 (Thu, 22 Aug 2013) | 1 line
+Changed paths:
+   M /trunk/modules/datatext.lua
+
+- Added World Bosses Lockout information. 
+------------------------------------------------------------------------

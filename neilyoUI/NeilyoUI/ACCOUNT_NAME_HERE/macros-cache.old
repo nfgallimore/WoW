@@ -1,0 +1,194 @@
+MACRO 147 " " Spell_Shadow_Possession
+#showtooltip Premeditation
+/target focus
+/cast Deadly Throw
+/targetlasttarget
+END
+MACRO 139 " " Spell_Shadow_SoulLeech_2
+/cancelaura hand of protection
+/use Pine Nut Bread
+/use Sweet Potato Bread
+/use Conjured Mana Cake
+/use Buttery Wheat Roll
+END
+MACRO 217 " " INV_Misc_QuestionMark
+#showtooltip Vicious Gladiator's Medallion of Tenacity
+/use Every Man for Himself(Racial)
+/cast !Stealth
+END
+MACRO 135 " d" INV_Misc_QuestionMark
+#show Dismantle
+/cast [mod:shift,target=focus] Dismantle; Dismantle
+END
+MACRO 189 " s" INV_Misc_QuestionMark
+#show shadowstep
+/cast Sap
+END
+MACRO 204 " UF" Ability_Creature_Cursed_04
+/run PartyMemberFrame1:ClearAllPoints() PartyMemberFrame1:SetPoint("TOPLEFT", 188, -250)
+/run PartyMemberFrame2:ClearAllPoints() PartyMemberFrame2:SetPoint("TOPLEFT", 188, -170)
+END
+MACRO 220 "1" INV_Misc_QuestionMark
+/cast [@gympd,help,nodead,exists]!Tricks of the Trade;!Tricks of the Trade
+END
+MACRO 164 "2" INV_Misc_QuestionMark
+#show Tricks of the Trade
+/cast [@bgl,help,nodead,exists]!Tricks of the Trade;!Tricks of the Trade
+END
+MACRO 186 "a" INV_Misc_QuestionMark
+#show shadow dance
+/cast Premeditation
+/cast Ambush
+END
+MACRO 198 "B1" INV_Misc_QuestionMark
+/cast [target=arena1] Blind
+END
+MACRO 199 "B2" INV_Misc_QuestionMark
+/cast [target=arena2] Blind
+END
+MACRO 176 "cs" INV_Misc_QuestionMark
+#show Vanish
+/cast Vanish
+/cast Premeditation
+/cast Cheap Shot
+/sw 23
+/sw play
+END
+MACRO 211 "cs" INV_Misc_QuestionMark
+#show Stealth
+/stopattack
+/cast !Stealth
+/cast Premeditation
+/cast Cheap Shot
+/sw 23
+/sw play
+END
+MACRO 223 "de" INV_Misc_QuestionMark
+#show Redirect
+/use Vicious Gladiator's Badge of Conquest
+/use Vicious Gladiator's Leather Gloves
+/startattack
+/cast Eviscerate
+END
+MACRO 221 "dfc" INV_Misc_QuestionMark
+#show Cloak of Shadows
+/cast Shadow Dance
+/target focus
+/cast Cheap Shot
+/targetlasttarget
+/startattack
+/sw 23
+/sw play
+END
+MACRO 200 "en" INV_Misc_QuestionMark
+#show cold blood
+/startattack
+/cast Envenom
+END
+MACRO 192 "F1" INV_Misc_QuestionMark
+#/focus arena1
+/focus [@mouseover,nodead,exists]; [@target,exists] 
+END
+MACRO 193 "F2" INV_Misc_QuestionMark
+/focus arena2
+END
+MACRO 194 "F3" INV_Misc_QuestionMark
+/focus arena3
+END
+MACRO 229 "fc" INV_Misc_QuestionMark
+#show Cloak of Shadows
+/target focus
+/cast Premeditation
+/cast Cheap Shot
+/targetlasttarget
+END
+MACRO 132 "g" INV_Misc_QuestionMark
+#show Stealth
+/castsequence [target=focus] reset=9 Gouge, Slice and Dice
+END
+MACRO 227 "gr" INV_Misc_QuestionMark
+#show Stealth
+/target focus
+/cast Premeditation
+/cast Garrote
+/targetlasttarget
+END
+MACRO 150 "gr" INV_Misc_QuestionMark
+#show Gouge
+/cast Premeditation
+/cast Garrote
+END
+MACRO 207 "h" INV_Misc_QuestionMark
+#show Shadowstep
+#show Vendetta
+/startattack
+#/cast Mutilate
+/cast Hemorrhage
+/use [stance:3] 13
+/use [stance:3] 14
+/use [stance:3] 10
+END
+MACRO 239 "k" INV_Misc_QuestionMark
+/cast Kidney Shot
+/sw 25
+/sw play
+END
+MACRO 21 "Mount" Ability_Mount_NetherDrakeElite
+/run if IsMounted()then return end local t,m m=GetRealZoneText() if m=="Dalaran" and GetSubZoneText()~="Krasus' Landing" or m=="Wintergrasp" or not IsFlyableArea() then t=2 else t=6 end CallCompanion("MOUNT",t)
+/dismount
+END
+MACRO 205 "r" INV_Misc_QuestionMark
+#show Sprint
+/cast Shadow Dance
+/cast [target=focus] Sap
+END
+MACRO 149 "s" INV_Misc_QuestionMark
+#show Kidney Shot
+/stopattack
+/cleartarget
+/targetenemyplayer
+/cast Sap
+END
+MACRO 232 "s" INV_Misc_QuestionMark
+#show Dismantle
+/cast Shadow Dance
+/cast Sap
+END
+MACRO 228 "SdFg" INV_Misc_QuestionMark
+/cast Shadow Dance
+/target focus
+/cast Garrote
+/targetlasttarget
+/startattack
+END
+MACRO 233 "shiv" INV_Misc_QuestionMark
+/target focus
+/cast Shiv
+/cast Throw
+/targetlasttarget
+END
+MACRO 240 "Step1" INV_Misc_QuestionMark
+/target arena1
+/cast Shadowstep
+END
+MACRO 241 "Step2" INV_Misc_QuestionMark
+/target arena2
+/cast Shadowstep
+END
+MACRO 242 "tot" Ability_Creature_Cursed_04
+/run local f = GetMouseFocus(); f:SetUserPlaced(true) f:SetMovable(true) f:EnableMouse(true) f:RegisterForDrag("LeftButton") f:SetScript("OnDragStart",f.StartMoving) f:SetScript("OnDragStop",f.StopMovingOrSizing)
+END
+MACRO 202 "UF2" Ability_Creature_Cursed_04
+/run ArenaEnemyFrame1:ClearAllPoints() ArenaEnemyFrame1:SetPoint("TOPLEFT", -320, -15)
+/run PartyMemberFrame3:ClearAllPoints() PartyMemberFrame3:SetPoint("TOPLEFT", 188, -90)
+/script PartyMemberFrame1:SetScale(1.1)
+/script PartyMemberFrame2:SetScale(1.1)
+END
+MACRO 236 "UFarenaSize" Ability_Creature_Cursed_04
+/script ArenaEnemyFrame1:SetScale(1.1)
+/script ArenaEnemyFrame2:SetScale(1.1)
+/script ArenaEnemyFrame3:SetScale(1.1)
+/script ArenaEnemyFrame4:SetScale(1.1)
+/script ArenaEnemyFrame5:SetScale(1.1)
+/script PartyMemberFrame3:SetScale(1.1)
+END

@@ -1,0 +1,2 @@
+
+CappingCharDB = nil

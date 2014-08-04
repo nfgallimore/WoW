@@ -1,0 +1,1 @@
+## Interface: 50400## Version: 1.1.6## Title: WhisperInvite## Notes: Autoinvite over many channels## Title-deDE: WhisperInvite## Notes-deDE: Autoinvite über mehrende Channels## SavedVariables: WhisperInviteGlobal## SavedVariablesPerCharacter: WhisperInviteSettings## Author: Arekolocale\core.lualocale\deDE.lualocale\enEN.luaWhisperInvite.xml

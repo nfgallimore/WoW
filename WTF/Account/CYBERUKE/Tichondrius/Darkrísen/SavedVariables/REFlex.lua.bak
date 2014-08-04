@@ -1,0 +1,77 @@
+
+REFDatabase = {
+}
+REFSettings = {
+	["ArenaSupport"] = true,
+	["MiniBarScale"] = 1,
+	["MiniBarAnchor"] = "CENTER",
+	["OnlyNew"] = false,
+	["LastDay"] = "28",
+	["LastDayStats"] = {
+		["MMR"] = 0,
+		["MMRBG"] = 0,
+		["RBG"] = 0,
+		["Honor"] = 594,
+		["5v5"] = 0,
+		["CP"] = 1575,
+		["3v3"] = 0,
+		["2v2"] = 1077,
+	},
+	["RBGListFirstTime"] = true,
+	["ShowMiniBar"] = false,
+	["LDBBGMorph"] = true,
+	["RBGSupport"] = true,
+	["CurrentMMR"] = 0,
+	["UNBGSupport"] = true,
+	["LDBHK"] = false,
+	["MinimapPos"] = 45,
+	["MiniBarVisible"] = {
+		{
+			["HonorKills"] = 1,
+			["KillingBlows"] = 1,
+			["Healing"] = 2,
+			["Damage"] = 2,
+		}, -- [1]
+		{
+			["HonorKills"] = 1,
+			["KillingBlows"] = 1,
+			["Healing"] = 2,
+			["Damage"] = 2,
+		}, -- [2]
+	},
+	["AllowQuery"] = true,
+	["ShowDetectedBuilds"] = true,
+	["LDBShowTotalBG"] = false,
+	["LDBCPCap"] = true,
+	["CurrentMMRBG"] = 0,
+	["LDBShowTotalArena"] = false,
+	["MiniBarX"] = 0,
+	["ArenasListFirstTime"] = true,
+	["MiniBarY"] = 0,
+	["LDBShowQueues"] = true,
+	["ShowMinimapButton"] = true,
+	["Version"] = 21,
+	["LDBShowPlace"] = false,
+	["MiniBarOrder"] = {
+		{
+			"KillingBlows", -- [1]
+			"HonorKills", -- [2]
+			"Damage", -- [3]
+			"Healing", -- [4]
+			"Deaths", -- [5]
+			"KDRatio", -- [6]
+			"Honor", -- [7]
+		}, -- [1]
+		{
+			"KillingBlows", -- [1]
+			"HonorKills", -- [2]
+			"Damage", -- [3]
+			"Healing", -- [4]
+			"Deaths", -- [5]
+			"KDRatio", -- [6]
+			"Honor", -- [7]
+		}, -- [2]
+	},
+}
+REFDatabaseA = {
+}

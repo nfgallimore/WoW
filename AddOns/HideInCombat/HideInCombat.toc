@@ -1,0 +1,9 @@
+## Interface: 50001
+## Title: HideInCombat
+## Notes: Hides chat, tooltip and minimap frames while in combat and in solor/party/raid
+## Author: Taracque, Dögrovás of Arathor
+## Version: 0.0.5
+## SavedVariables: HideInCombatDB
+
+HideInCombat.lua
+Localization_enUS.lua

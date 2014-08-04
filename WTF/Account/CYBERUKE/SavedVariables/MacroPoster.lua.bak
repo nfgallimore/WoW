@@ -1,0 +1,7 @@
+
+MacroPosterDB = {
+	["enabled"] = true,
+	["print_count"] = 16,
+	["delay"] = 5,
+	["last_print"] = 1394269487,
+}

@@ -1,0 +1,9 @@
+
+InformantConfig = {
+	["position"] = {
+		["y"] = 399.9999694824219,
+		["x"] = 640.0000610351562,
+	},
+	["welcomed"] = true,
+}
+InformantLocalUpdates = nil

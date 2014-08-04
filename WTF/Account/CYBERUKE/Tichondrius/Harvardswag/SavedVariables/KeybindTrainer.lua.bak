@@ -1,0 +1,43 @@
+
+KT_SavedStats = {
+	["actions"] = {
+	},
+	["trials"] = {
+	},
+}
+KT_SavedUIConfigVals = {
+	["fieldKT_ActionsLastTimeGraph"] = 1,
+	["fieldKT_ActionsLastMissGraph"] = 2,
+	["typeKT_ActionsAvgTimeGraph"] = "actions",
+	["funcKT_ActionsMaxTimeGraph"] = nil --[[ skipped inline function ]],
+	["KT_SelectStatisticKT_ActionsAvgTimeGraph"] = 2,
+	["KT_SelectTrialtrial_all"] = 2,
+	["KT_SelectStatisticKT_ActionsMaxTimeGraph"] = 5,
+	["typeKT_ActionsLastMissGraph"] = "actions",
+	["KT_SelectStatisticKT_ActionsLastTimeGraph"] = 3,
+	["KT_Bartender"] = true,
+	["KT_SelectTrialtrial_def_title"] = 1,
+	["KT_SelectStatistic"] = "KT_ActionsLastMissGraph",
+	["KT_SelectStatisticKT_ActionsAvgMissGraph"] = 4,
+	["funcKT_ActionsAvgTimeGraph"] = nil --[[ skipped inline function ]],
+	["funcKT_ActionsAvgMissGraph"] = nil --[[ skipped inline function ]],
+	["KT_SelectTrialtrial_cust_title"] = 3,
+	["KT_SelectTrialtrial_bartender"] = 2,
+	["KT_SelectTrial"] = "trial_bartender",
+	["KT_RandomTime"] = true,
+	["typeKT_ActionsAvgMissGraph"] = "actions",
+	["KT_SelectStatisticKT_ActionsLastMissGraph"] = 1,
+	["KT_RandomPosition"] = true,
+	["KT_RandomOrder"] = true,
+	["fieldKT_ActionsMaxTimeGraph"] = 1,
+	["KT_IconSizeSlider"] = 2.040008783340454,
+	["fieldKT_ActionsAvgMissGraph"] = 2,
+	["KT_Continuous"] = true,
+	["typeKT_ActionsMaxTimeGraph"] = "actions",
+	["typeKT_ActionsLastTimeGraph"] = "actions",
+	["KT_ShowTimer"] = true,
+	["KT_SelectTrialtrial_visible"] = 3,
+	["funcKT_ActionsLastMissGraph"] = nil --[[ skipped inline function ]],
+	["funcKT_ActionsLastTimeGraph"] = nil --[[ skipped inline function ]],
+	["fieldKT_ActionsAvgTimeGraph"] = 1,
+}

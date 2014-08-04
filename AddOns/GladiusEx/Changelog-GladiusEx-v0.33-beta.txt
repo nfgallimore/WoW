@@ -1,0 +1,12 @@
+tag v0.33-beta
+2babdf355ea0ebc79cdcb7c2810898baafb408cc
+slaren <ddevesa@gmail.com>
+2014-02-18 17:05:44 +0100
+
+updating libraries
+
+
+--------------------
+
+slaren:
+	- cooldowns: added a name to the cooldown spiral frames so that it can be filtered by OmniCC

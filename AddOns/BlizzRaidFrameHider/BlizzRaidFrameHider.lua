@@ -1,0 +1,8 @@
+local f = CreateFrame("Frame", nil, UIParent)
+	f:RegisterEvent("PLAYER_ENTERING_WORLD")
+	f:SetScript("OnEvent", function(self, event)
+			CompactRaidFrameManager:UnregisterAllEvents()
+			CompactRaidFrameManager:Hide()
+			CompactRaidFrameContainer:UnregisterAllEvents()
+			CompactRaidFrameContainer:Hide()
+end)

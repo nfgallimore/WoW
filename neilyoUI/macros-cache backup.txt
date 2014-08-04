@@ -1,0 +1,113 @@
+VER 3 010000000000003D " " "INV_MISC_QUESTIONMARK"
+#showtooltip Vanish
+/targetenemyplayer [notarget]
+/cast Vanish
+/cast Premeditation
+/cast Cheap Shot
+/sw 23
+/sw play
+END
+VER 3 0100000000000029 "ab" "INV_MISC_QUESTIONMARK"
+#showtooltip [mod:alt] Hemorrhage; [stealth][stance:3] Ambush; Backstab
+/cast [stealth] Premeditation
+/cast [mod:alt] Hemorrhage
+/cast [stealth][stance:3] Ambush
+/cast [nostealth] Backstab
+/cast [stealth] Slice and Dice
+/use [stance:3] 13
+END
+VER 3 010000000000003F "aoe" "INV_MISC_QUESTIONMARK"
+#showtooltip [mod:ctrl] Shroud of Concealment; [mod:shift]  Crimson Tempest; [mod:alt] Shadow Walk; Fan of Knives
+/cast [mod:shift] Crimson Tempest
+/cast [mod:alt] Shadow Walk
+/cast [mod:ctrl] Shroud of Concealment
+/cast Fan of Knives
+END
+VER 3 010000000000003E "blind" "INV_MISC_QUESTIONMARK"
+#showtooltip blind
+/cast [mod:alt, target=focus] Blind; Blind
+END
+VER 3 0100000000000041 "burst" "INV_MISC_QUESTIONMARK"
+#showtooltip Shadow blades
+/cast Shadow blades
+/use 13
+/cast [target=nockd] Tricks of the Trade
+END
+VER 3 0100000000000040 "cloak" "INV_MISC_QUESTIONMARK"
+#showtooltip Cloak of Shadows
+/cast [mod:ctrl] Feint
+/cast [mod:shift] Recuperate
+/cast [nomod] Cloak of Shadows
+END
+VER 3 0100000000000033 "disarm" "INV_MISC_QUESTIONMARK"
+#showtooltip Dismantle
+/cast [mod:shift,target=focus] Dismantle; Dismantle
+/p Disarming %t
+END
+VER 3 010000000000000A "e" "INV_MISC_QUESTIONMARK"
+#showtooltip [mod:ctrl] Slice and Dice; Eviscerate
+/targetenemyplayer [notarget]
+/startattack [nostealth]
+/cast [mod:ctrl] Slice and Dice
+/cast [nomod] Eviscerate
+/cast [stealth] Premeditation
+END
+VER 3 0100000000000031 "evade" "INV_MISC_QUESTIONMARK"
+#showtooltip Evasion
+/cast Evasion
+/cast Feint
+/cast Combat Readiness
+/cast Growl
+/w party1 Using evasion!
+END
+VER 3 0100000000000030 "g" "INV_MISC_QUESTIONMARK"
+#showtooltip Gouge
+/cast [nomod][mod:shift, target=focus] Gouge; Gouge
+END
+VER 3 0100000000000012 "kick" "INV_MISC_QUESTIONMARK"
+#showtooltip Kick
+/startattack
+/targetenemyplayer [notarget]
+/castsequence [mod:shift,target=focus] reset=15 Kick, Gouge; reset=15 Kick, Gouge
+/cancelaura hand of protection
+END
+VER 3 010000000000003C "ks" "INV_MISC_QUESTIONMARK"
+#showtooltip [mod:ctrl][stealth] Cheap Shot; Kidney Shot
+/cancelaura Subterfuge
+/cast [mod:ctrl, nostealth] Shadow Dance
+/cast [mod:ctrl] Cheap Shot
+/cast [stealth][stance:3] Cheap Shot
+/cast [nomod, nostealth] Kidney Shot
+/sw 23
+/sw play
+END
+VER 3 0100000000000026 "rk" "INV_MISC_QUESTIONMARK"
+#showtooltip Redirect
+/stopattack
+/cast [mod:shift,target=focus] Premeditation; Premeditation
+/cast [mod:shift, target=focus] Shadowstep
+/castsequence [mod:shift, target=focus] reset=59 Redirect, Kidney Shot; reset=59 Redirect, Kidney Shot
+END
+VER 3 010000000000001D "s" "INV_MISC_QUESTIONMARK"
+#showtooltip [mod:alt] Vanish; Stealth
+/cast [nomod] Stealth
+/targetenemyplayer [notarget]
+/stopattack [nostealth]
+/cast [mod:alt] Vanish
+END
+VER 3 0100000000000035 "shiv" "INV_MISC_QUESTIONMARK"
+#showtooltip Shiv
+/targetenemyplayer [notarget]
+/cast [nomod][mod:shift, target=focus] Shiv
+/cast [nomod][mod:shift, target=focus] Throw
+END
+VER 3 0100000000000014 "step" "INV_MISC_QUESTIONMARK"
+#showtooltip Shadowstep
+/target [mod:ctrl] focus
+/targetenemyplayer [notarget]
+/cast [nomod] Shadowstep; [mod:ctrl, target=focus] Shadowstep
+END
+VER 3 010000000000003B "ToT" "INV_MISC_QUESTIONMARK"
+#showtooltip Tricks of the Trade
+/cast [target=Cuteycrackem]Tricks of the Trade
+END

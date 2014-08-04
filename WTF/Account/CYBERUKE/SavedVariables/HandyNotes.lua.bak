@@ -1,0 +1,19 @@
+
+HandyNotesDB = {
+	["profileKeys"] = {
+		["Darkrísen - Mal'Ganis"] = "Darkrísen - Mal'Ganis",
+	},
+	["profiles"] = {
+		["Darkrísen - Mal'Ganis"] = {
+		},
+	},
+}
+HandyNotes_HandyNotesDB = {
+	["profileKeys"] = {
+		["Darkrísen - Mal'Ganis"] = "Darkrísen - Mal'Ganis",
+	},
+	["profiles"] = {
+		["Darkrísen - Mal'Ganis"] = {
+		},
+	},
+}

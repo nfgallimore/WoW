@@ -1,0 +1,8 @@
+## Interface: 50200
+## Title: WinLossTracker
+## SavedVariables: player
+## Version: 1.1 beta
+## Author: Value
+## Notes: Allows you to track win-loss records against other players and specific teams. 
+
+WinLossTracker.lua

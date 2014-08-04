@@ -1,0 +1,84 @@
+
+BgStatisticsDB = {
+	["profileKeys"] = {
+		["Darkrizen - Tichondrius"] = "Darkrizen - Tichondrius",
+	},
+	["char"] = {
+		["Darkrizen - Tichondrius"] = {
+			[1394346557] = {
+				["zname"] = "Eye of the Storm",
+				["stats"] = {
+					"^1^SZances-Elune^N0^N18^N8^N76^N0^SBlood~`Elf^SPaladin^SPALADIN^N0^N15335191^N0^N0^N0^^", -- [1]
+					"^1^SExlager-BurningBlade^N1^N24^N2^N94^N0^SBlood~`Elf^SPaladin^SPALADIN^N578064^N14641279^N0^N0^N0^^", -- [2]
+					"^1^SZerorun-Gnomeregan^N0^N61^N2^N151^N1^SHuman^SPaladin^SPALADIN^N37775^N12558533^N0^N0^N0^^", -- [3]
+					"^1^SDarkrizen^N1^N48^N2^N138^N1^SHuman^SPaladin^SPALADIN^N334976^N11200989^N0^N0^N0^^", -- [4]
+					"^1^SLightkeeper-Garrosh^N1^N47^N2^N145^N1^SGnome^SPriest^SPRIEST^N1742982^N10722365^N0^N0^N0^^", -- [5]
+					"^1^SGiuliana-Stormrage^N1^N62^N0^N169^N1^SHuman^SMonk^SMONK^N1930924^N10693042^N0^N0^N0^^", -- [6]
+					"^1^SCocopúff-Runetotem^N6^N43^N4^N146^N1^SHuman^SWarlock^SWARLOCK^N7517539^N3116249^N0^N0^N0^^", -- [7]
+					"^1^SCurex-Azralon^N0^N17^N8^N77^N0^SUndead^SPriest^SPRIEST^N128213^N2915385^N0^N0^N0^^", -- [8]
+					"^1^SFearify-Drak'thul^N9^N51^N4^N158^N1^SPandaren^SMonk^SMONK^N6934625^N2622786^N0^N0^N0^^", -- [9]
+					"^1^SEddîe-Thrall^N1^N28^N3^N103^N0^SUndead^SMonk^SMONK^N5491503^N2388466^N0^N0^N0^^", -- [10]
+					"^1^SCleterella-Stormrage^N9^N64^N1^N154^N1^SHuman^SPriest^SPRIEST^N8226884^N2290514^N0^N0^N0^^", -- [11]
+					"^1^SDesacron-Darkspear^N3^N20^N5^N84^N0^SUndead^SWarlock^SWARLOCK^N2902893^N2140146^N0^N0^N0^^", -- [12]
+					"^1^SJadeshot-Darkspear^N4^N46^N2^N136^N1^SPandaren^SHunter^SHUNTER^N5420263^N1925442^N0^N0^N0^^", -- [13]
+					"^1^SRÿän-Thrall^N6^N26^N1^N98^N0^SOrc^SDeath~`Knight^SDEATHKNIGHT^N15236209^N1907074^N0^N0^N0^^", -- [14]
+					"^1^SDeådly-Mannoroth^N9^N45^N2^N140^N1^SHuman^SPaladin^SPALADIN^N7775024^N1658700^N0^N0^N0^^", -- [15]
+					"^1^SSwettlou^N1^N21^N8^N87^N0^SOrc^SShaman^SSHAMAN^N5670197^N1523935^N0^N0^N0^^", -- [16]
+					"^1^STaintedmage-Elune^N0^N13^N7^N67^N0^STroll^SMage^SMAGE^N5635357^N1387605^N0^N0^N0^^", -- [17]
+					"^1^SLockgodess-Elune^N1^N18^N5^N78^N0^SBlood~`Elf^SWarlock^SWARLOCK^N4407963^N1139984^N0^N0^N0^^", -- [18]
+					"^1^SNalem-Runetotem^N1^N5^N1^N38^N0^STroll^SDruid^SDRUID^N3689773^N1128501^N0^N0^N0^^", -- [19]
+					"^1^SOrganism-Kel'Thuzad^N6^N51^N4^N156^N1^SHuman^SDeath~`Knight^SDEATHKNIGHT^N16420838^N1082089^N0^N0^N0^^", -- [20]
+					"^1^SAbudujanah-Vashj^N4^N25^N1^N93^N0^SOrc^SRogue^SROGUE^N8348263^N896682^N0^N0^N0^^", -- [21]
+					"^1^SWarthogator-Jubei'Thos^N3^N13^N0^N65^N0^SOrc^SShaman^SSHAMAN^N2842906^N843856^N0^N0^N0^^", -- [22]
+					"^1^SThorimm-Elune^N2^N15^N7^N76^N0^STauren^SWarrior^SWARRIOR^N6405387^N759499^N0^N0^N0^^", -- [23]
+					"^1^SDarkmisst-Dragonmaw^N3^N59^N1^N156^N1^SDraenei^SShaman^SSHAMAN^N3875166^N725452^N0^N0^N0^^", -- [24]
+					"^1^SThìago-Nemesis^N1^N50^N2^N130^N1^SHuman^SHunter^SHUNTER^N2958700^N496077^N0^N0^N0^^", -- [25]
+					"^1^SSnattche-Stormrage^N20^N63^N0^N152^N1^SHuman^SWarrior^SWARRIOR^N25084216^N460649^N0^N0^N0^^", -- [26]
+					"^1^SCharitybush-Elune^N2^N15^N9^N71^N0^SBlood~`Elf^SHunter^SHUNTER^N3973109^N335160^N0^N0^N0^^", -- [27]
+					"^1^SSubtraxxion-Kel'Thuzad^N1^N46^N2^N156^N1^SGnome^SRogue^SROGUE^N3076106^N183636^N0^N0^N0^^", -- [28]
+					"^1^SNessy-Spinebreaker^N0^N33^N3^N132^N1^SGnome^SWarlock^SWARLOCK^N502498^N154368^N0^N0^N0^^", -- [29]
+					"^1^SSinsu-Thrall^N3^N15^N1^N80^N0^STroll^SHunter^SHUNTER^N2964799^N0^N0^N0^N0^^", -- [30]
+				},
+				["win"] = 1,
+				["plvl"] = 90,
+			},
+			[1394346608] = {
+				["zname"] = "Eye of the Storm",
+				["stats"] = {
+					"^1^SZances-Elune^N0^N18^N8^N125^N0^SBlood~`Elf^SPaladin^SPALADIN^N0^N15335191^N0^N0^N0^^", -- [1]
+					"^1^SExlager-BurningBlade^N1^N24^N2^N143^N0^SBlood~`Elf^SPaladin^SPALADIN^N578064^N14641279^N0^N0^N0^^", -- [2]
+					"^1^SZerorun-Gnomeregan^N0^N61^N2^N286^N1^SHuman^SPaladin^SPALADIN^N37775^N12558533^N0^N0^N0^^", -- [3]
+					"^1^SDarkrizen^N1^N48^N2^N287^N1^SHuman^SPaladin^SPALADIN^N334976^N11200989^N0^N0^N0^^", -- [4]
+					"^1^SLightkeeper-Garrosh^N1^N47^N2^N293^N1^SGnome^SPriest^SPRIEST^N1755625^N10722365^N0^N0^N0^^", -- [5]
+					"^1^SGiuliana-Stormrage^N1^N62^N0^N317^N1^SHuman^SMonk^SMONK^N1930924^N10693042^N0^N0^N0^^", -- [6]
+					"^1^SCocopúff-Runetotem^N6^N43^N4^N443^N1^SHuman^SWarlock^SWARLOCK^N7520707^N3116564^N0^N0^N0^^", -- [7]
+					"^1^SCurex-Azralon^N0^N17^N8^N127^N0^SUndead^SPriest^SPRIEST^N128213^N2915385^N0^N0^N0^^", -- [8]
+					"^1^SFearify-Drak'thul^N9^N51^N4^N306^N1^SPandaren^SMonk^SMONK^N6934625^N2622786^N0^N0^N0^^", -- [9]
+					"^1^SEddîe-Thrall^N1^N28^N3^N152^N0^SUndead^SMonk^SMONK^N5491503^N2388466^N0^N0^N0^^", -- [10]
+					"^1^SCleterella-Stormrage^N9^N64^N1^N289^N1^SHuman^SPriest^SPRIEST^N8226884^N2290514^N0^N0^N0^^", -- [11]
+					"^1^SDesacron-Darkspear^N3^N20^N5^N134^N0^SUndead^SWarlock^SWARLOCK^N2902893^N2140146^N0^N0^N0^^", -- [12]
+					"^1^SJadeshot-Darkspear^N4^N46^N2^N433^N1^SPandaren^SHunter^SHUNTER^N5420263^N1925442^N0^N0^N0^^", -- [13]
+					"^1^SRÿän-Thrall^N6^N26^N1^N148^N0^SOrc^SDeath~`Knight^SDEATHKNIGHT^N15273007^N1908262^N0^N0^N0^^", -- [14]
+					"^1^SDeådly-Mannoroth^N9^N45^N2^N437^N1^SHuman^SPaladin^SPALADIN^N7775024^N1658700^N0^N0^N0^^", -- [15]
+					"^1^SSwettlou^N1^N21^N8^N136^N0^SOrc^SShaman^SSHAMAN^N5670197^N1523935^N0^N0^N0^^", -- [16]
+					"^1^STaintedmage-Elune^N0^N13^N7^N116^N0^STroll^SMage^SMAGE^N5635357^N1387605^N0^N0^N0^^", -- [17]
+					"^1^SLockgodess-Elune^N1^N18^N5^N127^N0^SBlood~`Elf^SWarlock^SWARLOCK^N4407963^N1139984^N0^N0^N0^^", -- [18]
+					"^1^SNalem-Runetotem^N1^N5^N1^N87^N0^STroll^SDruid^SDRUID^N3689773^N1128501^N0^N0^N0^^", -- [19]
+					"^1^SOrganism-Kel'Thuzad^N6^N51^N4^N305^N1^SHuman^SDeath~`Knight^SDEATHKNIGHT^N16420838^N1082089^N0^N0^N0^^", -- [20]
+					"^1^SAbudujanah-Vashj^N4^N25^N1^N143^N0^SOrc^SRogue^SROGUE^N8348263^N896682^N0^N0^N0^^", -- [21]
+					"^1^SWarthogator-Jubei'Thos^N3^N13^N0^N114^N0^SOrc^SShaman^SSHAMAN^N2850316^N843856^N0^N0^N0^^", -- [22]
+					"^1^SThorimm-Elune^N2^N15^N7^N125^N0^STauren^SWarrior^SWARRIOR^N6405387^N759499^N0^N0^N0^^", -- [23]
+					"^1^SDarkmisst-Dragonmaw^N3^N59^N1^N440^N1^SDraenei^SShaman^SSHAMAN^N3875166^N725452^N0^N0^N0^^", -- [24]
+					"^1^SThìago-Nemesis^N1^N50^N2^N400^N1^SHuman^SHunter^SHUNTER^N2958700^N496077^N0^N0^N0^^", -- [25]
+					"^1^SSnattche-Stormrage^N20^N63^N0^N287^N1^SHuman^SWarrior^SWARRIOR^N25084216^N460649^N0^N0^N0^^", -- [26]
+					"^1^SCharitybush-Elune^N2^N15^N9^N121^N0^SBlood~`Elf^SHunter^SHUNTER^N3973109^N335160^N0^N0^N0^^", -- [27]
+					"^1^SSubtraxxion-Kel'Thuzad^N1^N46^N2^N304^N1^SGnome^SRogue^SROGUE^N3076106^N183636^N0^N0^N0^^", -- [28]
+					"^1^SNessy-Spinebreaker^N0^N33^N3^N280^N1^SGnome^SWarlock^SWARLOCK^N502498^N154368^N0^N0^N0^^", -- [29]
+					"^1^SSinsu-Thrall^N3^N15^N1^N130^N0^STroll^SHunter^SHUNTER^N2964799^N0^N0^N0^N0^^", -- [30]
+				},
+				["win"] = 1,
+				["plvl"] = 90,
+			},
+		},
+	},
+}

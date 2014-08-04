@@ -1,0 +1,30 @@
+
+atroxArenaViewerData = {
+	["current"] = {
+		["inArena"] = false,
+		["inFight"] = false,
+		["listening"] = "",
+		["update"] = 0.1,
+		["interval"] = 0.1,
+		["entered"] = 0,
+		["communication"] = "GUILD",
+		["record"] = true,
+		["broadcast"] = false,
+		["move"] = 0,
+		["time"] = 0,
+	},
+	["defaults"] = {
+		["profile"] = {
+			["update"] = 0.1,
+			["manabartexture"] = "oCB",
+			["minimapy"] = 58.8,
+			["uniquecolor"] = false,
+			["shortauras"] = true,
+			["broadcastannounce"] = true,
+			["interval"] = 0.1,
+			["minimapx"] = -54.6,
+			["healthdisplay"] = 3,
+			["hpbartexture"] = "oCB",
+		},
+	},
+}

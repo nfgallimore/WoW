@@ -1,0 +1,23 @@
+
+Gladius2DB = {
+	["profileKeys"] = {
+		["Darkrizen - Sargeras"] = "Darkrizen - Sargeras",
+	},
+	["profiles"] = {
+		["Darkrizen - Sargeras"] = {
+			["tagsVersion"] = 1,
+			["locked"] = true,
+			["x"] = {
+				["arena1"] = 888.9605856712806,
+			},
+			["frameScale"] = 0.7000000000000001,
+			["auraVersion"] = 1,
+			["y"] = {
+				["arena1"] = 635.5201203381657,
+			},
+			["backgroundColor"] = {
+				["a"] = 0,
+			},
+		},
+	},
+}

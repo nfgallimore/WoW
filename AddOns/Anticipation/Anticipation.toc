@@ -1,0 +1,7 @@
+## Interface: 50400
+## Title: Anticipation
+## Version: 0.1
+## Author: Spyro
+## Notes: Shows the Anticipation talent buff stacks as additional combo points
+
+Anticipation.lua

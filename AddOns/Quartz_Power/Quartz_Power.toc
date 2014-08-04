@@ -1,0 +1,14 @@
+﻿## Interface: 50400
+## X-Min-Interface: 50001
+## Title: Quartz |cff7777ffPrower|r
+## Notes: Quartz module to display Secondary Powers
+## Author: Katharina
+## Version: 0.7
+## Dependencies: Quartz
+## X-License: GPL v3
+## X-Quartz-Module: Prower
+## X-Quartz-RequiredModules: Quartz
+## OptionalDeps: Ace3, LibSharedMedia-3.0, SharedMedia
+
+Quartz_Power.lua
+

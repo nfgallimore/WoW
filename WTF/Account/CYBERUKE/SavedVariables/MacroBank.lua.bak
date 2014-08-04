@@ -1,0 +1,11 @@
+
+MacroBankDB = {
+	["DBVersion"] = 5,
+	["profileKeys"] = {
+		["Darkrizen - Tichondrius"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

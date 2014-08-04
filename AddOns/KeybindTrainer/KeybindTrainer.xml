@@ -1,0 +1,1639 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+  <!-- Dropdown menu template. -->
+  <Frame name="KT_Dropdown" inherits="UIDropDownMenuTemplate" virtual="true">
+    <Layers>
+      <Layer level="ARTWORK">
+        <FontString name="$parentLabel" inherits="GameFontNormal">
+          <Anchors>
+            <Anchor point="RIGHT" relativePoint="LEFT">
+              <Offset x="18" y="3"/>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Scripts>
+      <OnEnter>
+        KeybindTrainer:CreateDropDownToolTip(_G[self:GetName() .. "Button"])
+      </OnEnter>
+      <OnLeave>
+        GameTooltip:Hide();
+      </OnLeave>
+      <OnLoad>
+        -- Set up menu, passing the frame, button and label
+        KeybindTrainer:CreateDropDownMenu(self:GetParent(),
+                                    self, 
+                                    _G[self:GetName() .. "Button"],
+                                    _G[self:GetName() .. "Label"])
+      </OnLoad>
+    </Scripts>
+  </Frame>
+
+  <!-- Columns in statistics graphs -->
+  <Frame name="KT_ColTemplate" hidden="true" virtual="true">
+    <Size x="32" y="32"/>
+    <Anchors>
+      <Anchor point="BOTTOM" relativePoint="BOTTOM" relativeTo="$parent" />
+    </Anchors>
+    <Frames>
+      <!-- Icon for Action -->
+      <Button name="$parentIcon" hidden="false" inherits="ActionButtonTemplate" disabled="true">
+        <Size x="32" y="32"/>
+        <Anchors>
+          <Anchor point="BOTTOMLEFT">
+            <Offset x="0" y="0"/>
+          </Anchor>
+        </Anchors>
+        <NormalTexture setAllPoints="true"/>
+        <Scripts>
+          <OnLoad>
+            self:Disable()
+          </OnLoad>
+        </Scripts>
+      </Button>
+
+      <!-- Graph Bar -->
+      <Frame name="$parentBar">
+        <!-- Y-Size set programatically -->
+        <Size x="32" y="32"/>
+
+        <!-- Texture -->
+        <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" tile="true">
+          <Color a="1" r="0" g="0" b="0" />
+          <TileSize val="32"/>
+        </Backdrop> 
+
+        <Layers>
+
+          <Layer level="OVERLAY">
+            <!-- Line on Bar -->
+            <Texture name="$parentLine" hidden="true">
+              <Size y="1"/>
+              <Anchors>
+                <Anchor point="LEFT"  relativeTo="$parent" relativePoint="LEFT"/>
+                <Anchor point="RIGHT" relativeTo="$parent" relativePoint="RIGHT"/>
+                <!-- This anchor will be set programmatically -->
+                <Anchor point="TOP"  relativeTo="$parent" relativePoint="TOP">
+                  <Offset x="0" y="0"/>
+                </Anchor>
+              </Anchors>
+              <Color r="1.0" g="0.0" b="0.0" a="1.0" />
+            </Texture>
+
+            <!-- Value for bar -->            
+            <FontString name="$parentVal" inherits="GameFontHighlight">
+              <Anchors>
+                <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="TOP">
+                  <Offset x="0" y="2"/>
+                </Anchor>
+              </Anchors>
+            </FontString>
+          </Layer>
+
+      </Layers>
+
+        <!-- Glue to icon -->
+        <Anchors>
+          <Anchor point="BOTTOMLEFT"  relativeTo="$parentIcon" relativePoint="TOPLEFT">
+            <Offset x="0" y="2"/>
+          </Anchor>
+          <Anchor point="BOTTOMRIGHT"  relativeTo="$parentIcon" relativePoint="TOPRIGHT">
+            <Offset x="0" y="2"/>
+          </Anchor>
+       </Anchors>
+      </Frame>
+
+    </Frames>
+  </Frame>
+
+  <!-- A scrolling graph of icons, showing up to 8 at a time. -->
+  <Frame name="KT_ScrollGraph" virtual="true">
+    <Size x="300" y="130"/>
+
+    <!-- Title -->
+    <Layers>
+      <Layer level="OVERLAY">
+        <FontString name="$parentTitle" inherits="GameFontNormal">
+          <Anchors>
+            <Anchor point="TOP" relativeTo="$parent" relativePoint="TOP">
+              <Offset x="0" y="-8"/>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+
+    <Backdrop bgFile="Interface\MERCHANTFRAME\UI-BuyBack-TopLeft" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="false">
+      <BackgroundInsets>
+        <AbsInset left="2" right="2" top="2" bottom="2" />
+      </BackgroundInsets>
+      <Color r="0.75" g="0.75" b="0.75"/>
+      <EdgeSize val="20" />
+    </Backdrop>
+
+    <Frames>
+    
+      <!-- Graph display area -->
+      <Frame name="$parentDisplay">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$parent"/>
+          <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="parent"/>
+          <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
+            <Offset x="0" y="24" /> <!-- Scrollbar height -->
+          </Anchor>
+        </Anchors>
+        <Anchors>
+          <Anchor point="CENTER"/>
+        </Anchors>
+
+        <!-- Draw columns -->
+        <Frames>
+          <Frame name="$parentCol1" inherits="KT_ColTemplate">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="LEFT" relativeTo="$parent">
+                <Offset x="8" y="0"/>
+              </Anchor>
+            </Anchors>
+          </Frame>
+          <Frame name="$parentCol2" inherits="KT_ColTemplate">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentCol1">
+                <Offset x="4" y="0"/>
+              </Anchor>
+            </Anchors>
+          </Frame>
+          <Frame name="$parentCol3" inherits="KT_ColTemplate">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentCol2">
+                <Offset x="4" y="0"/>
+              </Anchor>
+            </Anchors>
+          </Frame>
+          <Frame name="$parentCol4" inherits="KT_ColTemplate">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentCol3">
+                <Offset x="4" y="0"/>
+              </Anchor>
+            </Anchors>
+          </Frame>
+          <Frame name="$parentCol5" inherits="KT_ColTemplate">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentCol4">
+                <Offset x="4" y="0"/>
+              </Anchor>
+            </Anchors>
+          </Frame>
+          <Frame name="$parentCol6" inherits="KT_ColTemplate">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentCol5">
+                <Offset x="4" y="0"/>
+              </Anchor>
+            </Anchors>
+          </Frame>
+          <Frame name="$parentCol7" inherits="KT_ColTemplate">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentCol6">
+                <Offset x="4" y="0"/>
+              </Anchor>
+            </Anchors>
+          </Frame>
+          <Frame name="$parentCol8" inherits="KT_ColTemplate">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentCol7">
+                <Offset x="4" y="0"/>
+              </Anchor>
+            </Anchors>
+          </Frame>
+        </Frames>
+
+        <Scripts>
+          <OnMouseWheel>
+            -- Allow mousewheel sliding.
+            -- KT_OnMouseWheel(self, delta)
+          </OnMouseWheel>
+        </Scripts>
+
+      <!-- Horizontal Scroll Bar -->    
+      </Frame>
+      <Slider name="$parentHSlider" orientation="HORIZONTAL">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentDisplay">
+            <Offset x="4" y="0"/>
+          </Anchor>
+          <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="parentDisplay">
+            <Offset x="-4" y="0"/>
+          </Anchor>
+          <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
+            <Offset x="0" y="1"/>
+          </Anchor>
+        </Anchors>
+        <Backdrop edgeFile="Interface\Buttons\UI-SliderBar-Border" bgFile="Interface\Buttons\UI-SliderBar-Background" tile="true">
+          <EdgeSize>
+            <AbsValue val="8"/>
+          </EdgeSize>
+          <TileSize>
+            <AbsValue val="8"/>
+          </TileSize>
+          <BackgroundInsets>
+            <AbsInset left="3" right="3" top="6" bottom="6"/>
+          </BackgroundInsets>
+        </Backdrop>
+        <ThumbTexture name="$parentThumbTexture" file="Interface\Buttons\UI-ScrollBar-Knob">
+          <Size x="25" y="25"/>
+        </ThumbTexture>
+      </Slider>
+    </Frames>
+    <Scripts>
+      <OnShow>
+        -- Calculate and show graph
+        KeybindTrainer:ShowGraph(self, _G[self:GetName().."Display"],
+                           _G[self:GetName().."Title"], true)
+      </OnShow>
+      <OnHide>
+        -- Hide graph, clean up memory
+        KeybindTrainer:HideGraph(self)
+      </OnHide>
+    </Scripts>
+  </Frame>
+
+  <!-- KT dialog box template -->
+  <Frame name="KT_DialogTemplate" parent="UIParent" frameStrata="FULLSCREEN_DIALOG" enableMouse="true" moveable="true" virtual="true">
+    <Size x="350" y="165" />
+    <TitleRegion>
+      <Size x="100" y="20"/>
+      <Anchors>
+        <Anchor point="TOP"/>
+      </Anchors>
+    </TitleRegion>
+    <Anchors>
+      <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER" />
+    </Anchors>
+    <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+      <Color a="1" r="0" g="0" b="0" />
+      <BackgroundInsets>
+        <AbsInset left="10" right="11" top="11" bottom="10" />
+      </BackgroundInsets>
+      <TileSize val="32"/>
+      <EdgeSize val="32"/>
+    </Backdrop>
+    <Layers>
+      <Layer level="ARTWORK">
+        <!-- Top of the frame -->
+        <Texture name="$parentFrameHeader" file="Interface\DialogFrame\UI-DialogBox-Header">
+          <Size>
+            <AbsDimension x="256" y="64"/>
+          </Size>
+          <Anchors>
+            <Anchor point="TOP">
+              <Offset>
+                <AbsDimension x="0" y="12"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </Texture>
+
+        <!-- Box title -->
+        <FontString name="$parentTitle" inherits="GameFontNormal">
+          <Anchors>
+            <Anchor point="TOP" relativeTo="$parentFrameHeader">
+              <Offset>
+                <AbsDimension x="0" y="-14"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+
+        <!-- Description string -->
+        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="TOP">
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+              <Offset x="20" y="-30"/>
+            </Anchor>
+            <Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
+              <Offset x="-20" y="-30"/>
+            </Anchor>
+            <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="TOP">
+              <Offset x="0" y="-60"/>
+            </Anchor>
+          </Anchors>
+        </FontString>
+
+        <!-- Warning/error string -->
+        <FontString name="$parentError" inherits="GameFontNormal" justifyH="LEFT" justifyV="TOP">
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="$parentText" relativePoint="BOTTOMLEFT">
+              <Offset x="0" y="0"/>
+            </Anchor>
+            <Anchor point="TOPRIGHT" relativeTo="$parentText" relativePoint="BOTTOMRIGHT">
+              <Offset x="0" y="0"/>
+            </Anchor>
+            <Anchor point="BOTTOM" relativeTo="$parentText" relativePoint="BOTTOM">
+              <Offset x="0" y="-30"/>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Scripts>
+      <OnLoad>
+        -- Set localized text.
+        KeybindTrainer:LoadDialog(self, _G[self:GetName().."Text"], _G[self:GetName().."Title"])
+      </OnLoad>
+    </Scripts>
+  </Frame>
+
+  <!-- Config UIPanelButton template -->
+  <Button name="KT_ConfigButtonTemplate" inherits="UIPanelButtonTemplate" virtual="true">
+    <Size x="140" y="22"/>
+    <Scripts>
+      <OnLoad>
+        -- Set a tooltip and text, and register widget for disabling
+        KeybindTrainer:LoadButton(self:GetParent(), self)
+      </OnLoad>
+      <OnEnter>
+        KeybindTrainer:CreateButtonToolTip(self)
+      </OnEnter>
+      <OnLeave>
+        GameTooltip:Hide();
+      </OnLeave>
+      <OnClick>
+        -- Record click.
+        KeybindTrainer:OnClick(self)
+      </OnClick>
+    </Scripts>
+  </Button>
+
+  <!-- Config UIPanelButton template -->
+  <Button name="KT_DialogButtonTemplate" inherits="KT_ConfigButtonTemplate" virtual="true">
+    <Size x="70" y="22"/>
+    <Scripts>
+      <OnLoad>
+        -- Set a tooltip and text, and don't save widget for disabling
+        KeybindTrainer:LoadButton(self:GetParent(), self, true)
+      </OnLoad>
+      <OnEnter>
+        -- Override config disable for tooltips
+        KeybindTrainer:CreateButtonToolTip(self)
+      </OnEnter>
+    </Scripts>
+  </Button>
+
+  <!-- Config Checkbutton template -->
+  <CheckButton name="KT_ConfigCheckButtonTemplate" inherits="OptionsCheckButtonTemplate" virtual="true">
+    <Scripts>
+      <OnLoad>
+        -- Set a tooltip and checkbox label, do NOT register
+        KeybindTrainer:LoadCheckBox(self:GetParent(), self, true)
+      </OnLoad>
+      <OnClick>
+        -- Oh why not.
+        if ( self:GetChecked() ) then
+          PlaySound("igMainMenuOptionCheckBoxOn");
+        else
+          PlaySound("igMainMenuOptionCheckBoxOff");
+        end
+        
+        -- Record check/unchecked.
+        KeybindTrainer:OnCheck(self)
+      </OnClick>
+    </Scripts>
+  </CheckButton>
+
+  <!-- Config EditBox + Label template -->
+  <EditBox name="KT_EditInputTemplate" inherits="InputBoxTemplate" virtual="true">
+    <Layers>
+      <Layer level="ARTWORK">
+        <FontString name="$parentLabel" inherits="GameFontNormal">
+          <Anchors>
+            <Anchor point="RIGHT" relativeTo="$parent" relativePoint="LEFT">
+              <Offset x="-8" y="0"/>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Scripts>
+      <OnEnter>
+        KeybindTrainer:CreateEditBoxToolTip(self)
+      </OnEnter>
+      <OnLeave>
+        GameTooltip:Hide();
+      </OnLeave>
+      <OnEscapePressed>
+        self:ClearFocus();
+      </OnEscapePressed>
+      <OnEnterPressed>
+        self:ClearFocus();
+      </OnEnterPressed>
+      <OnTabPressed>
+        self:ClearFocus();
+      </OnTabPressed>
+      <OnLoad>
+        KeybindTrainer:LoadEditBox(self:GetParent(), self, _G[self:GetName().."Label"], true)
+      </OnLoad>
+    </Scripts>
+    <FontString inherits="GameFontHighlight" />
+  </EditBox>
+
+  <!-- Config block template -->
+  <Frame name="KT_ConfigUIBlockTemplate" virtual="true">
+    <Anchors>
+      <Anchor point="TOP" relativeTo="$parent" relativePoint="TOP">
+        <Offset x="0" y="0"/>
+      </Anchor>
+    </Anchors>
+    <Layers>
+      <Layer level="ARTWORK">
+        <FontString name="$parentLabel" inherits="GameFontHighlight">
+          <Anchors>
+            <Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT">
+              <Offset x="8" y="-20"/>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+      <EdgeSize>
+        <AbsValue val="16"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="16"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="5" right="5" top="5" bottom="5"/>
+      </BackgroundInsets>
+    </Backdrop>
+    <Scripts>
+      <OnLoad>
+        -- Init label.
+        KeybindTrainer:LoadBlock(self, 
+                           _G[self:GetName() .. "Label"])
+      </OnLoad>
+    </Scripts>
+  </Frame>
+
+  <!-- 
+
+       Main Frame
+
+   -->
+  <Frame name="KT_Frame" hidden="true" toplevel="true" enableMouse="true" movable="true" resizable="true" parent="UIParent" frameStrata="HIGH">
+    <Size x="615" y="250" />
+    <Anchors>
+      <Anchor point="CENTER" relativeTo="UIParent"/>
+    </Anchors>
+    <ResizeBounds>
+      <minResize x="615" y="250"/>
+    </ResizeBounds>
+    <Layers>
+
+      <!-- Background textures -->
+      <Layer level="BACKGROUND">
+        <Texture name="$parentTopBg" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-TopBackground">
+          <Size y="20"/>
+          <Anchors>
+            <Anchor point="TOPLEFT"  relativeTo="$parent" relativePoint="TOPLEFT">
+              <Offset x="4" y="-18"/>
+            </Anchor>
+            <Anchor point="TOPRIGHT"  relativeTo="$parent" relativePoint="TOPRIGHT">
+              <Offset x="0" y="-18"/>
+            </Anchor>
+          </Anchors>
+        </Texture>
+        <Texture name="$parentTopMidBg">
+          <Size y="100"/>
+          <Anchors>
+            <Anchor point="TOPLEFT"  relativeTo="$parent" relativePoint="TOPLEFT">
+              <Offset x="4" y="-38"/>
+            </Anchor>
+            <Anchor point="TOPRIGHT"  relativeTo="$parent" relativePoint="TOPRIGHT">
+              <Offset x="0" y="-38"/>
+            </Anchor>
+            <Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT"/>
+            <Anchor point="BOTTOMRIGHT" relativeTo="$parent" relativePoint="BOTTOMRIGHT"/>
+          </Anchors>
+          <Color r="0.0" g="0.0" b="0.0" a="0.5" />
+        </Texture>
+      </Layer>
+
+
+      <!-- Frame -->
+      <Layer level="ARTWORK">
+
+        <!-- Addon Title -->
+        <FontString name="KT_Title" inherits="GameFontNormal">
+          <Size x="250" y="16"/>
+          <Anchors>
+            <Anchor point="TOP">
+              <Offset x="3" y="-17"/>
+            </Anchor>
+          </Anchors>
+        </FontString>
+
+        <!-- About String -->
+        <FontString name="KT_About" inherits="GameFontDisableSmall">
+          <Size x="300" y="16"/>
+          <Anchors>
+            <Anchor point="BOTTOM">
+              <Offset x="0" y="3"/>
+            </Anchor>
+          </Anchors>
+        </FontString>
+
+        <!-- Set up frame borders.  Have to use WorldStateFrame since
+             it has a top/bottom/left/right component suitable for allowing
+             resizing.
+        -->
+
+        <Texture name="$parentTopLeft" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-TopLeft">
+          <Size x="128" y="25"/>
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset x="-4" y="-14"/>
+            </Anchor>
+          </Anchors>
+          <TexCoords left="0" right="1" top="0" bottom="0.1"/>
+        </Texture>
+
+        <Texture name="$parentTopRight" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-TopRight">
+          <Size x="140" y="25"/>
+          <Anchors>
+            <Anchor point="TOPRIGHT">
+              <Offset x="0" y="-14"/>
+            </Anchor>
+          </Anchors>
+          <TexCoords left="0" right="0.546875" top="0" bottom="0.1"/>
+        </Texture>
+
+        <!-- No width specified to allow for resizing. -->
+        <Texture name="$parentTop" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-Top">
+          <Size y="25"/>
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="$parentTopLeft" relativePoint="TOPRIGHT">
+              <Offset x="0" y="0"/>
+            </Anchor>
+            <Anchor point="TOPRIGHT" relativeTo="$parentTopRight" relativePoint="TOPLEFT">
+              <Offset x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <TexCoords left="0.3" right="0.35" top="0" bottom="0.1"/>
+        </Texture>
+
+        <Texture name="$parentBotLeft" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-BotLeft">
+          <Size x="9" y="168"/>
+          <Anchors>
+            <Anchor point="BOTTOMLEFT">
+              <Offset x="-4" y="0"/>
+            </Anchor>
+          </Anchors>
+          <TexCoords left="0" right=".064" top="0" bottom="0.65625"/>
+        </Texture>
+
+        <Texture name="$parentBotRight" file="Interface\WorldStateframe\WorldStateFinalScoreFrame-BotRight">
+          <Size x="4" y="168"/>
+          <Anchors>
+            <Anchor point="BOTTOMRIGHT"/>
+              <Offset x="0" y="0"/>
+          </Anchors>
+          <TexCoords left="0.535" right="0.546875" top="0" bottom="0.65625"/>
+        </Texture>
+
+        <Texture name="$parentBottom" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-BotLeft">
+          <Size y="5"/>
+          <Anchors>
+            <Anchor point="BOTTOMLEFT" relativeTo="$parentBotLeft" relativePoint="BOTTOMRIGHT"/>
+            <Anchor point="BOTTOMRIGHT" relativeTo="$parentBotRight" relativePoint="BOTTOMLEFT"/>
+          </Anchors>
+          <TexCoords left="0.25" right="0.6" top="0.645" bottom="0.65625"/>
+        </Texture>
+
+        <Texture name="$parentMidLeft" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-TopLeft">
+          <Size x="9" y="10"/>
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="$parentTopLeft" relativePoint="BOTTOMLEFT">
+              <Offset x="0" y="0"/>
+            </Anchor>
+            <Anchor point="BOTTOMLEFT" relativeTo="$parentBotLeft" relativePoint="TOPLEFT">
+              <Offset x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <TexCoords left="0" right=".064" top="0.9375" bottom="1"/>
+        </Texture>
+
+        <Texture name="$parentMidRight" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-TopRight">
+          <Size x="4" y="10"/>
+          <Anchors>
+            <Anchor point="TOPRIGHT" relativeTo="$parentTopRight" relativePoint="BOTTOMRIGHT"/>
+            <Anchor point="BOTTOMRIGHT" relativeTo="$parentBotRight" relativePoint="TOPRIGHT"/>
+          </Anchors>
+          <TexCoords left="0.535" right="0.546875" top="0.9375" bottom="1"/>
+        </Texture>
+      </Layer>
+    </Layers>
+    <Frames>
+
+      <!-- Close button -->
+      <Button name="$parentClose" inherits="UIPanelCloseButton">
+        <Anchors>
+          <Anchor point="TOPRIGHT">
+            <Offset x="5" y="-11"/>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            -- Close frame
+            self:GetParent():Hide()
+          </OnClick>
+          <OnEnter>
+            -- Light up + tooltip
+          </OnEnter>
+          <OnLeave>
+            -- Revert to normal state.
+          </OnLeave>
+        </Scripts>
+      </Button>
+      
+      <!-- Menu bar (+ drag handle) -->
+      <Button name="$parentMenuBar">
+        <Size y="65"/>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset x="3" y="-18"/>
+          </Anchor>
+          <Anchor point="TOPRIGHT">
+            <Offset x="-2" y="-18"/>
+          </Anchor>
+        </Anchors>
+
+        <Frames>
+
+          <!-- Top Config Menu -->
+          <Frame name="KT_ConfigBarTop">
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset x="0" y="-25"/>
+              </Anchor>
+              <Anchor point="TOPRIGHT">
+                <Offset x="0" y="-25"/>
+              </Anchor>
+              <Anchor point="BOTTOMLEFT">
+                <Offset x="0" y="0"/>
+              </Anchor>
+              <Anchor point="BOTTOMRIGHT">
+                <Offset x="0" y="0"/>
+              </Anchor>
+            </Anchors>
+
+            <!-- Set up top config area. -->
+            <!-- Blocks are described in left-to-right order. -->
+            <Frames>
+
+              <!-- Frame Pad to handle resizing. -->
+              <Frame name="KT_ConfigBarTopResizePad">
+                <Size x="593" y="40"/>
+                <Anchors>
+                  <Anchor point="TOP">
+                    <Offset x="0" y="2"/>
+                  </Anchor>
+                </Anchors>
+                <Frames>
+
+
+                <!-- Block: Trial Selection -->
+                <Frame name="KT_SelectTrialMenu" inherits="KT_ConfigUIBlockTemplate">
+                  <Size x="350" y="40"/>
+                  <Anchors>
+                    <Anchor point="LEFT" relativeTo="$parent" relativePoint="LEFT">
+                      <Offset x="0" y="2"/>
+                    </Anchor>
+                  </Anchors>
+                  <Frames>
+                    <!-- Dropdown: select which trial to run. -->
+                    <Frame name="KT_SelectTrial" inherits="KT_Dropdown">
+                      <Anchors>
+                        <Anchor point="TOPLEFT">
+                          <Offset x="25" y="-6"/>
+                        </Anchor>
+                      </Anchors>
+                    </Frame>
+  
+                    <!-- Add a custom trial button -->
+                    <Button name="KT_AddCustom" inherits="KT_ConfigButtonTemplate">
+                      <Size x="55" y="22"/>
+                      <Anchors>
+                        <Anchor point="LEFT" relativeTo="KT_SelectTrial" relativePoint="RIGHT">
+                          <Offset x="-9" y="2"/>
+                        </Anchor>
+                      </Anchors>
+                    </Button>
+  
+                    <!-- Edit a custom trial button -->
+                    <Button name="KT_EditCustom" inherits="KT_ConfigButtonTemplate">
+                      <Size x="55" y="22"/>
+                      <Anchors>
+                        <Anchor point="LEFT" relativeTo="KT_AddCustom" relativePoint="RIGHT">
+                          <Offset x="6" y="0"/>
+                        </Anchor>
+                      </Anchors>
+                      <Scripts>
+                        <OnLoad>
+                          -- Only enable when we select a custom trial
+                          -- to edit.
+                          KeybindTrainer:LoadButton(self:GetParent(), self, false)
+                          self:Disable()
+                        </OnLoad>
+                      </Scripts>
+                    </Button>
+  
+                  </Frames>
+                </Frame>
+                <!-- End Trial Select Block -->
+
+  
+                <!-- Block: Other Options -->
+                <Frame name="KT_OtherOptionsMenu" inherits="KT_ConfigUIBlockTemplate">
+                  <Size x="240" y="40"/>
+                  <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="KT_SelectTrialMenu" relativePoint="TOPRIGHT">
+                      <Offset x="3" y="0"/>
+                    </Anchor>
+                    <Anchor point="BOTTOMLEFT" relativeTo="KT_SelectTrialMenu" relativePoint="BOTTOMRIGHT">
+                      <Offset x="3" y="0"/>
+                    </Anchor>
+                  </Anchors>
+                  <Frames>
+                    <Button name="KT_ShowOptions" inherits="KT_ConfigButtonTemplate" hidden="false">
+                      <Size x="70" y="22"/>
+                      <Anchors>
+                        <Anchor point="LEFT" relativeTo="$parent" relativePoint="LEFT">
+                          <Offset x="9" y="0"/>
+                        </Anchor>
+                      </Anchors>
+                    </Button>
+                    <Button name="KT_ViewStats" inherits="KT_ConfigButtonTemplate" hidden="false">
+                      <Size x="70" y="22"/>
+                      <Anchors>
+                        <Anchor point="LEFT" relativeTo="KT_ShowOptions" relativePoint="RIGHT">
+                          <Offset x="6" y="0"/>
+                        </Anchor>
+                      </Anchors>
+                    </Button>
+                    <Button name="KT_ShowHelp" inherits="KT_ConfigButtonTemplate">
+                      <Size x="70" y="22"/>
+                      <Anchors>
+                        <Anchor point="LEFT" relativeTo="KT_ViewStats" relativePoint="RIGHT">
+                          <Offset x="6" y="0"/>
+                        </Anchor>
+                      </Anchors>
+                    </Button>
+                  </Frames>
+                 </Frame>
+                 <!-- End Other Options Block -->
+
+  
+               </Frames>
+             </Frame>
+             <!-- End Pad Frame -->
+             
+            </Frames>
+          </Frame>
+        </Frames>
+
+        <!-- Moveable -->
+        <Scripts>
+          <OnMouseDown>
+            self:GetParent():StartMoving()
+          </OnMouseDown>
+          <OnMouseUp>
+            self:GetParent():StopMovingOrSizing()
+          </OnMouseUp>
+        </Scripts>
+      </Button>
+
+      <!-- Resize button -->
+      <Button name="$parentResizeCorner" alpha="0.5">
+        <Size x="16" y="16"/>
+        <Anchors>
+          <Anchor point="BOTTOMRIGHT">
+            <Offset x="-4" y="4"/>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnMouseDown>
+            self:GetParent():StartSizing()
+          </OnMouseDown>
+          <OnMouseUp>
+            self:GetParent():StopMovingOrSizing()
+          </OnMouseUp>
+          <OnHide>
+            self:GetParent():StopMovingOrSizing()
+          </OnHide>
+        </Scripts>
+        <NormalTexture file="Interface\AddOns\KeybindTrainer\img\handle"/>
+      </Button>
+
+      <!-- Display area -->
+      <Frame name="KT_TrialDisplayFrame" enableMouse="true">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentMenuBar" relativePoint="BOTTOMLEFT">
+            <Offset x="8" y="0"/>
+          </Anchor>
+          <Anchor point="BOTTOMRIGHT" relativeTo="KT_Frame" relativePoint="BOTTOMRIGHT">
+            <Offset x="-10" y="16"/>
+          </Anchor>
+        </Anchors>
+
+        <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background-Dark" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+          <EdgeSize>
+            <AbsValue val="16"/>
+          </EdgeSize>
+          <TileSize>
+            <AbsValue val="16"/>
+          </TileSize>
+          <BackgroundInsets>
+            <AbsInset left="5" right="5" top="5" bottom="5"/>
+          </BackgroundInsets>
+        </Backdrop>
+
+        <Layers>
+          <Layer level="ARTWORK">
+            <!-- Trial stat report string. -->
+            <FontString name="$parentStats" inherits="GameFontHighlight">
+              <Anchors>
+                <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
+                  <Offset x="0" y="12"/>
+                </Anchor>
+              </Anchors>
+            </FontString>
+          </Layer>
+        </Layers>
+
+        <!-- Start and skip buttons -->
+        <Frames>
+          <Button name="KT_StartTrial" inherits="KT_ConfigButtonTemplate" hidden="true">
+            <Size x="100" y="22"/>
+            <Anchors>
+              <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
+                <Offset x="0" y="0"/>
+              </Anchor>
+            </Anchors>
+          </Button>
+          <Button name="KT_Skip" inherits="KT_ConfigButtonTemplate" hidden="true">
+            <Size x="100" y="22"/>
+            <Anchors>
+              <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
+                <Offset x="0" y="15"/>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnLoad>
+                -- Don't register this button for disabling.
+                KeybindTrainer:LoadButton(self:GetParent(), self, true)
+              </OnLoad>
+            </Scripts>
+          </Button>
+        </Frames>
+
+        <Scripts>
+          <OnLoad>
+            self:EnableKeyboard(false);
+            self:RegisterEvent("ADDON_LOADED");
+          </OnLoad>
+
+          <!-- Init the addon -->
+          <OnEvent>
+            KT_OnEvent(self, event, name, ...)
+          </OnEvent>
+
+          <OnLeave>
+            -- Leave the trial if we're not over the skip button.
+            if not _G["KT_Skip"]:IsMouseOver() then 
+              KeybindTrainer:EndTrial(self)
+            end
+          </OnLeave>
+
+          <!-- Check keybinds -->
+          <OnKeyDown>
+            KeybindTrainer:OnKeyDown(self, key)      
+          </OnKeyDown>
+    
+          <!-- Also want to handle mouse binds -->
+          <OnMouseDown>
+            KeybindTrainer:OnKeyDown(self, button)      
+          </OnMouseDown>
+          <OnMouseWheel>
+            KeybindTrainer:OnMouseWheel(self, delta)
+          </OnMouseWheel>
+
+        </Scripts>
+      </Frame>
+    </Frames>
+
+    <Scripts>
+      <OnHide>
+        -- Close any open dialogs when the main frame is hidden.
+        KeybindTrainer:CloseAll()
+      </OnHide>
+    </Scripts>
+
+  </Frame>
+
+
+  <!-- Custom input popup dialog box, not parented to the main frame. -->
+  <Frame name="KT_CustomInputDialog" inherits="KT_DialogTemplate" hidden="true">
+    <Size x="400" y="165" />
+    <Frames>
+      <!-- Input box + label -->
+      <EditBox name="KT_CustomTrialInput" inherits="KT_EditInputTemplate" parentKey="input" numeric="false" autoFocus="true">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+            <Offset x="25" y="-90" />
+          </Anchor>
+          <Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">>
+            <Offset x="-20" y="-90" />
+          </Anchor>
+          <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="TOP">>
+            <Offset x="-30" y="-115" />
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>
+            KeybindTrainer:LoadEditBox(self:GetParent(), self, _G[self:GetName().."Label"], false)
+          </OnLoad>
+        </Scripts>
+      </EditBox>
+
+      <!-- Save/Cancel buttons -->       
+      <Button name="KT_CustomTrialCancelButton" hidden="false" inherits="KT_DialogButtonTemplate">
+        <Anchors>
+          <Anchor point="BOTTOMRIGHT">
+            <Offset x="-20" y="20" />
+          </Anchor>
+        </Anchors>
+      </Button>
+
+      <Button name="KT_CustomTrialAcceptButton" hidden="false" inherits="KT_DialogButtonTemplate">
+        <Anchors>
+          <Anchor point="RIGHT" relativeTo="KT_CustomTrialCancelButton" relativePoint="LEFT">
+            <Offset x="-10" y="0" />
+          </Anchor>
+        </Anchors>
+      </Button>
+
+      <Button name="KT_CustomTrialCreateHelpButton" hidden="false" inherits="KT_DialogButtonTemplate">
+        <Anchors>
+          <Anchor point="RIGHT" relativeTo="KT_CustomTrialAcceptButton" relativePoint="LEFT">
+            <Offset x="-10" y="0" />
+          </Anchor>
+        </Anchors>
+      </Button>
+
+      <CheckButton name="KT_SaveToProfile" inherits="KT_ConfigCheckButtonTemplate">
+        <Anchors> 
+          <Anchor point="BOTTOMLEFT">
+            <Offset x="16" y="16" />
+          </Anchor>
+        </Anchors> 
+        <Scripts>
+          <OnLoad>
+            -- Set a tooltip and checkbox label.
+            KeybindTrainer:LoadCheckBox(self:GetParent(), self, true)
+          </OnLoad>
+        </Scripts>     
+      </CheckButton>
+
+    </Frames>    
+  </Frame>
+
+  <!-- Edit custom trial popup dialog box, not parented to the main frame. -->
+  <Frame name="KT_CustomEditDialog" inherits="KT_DialogTemplate" hidden="true">
+    <Frames>
+      <!-- Input box + label -->
+      <EditBox name="KT_CustomTrialEditInput" inherits="KT_EditInputTemplate" parentKey="input" numeric="false" autoFocus="true">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+            <Offset x="25" y="-90" />
+          </Anchor>
+          <Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">>
+            <Offset x="-20" y="-90" />
+          </Anchor>
+          <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="TOP">>
+            <Offset x="-30" y="-115" />
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>
+            KeybindTrainer:LoadEditBox(self:GetParent(), self, _G[self:GetName().."Label"], false)
+          </OnLoad>
+        </Scripts>
+      </EditBox>
+
+      <!-- Delete/Save/Cancel buttons -->       
+      <Button name="KT_CustomTrialEditCancelButton" hidden="false" inherits="KT_DialogButtonTemplate">
+        <Anchors>
+          <Anchor point="BOTTOMRIGHT">
+            <Offset x="-20" y="20" />
+          </Anchor>
+        </Anchors>
+      </Button>
+
+      <Button name="KT_CustomTrialEditAcceptButton" hidden="false" inherits="KT_DialogButtonTemplate">
+        <Anchors>
+          <Anchor point="RIGHT" relativeTo="KT_CustomTrialEditCancelButton" relativePoint="LEFT">
+            <Offset x="-10" y="0" />
+          </Anchor>
+        </Anchors>
+      </Button>
+
+      <Button name="KT_CustomTrialEditDeleteButton" hidden="false" inherits="KT_DialogButtonTemplate">
+        <Anchors>
+          <Anchor point="RIGHT" relativeTo="KT_CustomTrialEditAcceptButton" relativePoint="LEFT">
+            <Offset x="-10" y="0" />
+          </Anchor>
+        </Anchors>
+      </Button>
+
+      <Button name="KT_CustomTrialEditHelpButton" hidden="false" inherits="KT_DialogButtonTemplate">
+        <Anchors>
+          <Anchor point="RIGHT" relativeTo="KT_CustomTrialEditDeleteButton" relativePoint="LEFT">
+            <Offset x="-10" y="0" />
+          </Anchor>
+        </Anchors>
+      </Button>
+
+    </Frames>    
+  </Frame>
+
+  <!-- Statistics popup dialog box, not parented to the main frame. -->
+  <Frame name="KT_StatisticsDialog" inherits="KT_DialogTemplate" hidden="true">
+    <Size x="350" y="300" />
+
+    <Frames>
+      <!-- Dropdown: select which trial to run. -->
+      <Frame name="KT_SelectStatistic" inherits="KT_Dropdown">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentText" relativePoint="BOTTOM">
+            <Offset x="0" y="-10"/>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <!-- Override onload to prevent registration of widget. -->
+          <OnLoad>
+            -- Set up menu, passing the frame, button and label
+            KeybindTrainer:CreateDropDownMenu(self:GetParent(),
+                                        self, 
+                                        _G[self:GetName() .. "Button"],
+                                        _G[self:GetName() .. "Label"],
+                                        true)
+          </OnLoad>
+        </Scripts>
+      </Frame>
+
+      <!-- Define Graphs -->
+
+      <!-- Action Last Time Graph -->
+      <Frame name="KT_ActionsLastTimeGraph" hidden="true" inherits="KT_ScrollGraph">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="KT_SelectStatistic" relativePoint="BOTTOM">
+            <Offset x="0" y="-10"/>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>
+            -- Set the type of this graph.
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_TYPE..self:GetName(), 
+                            "actions")                               
+            -- Set the field this graph will show
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_FIELD..self:GetName(), 
+                            KeybindTrainer.Constants.STAT_FIELDS.LIST_TIME)
+            -- Set the op func used for this graph
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_FUNC..self:GetName(), 
+                           KT_GetStatLast)
+            -- Register graph
+            KeybindTrainer:RegisterGraph(self)
+          </OnLoad>
+        </Scripts>
+      </Frame>
+
+      <!-- Action Avg Time Graph -->
+      <Frame name="KT_ActionsAvgTimeGraph" hidden="true" inherits="KT_ScrollGraph">
+        <Anchors>
+          <Anchor point="BOTTOM" relativeTo="KT_ActionsLastTimeGraph" relativePoint="BOTTOM">
+            <Offset x="0" y="0"/>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>
+            -- Set the type of this graph.
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_TYPE..self:GetName(), 
+                            "actions")                               
+            -- Set the field this graph will show
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_FIELD..self:GetName(), 
+                            KeybindTrainer.Constants.STAT_FIELDS.LIST_TIME)
+            -- Set the op func used for this graph
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_FUNC..self:GetName(), 
+                           KT_GetStatAvg)
+            -- Register graph
+            KeybindTrainer:RegisterGraph(self)
+          </OnLoad>
+        </Scripts>
+      </Frame>
+
+      <!-- Action Avg Miss Avg -->
+      <Frame name="KT_ActionsAvgMissGraph" hidden="true" inherits="KT_ScrollGraph">
+        <Anchors>
+          <Anchor point="BOTTOM" relativeTo="KT_ActionsLastTimeGraph" relativePoint="BOTTOM">
+            <Offset x="0" y="0"/>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>
+            -- Set the type of this graph.
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_TYPE..self:GetName(), 
+                            "actions")                               
+            -- Set the field this graph will show
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_FIELD..self:GetName(), 
+                            KeybindTrainer.Constants.STAT_FIELDS.LIST_MISS)
+            -- Set the op func used for this graph
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_FUNC..self:GetName(), 
+                           KT_GetStatAvg)
+            -- Register graph
+            KeybindTrainer:RegisterGraph(self)
+          </OnLoad>
+        </Scripts>
+      </Frame>
+
+      <!-- Action Last Miss Graph -->
+      <Frame name="KT_ActionsLastMissGraph" hidden="true" inherits="KT_ScrollGraph">
+        <Anchors>
+          <Anchor point="BOTTOM" relativeTo="KT_ActionsLastTimeGraph" relativePoint="BOTTOM">
+            <Offset x="0" y="0"/>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>
+            -- Set the type of this graph.
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_TYPE..self:GetName(), 
+                            "actions")                               
+            -- Set the field this graph will show
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_FIELD..self:GetName(), 
+                            KeybindTrainer.Constants.STAT_FIELDS.LIST_MISS)
+            -- Set the op func used for this graph
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_FUNC..self:GetName(), 
+                           KT_GetStatLast)
+            -- Register graph
+            KeybindTrainer:RegisterGraph(self)
+          </OnLoad>
+        </Scripts>
+      </Frame>
+
+      <!-- Action Last Time Max Graph -->
+      <Frame name="KT_ActionsMaxTimeGraph" hidden="true" inherits="KT_ScrollGraph">
+        <Anchors>
+          <Anchor point="BOTTOM" relativeTo="KT_ActionsLastTimeGraph" relativePoint="BOTTOM">
+            <Offset x="0" y="0"/>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>
+            -- Set the type of this graph.
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_TYPE..self:GetName(), 
+                            "actions")                               
+            -- Set the field this graph will show
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_FIELD..self:GetName(), 
+                            KeybindTrainer.Constants.STAT_FIELDS.LIST_TIME)
+            -- Set the op func used for this graph
+            KeybindTrainer:SetVar(KeybindTrainer.Constants.GRAPH_FUNC..self:GetName(), 
+                           KT_GetStatMax)
+            -- Register graph
+            KeybindTrainer:RegisterGraph(self)
+          </OnLoad>
+        </Scripts>
+      </Frame>
+
+      <!-- Save/Cancel buttons -->       
+      <Button name="KT_StatisticsDialogOk" hidden="false" inherits="KT_DialogButtonTemplate">
+        <Anchors>
+          <Anchor point="BOTTOMRIGHT">
+            <Offset x="-20" y="20" />
+          </Anchor>
+        </Anchors>
+        <Size x="80" y="22" />
+      </Button>
+
+      <Button name="KT_StatisticsDialogClear" hidden="false" inherits="KT_DialogButtonTemplate">
+        <Anchors>
+          <Anchor point="RIGHT" relativeTo="KT_StatisticsDialogOk" relativePoint="LEFT">
+            <Offset x="-10" y="0" />
+          </Anchor>
+        </Anchors>
+        <Size x="80" y="22" />
+      </Button>
+
+    </Frames>    
+  </Frame>
+
+  <!-- Help dialog box, not parented to the main frame. -->
+  <Frame name="KT_HelpDialog" inherits="KT_DialogTemplate" parent="UIParent" frameStrata="FULLSCREEN_DIALOG" hidden="true">
+    <Size x="460" y="280" />
+    <Frames>
+      <!-- BG -->
+      <Frame name="$parentBG">
+        <Size x="406" y="210" />
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+            <Offset x="14" y="-26" />
+          </Anchor>
+        </Anchors>
+        <Backdrop bgFile="Interface\MERCHANTFRAME\UI-BuyBack-TopLeft" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="false">
+          <BackgroundInsets>
+            <AbsInset left="2" right="2" top="2" bottom="2" />
+          </BackgroundInsets>
+          <Color r="0.75" g="0.75" b="0.75"/>
+          <EdgeSize val="20" />
+        </Backdrop>
+      </Frame>
+      
+      <!-- Help text in a scroll frame -->
+      <ScrollFrame name="KT_HelpDialogScroll">
+        <Size x="400" y="192" />
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentBG" relativePoint="TOPLEFT">
+            <Offset x="8" y="-8" />
+          </Anchor>
+        </Anchors>
+
+        <Frames>
+          <Slider name="KT_HelpDialog_VSlider" inherits="UIPanelScrollBarTemplate" orientation="VERTICAL" minValue="0" maxValue="100" defaultValue="0" valueStep="1">
+            <Size x="24" y="170"/>
+            <Anchors>
+              <Anchor point="TOP" relativeTo="$parent" relativePoint="TOP">
+                <Offset x="0" y="-16" />
+              </Anchor>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="KT_HelpDialogScroll"/>
+            </Anchors>
+            <Backdrop edgeFile="Interface\Buttons\UI-SliderBar-Border" bgFile="Interface\Buttons\UI-SliderBar-Background" tile="true">
+              <EdgeSize>
+                <AbsValue val="8"/>
+              </EdgeSize>
+              <TileSize>
+                <AbsValue val="8"/>
+              </TileSize>
+              <BackgroundInsets>
+                <AbsInset left="3" right="3" top="6" bottom="6"/>
+              </BackgroundInsets>
+            </Backdrop>
+            <Scripts>
+              <OnMouseWheel>
+                self:SetValue(self:GetValue() - KeybindTrainer.Constants.SCROLL * delta)
+              </OnMouseWheel>
+              <OnValueChanged>
+                local val     = self:GetValue()
+
+                -- Correct for the strange behavior of the buttons
+                -- in Blizzard's UIPanelScrollBarTemplate.
+                if not KT_Help_LastScrollVal then
+                  KT_Help_LastScrollVal = 0
+                end
+                if (KT_Help_LastScrollVal - val)^2 > (KeybindTrainer.Constants.SCROLL^2) then
+                  if (val > KT_Help_LastScrollVal) then
+                    val = KT_Help_LastScrollVal + KeybindTrainer.Constants.SCROLL
+                  else
+                    val = KT_Help_LastScrollVal - KeybindTrainer.Constants.SCROLL
+                  end
+                end
+                self:SetValue(val)
+
+                -- Set the new scroll position
+                local scroll_val = (val / 100) * KT_HelpDialogScroll:GetVerticalScrollRange()
+                KT_HelpDialogScroll:SetVerticalScroll(scroll_val)
+                
+                -- Save position for next scroll
+                KT_Help_LastScrollVal = val
+              </OnValueChanged>
+            </Scripts>
+            <ThumbTexture name="$parentThumbTexture" file="Interface\Buttons\UI-ScrollBar-Knob">
+              <Size x="25" y="25"/>
+            </ThumbTexture>
+          </Slider>
+        </Frames>
+
+        <ScrollChild>
+          <!-- Actual HTML help -->
+          <SimpleHTML name="KT_HelpDialogTextFrame">
+            <Size x="390" y="180" />
+            <Anchors>
+              <Anchor point="CENTER" setAllPoints="true"/>
+            </Anchors>
+            <FontString inherits="GameFontHighlight"/>
+            <FontStringHeader3 inherits="GameFontNormal"/>
+            <FontStringHeader2 inherits="GameFontNormalLarge"/>
+            <FontStringHeader1 inherits="GameFontNormalHuge"/>
+            <Scripts>
+              <OnLoad>
+                self:SetText(KeybindTrainer.HelpDialogText)
+              </OnLoad>
+            </Scripts>
+          </SimpleHTML>
+        </ScrollChild>
+        <Scripts>
+          <OnMouseWheel>
+             local s = KT_HelpDialog_VSlider
+             s:SetValue(s:GetValue() - 3*delta)
+          </OnMouseWheel>         
+        </Scripts>
+      </ScrollFrame>
+
+      <Button name="KT_CloseHelp" hidden="false" inherits="KT_DialogButtonTemplate">
+        <Anchors>
+          <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
+            <Offset x="0" y="20" />
+          </Anchor>
+        </Anchors>
+        <Size x="80" y="22" />
+      </Button>
+    </Frames>
+  </Frame>
+
+
+  <!-- Config dialog box -->
+  <Frame name="KT_OptionsDialog" inherits="KT_DialogTemplate" parent="UIParent" frameStrata="FULLSCREEN_DIALOG" hidden="true">
+    <Size x="390" y="448" />
+
+    <!--
+    <Backdrop edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+      <EdgeSize val="32"/>
+    </Backdrop>
+    <Layers>
+      <Layer level="BACKGROUND">
+        <Texture setAllPoints="true">
+          <Color r="0" g="0" b="0" a="1.0"/>
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset x="10" y="-11"/>
+            </Anchor>
+            <Anchor point="BOTTOMRIGHT">
+              <Offset x="-11" y="10"/>
+            </Anchor>
+          </Anchors>
+        </Texture>
+      </Layer>
+    </Layers> -->
+
+    <Frames>
+
+      <!-- Block: Bind Options -->
+      <Frame name="KT_BindOptsMenu" inherits="KT_ConfigUIBlockTemplate">
+        <Size x="190" y="108"/>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+            <Offset x="15" y="-30"/>
+          </Anchor>
+          <Anchor point="RIGHT" relativeTo="$parent" relativePoint="RIGHT">
+            <Offset x="-15" y="0"/>
+          </Anchor>
+        </Anchors>
+        <Frames>
+          <CheckButton name="KT_PetBar" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors> 
+              <Anchor point="TOPLEFT" relativeTo="$parentLabel" relativePoint="BOTTOMLEFT">
+                <Offset x="0" y="-4"/>
+              </Anchor>
+            </Anchors>      
+          </CheckButton>
+          <CheckButton name="KT_StanceBar" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors>
+              <Anchor point="TOPLEFT" relativeTo="KT_PetBar" relativePoint="BOTTOMLEFT">
+                <Offset x="0" y="0"/>
+              </Anchor>
+            </Anchors>
+          </CheckButton>
+          <CheckButton hidden="true" name="KT_TotemBar" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors>
+              <Anchor point="TOPLEFT" relativeTo="KT_StanceBar" relativePoint="BOTTOMLEFT">
+                <Offset x="0" y="0"/>
+              </Anchor>
+            </Anchors>
+          </CheckButton>
+
+          <CheckButton name="KT_BindPad" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors>
+              <Anchor point="TOPLEFT" relativeTo="KT_PetBar" relativePoint="TOPLEFT">
+                <Offset x="190" y="0"/>
+              </Anchor>
+            </Anchors>
+          </CheckButton>
+          <CheckButton name="KT_Dominos" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors>
+              <Anchor point="TOPLEFT" relativeTo="KT_BindPad" relativePoint="BOTTOMLEFT">
+                <Offset x="0" y="0"/>
+              </Anchor>
+            </Anchors>
+          </CheckButton>
+          <CheckButton name="KT_Bartender" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors>
+              <Anchor point="TOPLEFT" relativeTo="KT_Dominos" relativePoint="BOTTOMLEFT">
+                <Offset x="0" y="0"/>
+              </Anchor>
+            </Anchors>
+          </CheckButton>
+        </Frames>
+      </Frame>
+      <!-- End Stats Config Box -->
+
+      <!-- Block: Trial Config -->
+      <Frame name="KT_TrialMenu" inherits="KT_ConfigUIBlockTemplate">
+        <Size x="140" y="80"/>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="KT_BindOptsMenu" relativePoint="BOTTOMLEFT">
+            <Offset x="0" y="-5"/>
+          </Anchor>
+          <Anchor point="RIGHT" relativeTo="$parent" relativePoint="RIGHT">
+            <Offset x="-15" y="0"/>
+          </Anchor>
+        </Anchors>
+        <Frames>
+          <CheckButton name="KT_Continuous" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors> 
+              <Anchor point="TOPLEFT" relativeTo="$parentLabel" relativePoint="BOTTOMLEFT">
+                <Offset x="0" y="-4"/>
+              </Anchor>
+            </Anchors>      
+          </CheckButton>
+          <CheckButton name="KT_RandomOrder" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors> 
+              <Anchor point="TOPLEFT" relativeTo="$parentLabel" relativePoint="BOTTOMLEFT">
+                <Offset x="0" y="-28"/>
+              </Anchor>
+            </Anchors>      
+          </CheckButton>
+          <CheckButton name="KT_SaveStats" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors> 
+              <Anchor point="TOPLEFT" relativeTo="KT_Continuous" relativePoint="TOPLEFT">
+                <Offset x="190" y="0"/>
+              </Anchor>
+            </Anchors>      
+          </CheckButton>
+        </Frames>
+      </Frame>
+      <!-- End Trial Config Box -->
+
+      <!-- Block: Display Config -->
+      <Frame name="KT_DisplayMenu" inherits="KT_ConfigUIBlockTemplate">
+        <Size x="428" y="112"/>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="KT_TrialMenu" relativePoint="BOTTOMLEFT">
+            <Offset x="0" y="-5"/>
+          </Anchor>
+          <Anchor point="RIGHT" relativeTo="$parent" relativePoint="RIGHT">
+            <Offset x="-15" y="0"/>
+          </Anchor>
+        </Anchors>
+        <Frames>
+          <CheckButton name="KT_RandomPosition" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors> 
+              <Anchor point="TOPLEFT" relativeTo="$parentLabel" relativePoint="BOTTOMLEFT">
+            <Offset x="0" y="-4"/>
+              </Anchor>
+            </Anchors>      
+          </CheckButton>
+          <CheckButton name="KT_ShowTimer" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors> 
+              <Anchor point="TOPLEFT" relativeTo="KT_RandomPosition" relativePoint="TOPLEFT">
+                <Offset x="190" y="0"/>
+              </Anchor>
+            </Anchors>      
+          </CheckButton>
+
+          <!-- Input box for custom duration. Accepts 
+               floating point numbers.            -->
+          <EditBox name="KT_DurationInput" inherits="KT_EditInputTemplate" autoFocus="false" parentKey="input" letters="4" numeric="false">
+            <Size x="45" y="24"/>
+            <Anchors>
+              <Anchor point="TOPLEFT" relativeTo="KT_RandomPosition" relativePoint="BOTTOMLEFT">
+            <Offset x="72" y="-6"/>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnEditFocusLost>
+            KeybindTrainer:SaveEditBoxFloatValue(self)
+              </OnEditFocusLost>
+            </Scripts>
+          </EditBox>
+
+          <!-- Random durations.  Disables the above input. -->
+          <CheckButton name="KT_RandomTime" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors> 
+              <Anchor point="TOPLEFT" relativeTo="KT_DurationInput" relativePoint="BOTTOMLEFT">
+                <Offset x="-72" y="0"/>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <PostClick>
+                KeybindTrainer:ChangeOther(self,
+                         _G["KT_DurationInput"],
+                         _G["KT_DurationInputLabel"])
+              </PostClick>
+              <OnEnable>
+                KeybindTrainer:ChangeOther(self,
+                         _G["KT_DurationInput"],
+                         _G["KT_DurationInputLabel"])
+              </OnEnable>
+            </Scripts>
+          </CheckButton>
+
+          <!-- Icon size slider -->
+          <Slider name="KT_IconSizeSlider" inherits="OptionsSliderTemplate">
+            <Size x="100" y="20"/>
+            <Anchors>
+              <Anchor point="TOPLEFT" relativeTo="KT_ShowTimer" relativePoint="BOTTOMLEFT">
+            <Offset x="4" y="-22"/>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+            <FontString name="$parentVal" inherits="GameFontHighlight">
+              <Anchors>
+                <Anchor point="LEFT" relativeTo="$parentText" relativePoint="RIGHT">
+                  <Offset x="0" y="0"/>
+                </Anchor>
+              </Anchors>
+            </FontString>
+              </Layer>
+            </Layers>
+            <Scripts>
+              <OnLoad>
+                KeybindTrainer:LoadSlider(self:GetParent(),
+                            self,
+                            _G[self:GetName().."Text"],
+                            _G[self:GetName().."Val"],
+                            _G[self:GetName().."Low"],
+                            _G[self:GetName().."High"],
+                            0.5,
+                            4.0, true);
+              </OnLoad>
+              <OnValueChanged>
+                KeybindTrainer:OnSlide(self, 
+                         value,
+                         _G[self:GetName().."Val"]);
+              </OnValueChanged>
+            </Scripts>
+          </Slider>
+
+        </Frames>
+      </Frame>
+      <!-- End Display Config Block -->
+
+      <!-- Block: Addon Config -->
+      <Frame name="KT_AddonMenu" inherits="KT_ConfigUIBlockTemplate">
+        <Size x="116" y="55"/>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="KT_DisplayMenu" relativePoint="BOTTOMLEFT">
+            <Offset x="0" y="-5"/>
+          </Anchor>
+          <Anchor point="RIGHT" relativeTo="$parent" relativePoint="RIGHT">
+            <Offset x="-15" y="0"/>
+          </Anchor>
+        </Anchors>
+        <Frames>
+          <CheckButton name="KT_ShowMinimapIcon" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors> 
+              <Anchor point="TOPLEFT" relativeTo="$parentLabel" relativePoint="BOTTOMLEFT">
+                <Offset x="0" y="-4"/>
+              </Anchor>
+            </Anchors>      
+          </CheckButton>
+          <CheckButton name="KT_ShowStartupMsg" inherits="KT_ConfigCheckButtonTemplate">
+            <Anchors> 
+              <Anchor point="TOPLEFT" relativeTo="KT_ShowMinimapIcon" relativePoint="TOPLEFT">
+                <Offset x="190" y="0"/>
+              </Anchor>
+            </Anchors>      
+          </CheckButton>
+        </Frames>
+      </Frame>
+      <!-- End Addon Config Box -->
+
+
+
+
+      <!-- TODO: CONFIG HERE -->
+
+
+
+      <Button name="KT_CloseOptions" hidden="false" inherits="KT_DialogButtonTemplate">
+        <Anchors>
+      <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
+        <Offset x="0" y="20" />
+      </Anchor>
+        </Anchors>
+        <Size x="80" y="22" />
+      </Button>
+    </Frames>
+  </Frame>
+
+</Ui>
+  

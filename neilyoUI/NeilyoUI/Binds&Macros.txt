@@ -1,0 +1,357 @@
+MACROS LISTED NEAR BOTTOM
+
+1: Start Attack Eviscerate -In Stealth: Unstealth 
+Shift 1: Expose -Alt 1: Focus Deadly Throw
+Control / Alt
+
+2: Startattack Backstab/Mut/Hemo (depends on spec)  -In Stealth: Premed 
+Ambush 
+Shift 2: Offensive Trinket -Alt 2: Engi Gloves
+Control / Alt
+
+3: Kidney -In Stealth: Spammable Sap Macro 
+Shift 3: Slice and Dice
+Control / Alt
+
+4: Gouge -In Stealth: Garrote 
+Shift 4: Focus Gouge -In Stealth: Focus Garrote
+Control / Alt
+
+5: Stealth Premed Cheapshot macro 
+Shift 5: Dance Focus Cheapshot Macro -In Stealth: Focus Premed Cheapshot Macro
+Control / Alt
+
+6: Distract
+Shift / Control / Alt
+
+~: Deadly Throw
+Shift / Control / Alt
+
+Q: Startattack Shiv and Throw Macro
+Shift Q: Focus Shiv and Focus Throw Macro 
+Alt Q: Racial 
+Ctrl Q: Ground Mount
+
+W: Forward
+
+E: Blind 
+Shift E: Focus Blind 
+Ctrl E: Blind arena4
+Alt E: Blind arena5
+
+R: Startattack Kick 
+Shift R: Focus Kick 
+Ctrl R: Offhand Swap
+Control / Alt
+
+T: Dismantle 
+Shift T: Focus Dismantle 
+Ctrl T: Cannabalize / Flying Mount
+Alt
+
+A: Strafe left
+
+S: Back
+
+D: Strafe Right
+
+F: Startattack Dance Premed Cheapshot Macro
+Shift F: Startattack Dance Premed Garrote Offensive Trinket Macro 
+Ctrl F: Dance Focus Garrote Macro
+Alt F: Main Hand Weapon Swap
+
+G: Castsequence Redirect, Kidney shot Macro
+Shift G: Target Focus Castsequence Redirect, Kidney shot Macro
+Ctrl G: Food+cancel Hand of Protection macro
+Alt
+
+Z: Smoke Bomb
+Shift / Control / Alt
+
+X: Startattack Hemo or Envenom if Mutilate (offensive trinket(s)/gloves if danced for hemo) -In Stealth: Sap 
+Shift X: Dance Focus Sap -In Stealth: Focus Sap
+Ctrl X: Rupture
+Alt
+
+C: Cloak 
+Shift C: Recuperate 
+Alt C: Tricks Secondary 
+Ctrl C: Feint
+
+V: Fan of Knives 
+Shift V: Healthstone 
+Ctrl V: Bandage
+Alt
+
+Mouse = Razer Death Adder at 1800 dpi 1000Hz, Razer sens: Between 3 and 3.5. Windows Sens: 
+6th notch (Middle/default) Wow Sens: On the "S" of "Sensitivity" 
+-Mouse look speed: Lowest
+
+Mouse4: Vanish -In Stealth: Vanish Cheapshot Macro 
+Shift Mouse4: PvP Trinket+stealth macro
+Alt Mouse4: Preparation 
+Ctrl Mouse4: Dance Sap Nearest Enemy Macro
+
+Mouse5: Shadowstep 
+Shift Mouse5: Focus Shadowstep + Target Focus
+Alt Mouse5: Tricks primary 
+Ctrl Mouse5: Dance Sap Target
+
+Mwheelup: Combat Readiness 
+Shift Mwheelup: /focus arena1 (new line)/focus [@mouseover,nodead,exists] (mouseover focus if focusing a pet in arena or setting focus in BG's/Duels)
+Alt Mwheelup: target=arena1 blind (change to focus arena 4 in 5v5)
+Ctrl Mwheelup: target=arena1 step + target arena1 (blind arena 1 in 5v5)
+
+Mwheeldown: Sprint 
+Shift Mwheeldown: /focus arena2 
+Alt Mwheeldown: target=arena2 blind (change to focus arena5 in 5v5)
+Ctrl Mwheeldown: target-arena2 step + target arena2 (blind arena2 in 5v5)
+
+MiddleMouse: Evasion 
+Shift MiddleMouse: /focus arena3 
+Alt MiddleMouse: target=arena3 Blind (not used in 5v5)
+Ctrl MiddleMouse: target=arena3 step + target arena3 (blind arena3 in 5v5)
+
+
+Tab: Target Nearest Enemy PLAYER 
+Shift Tab: Target Last Target
+
+Sdance Bar: Everything the same as normal bar except- 2: Startattack Ambush Offensive trinket(s)/gloves
+and X stays hemo while hemo is on 2 out of dance if not using backstab
+
+Camera Distance: 21 scroll notches/button presses out from 1st person 
+Resolution: 1920x1080(recommended) -UI Scale: Lined up with the "A" in "API"
+
+Macros:
+(out of stealth and in dance bars)
+/startattack
+/cast Premeditation
+/use [stance:3] 13
+/use [stance:3] 14
+/use [stance:3] 10
+/cast [stance:3] Ambush 
+/cast [stance:0] Backstab
+                 Hemo if hemo spec. 13 is top trinket slot, 14 is bottom, 10 are gloves.
+				 MAKE SURE to remove either 13 or 14 if you are not human, depending on which slot you put PvP trinket in (13=top slot 14=bottom, 10 is gloves).
+
+(stealth bar)
+/cast Premeditation
+/cast Ambush
+
+(dance bar)
+/startattack
+/use [stance:3] 13
+/use [stance:3] 14
+/use [stance:3] 10
+/cast Eviscerate
+					MAKE SURE to remove either 13 or 14 if you are not human, depending on which slot you put PvP trinket in (13=top slot 14=bottom, 10 is gloves).
+					
+(stealth bar)
+/cast Premeditation
+/cast Garrote
+
+(stealth bar)
+/target focus
+/cast Premeditation
+/cast Garrote
+/targetlasttarget
+
+/cast Shadow Dance
+/target focus
+/cast Garrote
+/targetlasttarget
+/startattack
+
+(stealth bar)
+/target focus
+/cast Premeditation
+/cast Cheap Shot
+/targetlasttarget
+
+(dance bar)
+/cast Shadow Dance
+/target focus
+/cast Cheap Shot
+/targetlasttarget
+/startattack
+
+/cast Shadow Dance
+/cast Premeditation
+/cast Cheap Shot
+
+
+/cast Shadow Dance
+/cast Premeditation
+/use 13
+/use 14
+/use 10
+/cast Garrote
+/startattack
+				MAKE SURE to remove either 13 or 14 if you are not human, depending on which slot you put PvP trinket in (13=top slot 14=bottom, 10 is gloves).
+
+/cast Shadow Dance
+/cast [target=focus] Sap
+
+/cast Shadow Dance
+/cast Sap
+
+/startattack
+/use [stance:3] 13
+/use [stance:3] 14
+/use [stance:3] 10
+/cast Hemorrhage
+					MAKE SURE to remove either 13 or 14 if you are not human, depending on which slot you put PvP trinket in (13=top slot 14=bottom, 10 is gloves).
+
+/stopattack
+/cast !Stealth
+/cast Premeditation
+/cast Cheap Shot
+
+/target focus
+/cast Gouge
+/targetlasttarget
+
+/cast [mod:shift,target=focus] Dismantle; Dismantle
+
+/target focus
+/castsequence reset=59 Redirect, Kidney Shot
+
+/cancelaura hand of protection
+/use Conjured Mana Strudel
+/use Sweet Potato Bread
+/use Savory Snowplum
+
+/stopattack
+/cast Sap
+
+/cast [@name1, nodead, exists] [@name2] Tricks of the Trade
+
+/targetfriendplayer
+/cast Tricks of the Trade
+/targetlastenemy
+
+/cast !Cannibalize(Racial)
+
+/startattack
+/cast Shiv
+/cast Throw
+
+/target focus
+/cast Shiv
+/cast Throw
+/targetlasttarget
+
+(double on use trinkets)
+/use 13
+/use 14
+/use 10
+
+/stopattack
+/cleartarget
+/targetenemyplayer
+/cast Sap(Rank 4)
+
+/cancelaura Stealth
+
+/startattack
+/cast [mod:shift,target=focus] Kick; Kick
+
+/cast [target=focus] Sap(Rank 4)
+
+/startattack
+
+/cast [nomod] Blind
+/cast [mod:shift,target=focus] Blind
+/cast [mod:ctrl,target=arena4] Blind
+/cast [mod:alt,target=arena5] Blind
+
+/cast [target=arena1] Blind
+-/focus arena4 (changed for 5v5, swap the dash to cancel the line out)
+
+/cast [target=arena2] Blind
+-/focus arena5 (changed for 5v5, swap the dash to cancel the line out)
+
+/cast [target=arena3] Blind
+
+/focus arena1
+/focus [@mouseover,nodead,exists]
+
+
+/focus arena2
+
+/focus arena3
+
+/target Arena1
+/cast [target=arena1] Shadowstep
+-/cast [target=arena1] Blind (change to this for 5v5, swap the dash to cancel the first 2 lines out)
+
+/target Arena2
+/cast [target=arena2] Shadowstep
+-/cast [target=arena2] Blind (change to this for 5v5, swap the dash to cancel the first 2 lines out)
+
+/target Arena3
+/cast [target=arena3] Shadowstep
+-/cast [target=arena3] Blind (change to this for 5v5, swap the dash to cancel the first 2 lines out)
+
+
+/target focus
+/cast Deadly Throw
+/targetlasttarget
+
+/target focus
+/cast [target=focus] Shadowstep
+
+
+/stopattack
+/cast Shadow Dance
+/targetenemyplayer
+/cast Sap 
+
+
+#show Vicious Gladiator's Medallion of Tenacity
+/use Every Man for Himself(Racial)
+/cast !Stealth
+(change to /use pvp trinket if not human)
+
+
+/use [mod:ctrl]Deadly Poison;[mod:altl]Mind-numbing Poison;[mod:shift]Wound Poison;Crippling Poison
+/use [button:1]16;[button:2]17;[button:3]18
+/click StaticPopup1Button1
+(left click = apply to main hand, right click = apply to off hand, middle mouse click = apply to throwing weapon. No modifier
+= crippling, shift = wound, alt = mind numbing, ctrl = deadly)
+
+/run PartyMemberFrame1:ClearAllPoints() PartyMemberFrame1:SetPoint("TOPLEFT", 188, -250)
+/run PartyMemberFrame2:ClearAllPoints() PartyMemberFrame2:SetPoint("TOPLEFT", 188, -170)
+/run PartyMemberFrame3:ClearAllPoints() PartyMemberFrame3:SetPoint("TOPLEFT", 188, -90)
+(move Party frames, use a war game to test positioning)
+(I use raid frames now, in case u want to use this though I left it here, coordinates are outdated).
+
+/run ArenaEnemyFrame1:ClearAllPoints() ArenaEnemyFrame1:SetPoint("TOPLEFT", -571, -45)
+/run for i=1,58 do _G["t"..i]:Hide() end
+
+(move arena frame positions, type /testaef if you use my autoscript to see where the arenaframes are).
+
+/script PartyMemberFrame1:SetScale(1.1)
+/script PartyMemberFrame2:SetScale(1.1)
+/script PartyMemberFrame3:SetScale(1.1)
+/script PartyMemberFrame4:SetScale(1.1)
+
+/script ArenaEnemyFrame1:SetScale(1.1)
+/script ArenaEnemyFrame2:SetScale(1.1)
+/script ArenaEnemyFrame3:SetScale(1.1)
+/script ArenaEnemyFrame4:SetScale(1.1)
+/script ArenaEnemyFrame5:SetScale(1.1)
+
+/run local f = GetMouseFocus(); f:SetUserPlaced(true) f:SetMovable(true) f:EnableMouse(true) f:RegisterForDrag("LeftButton") f:SetScript("OnDragStart",f.StartMoving) f:SetScript("OnDragStop",f.StopMovingOrSizing)
+(bind it, spam it while mousing over target of target and then drag, do it on focus frames target of target too)
+
+/run SetBindingMacro("bindname","macroname") SaveBindings(GetCurrentBindingSet()) 
+(bind macros without having to put them on your bars. You will need to look in the bindings
+file to find the bind names EX: ALT-BUTTON3 or something like that is alt middle mouse)
+
+
+/console synchronizeMacros 0
+/console synchronizeSettings 0
+/console synchronizeBindings 0
+(saves your settings client side instead of server side)
+

@@ -1,0 +1,12 @@
+## Interface: 50400
+## Title: MacroPoster
+## Notes: Periodically posts a macro to trade
+## SavedVariables: MacroPosterDB
+## Author: Zarillion
+## Version: 1.1
+## X-Curse-Packaged-Version: 5.4
+## X-Curse-Project-Name: MacroPoster
+## X-Curse-Project-ID: macroposter
+## X-Curse-Repository-ID: wow/macroposter/mainline
+
+MacroPoster.lua

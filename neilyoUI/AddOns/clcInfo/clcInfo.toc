@@ -1,0 +1,40 @@
+## Interface: 50400
+## Title: clcInfo
+## Author: clc
+## SavedVariables: clcInfoDB
+## SavedVariablesPerCharacter: clcInfoCharDB
+## X-Curse-Packaged-Version: v.1.5.40.002
+## X-Curse-Project-Name: clcInfo
+## X-Curse-Project-ID: clctracker
+## X-Curse-Repository-ID: wow/clctracker/mainline
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+core.lua
+templates.lua
+fixandclean.lua
+debug.lua
+
+display\core.lua
+display\alerts.lua
+display\grids.lua
+display\icons.lua
+display\bars.lua
+display\micons.lua
+display\mbars.lua
+display\texts.lua
+
+data\util.lua
+data\global_icon.lua
+data\global_bar.lua
+data\global_micon.lua
+data\global_mbar.lua
+data\global_text.lua
+data\alerts.lua
+data\custom.lua
+
+retmodule\index.xml
+
+data\classes.xml

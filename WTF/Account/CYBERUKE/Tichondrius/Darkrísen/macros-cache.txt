@@ -1,0 +1,69 @@
+VER 3 010000000000000C "bark" "INV_MISC_QUESTIONMARK"
+/use [mod:alt, @player][] Ironbark
+/use [mod:alt, @player][] Cenarion Ward
+/use [mod:alt, @player][] Swiftmend
+END
+VER 3 0100000000000017 "bark" "INV_MISC_QUESTIONMARK"
+/use [mod:ctrl,@party2][mod:shift,@party1] Cenarion Ward; [nomod][mod:alt, @player] Regrowth
+/use [mod:ctrl,@party1][mod:shift,@party1] Ironbark
+END
+VER 3 010000000000001C "bark1" "INV_MISC_QUESTIONMARK"
+/use [@party1] Ironbark
+/use [@party1] Cenarion Ward
+END
+VER 3 010000000000000F "bear" "INV_MISC_QUESTIONMARK"
+/use Bear form
+END
+VER 3 0100000000000007 "cancel" "INV_MISC_QUESTIONMARK"
+/cancelform
+/cast Rejuenation
+END
+VER 3 0100000000000010 "cat" "INV_MISC_QUESTIONMARK"
+/use Cat form
+END
+VER 3 010000000000001E "clone" "INV_MISC_QUESTIONMARK"
+/use Nature's Swiftness
+/use [@focus,exists][] Cyclone
+END
+VER 3 010000000000000D "clone" "INV_MISC_QUESTIONMARK"
+/use [@focus, exists][] Cyclone
+END
+VER 3 010000000000001F "mnt" "INV_MISC_QUESTIONMARK"
+/use [flyable] Swift Flight Form
+/use [noflyable] Black War Wolf
+END
+VER 3 0100000000000019 "ONE" "INV_MISC_QUESTIONMARK"
+/target party1
+/use [@party1]Lifebloom
+END
+VER 3 0100000000000009 "ONE" "INV_MISC_QUESTIONMARK"
+/use [@party1] Nature's Cure
+END
+VER 3 0100000000000008 "rejuv" "INV_MISC_QUESTIONMARK"
+#showtooltip Rejuvenation
+/castsequence [nomod][mod:alt, @player] reset=target/2 Rejuvenation, Genesis
+END
+VER 3 010000000000001D "root" "INV_MISC_QUESTIONMARK"
+/targetenemyplayer
+/use Entangling Roots
+/targetlasttarget
+END
+VER 3 010000000000001A "self" "INV_MISC_QUESTIONMARK"
+/use [@player] lifebloom
+END
+VER 3 0100000000000018 "self" "INV_MISC_QUESTIONMARK"
+/use [@player] Ironbark
+/use [@player] Cenarion Ward
+/use [@player] Tree Form
+/use [@player] Regrowth
+END
+VER 3 0100000000000011 "travel" "INV_MISC_QUESTIONMARK"
+/use Travel Form
+END
+VER 3 010000000000000A "TWO" "INV_MISC_QUESTIONMARK"
+/use [@party2] Nature's Cure
+END
+VER 3 010000000000001B "TWO" "INV_MISC_QUESTIONMARK"
+/tar party2
+/use [@party2] Lifebloom
+END

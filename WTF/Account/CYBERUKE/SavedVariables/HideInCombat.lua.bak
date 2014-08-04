@@ -1,0 +1,11 @@
+
+HideInCombatDB = {
+	["enabled"] = true,
+	["announce"] = true,
+	["inRaid"] = true,
+	["hideMinimap"] = true,
+	["hideTooltip"] = true,
+	["inParty"] = true,
+	["inSolo"] = true,
+	["hideChat"] = true,
+}

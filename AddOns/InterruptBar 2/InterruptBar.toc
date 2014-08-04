@@ -1,0 +1,8 @@
+## Title: Interrupt Bar Modified
+## Interface: 50400
+## Notes: A basic mod that tracks enemy interrupts.
+## SavedVariables: InterruptBarDB
+## Defaultstate: Enabled
+## Version: 1.0.1
+
+InterruptBar.lua

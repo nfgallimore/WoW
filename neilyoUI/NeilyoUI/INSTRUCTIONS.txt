@@ -1,0 +1,30 @@
+LOOK AT IMPORTING UI ARTICLE IN ARTICLE SECTION FOR HOW TO CUSTOMIZE COOLDOWN ICONS!
+
+LOGIN TO YOUR CHARACTER FIRST and type 3 separate commands into chat
+
+/console synchronizeSettings 0
+/console synchronizeMacros 0
+/console synchronizeBindings 0
+
+CLOSE WOW
+
+-Rename YOUR OWN account folder to save it.  It is inside your 
+WoW folder->WTF folder->Account folder.  You can just rename your account folder to something
+like My Old Account Settings or whatever you want.
+
+-Place the ACCOUNT NAME folder I provided in the WTF folder and rename it to YOUR ACCOUNT name in all caps exactly as your account name 
+appeared in the WTF folder before. 
+
+-Inside the folder I provided, rename the Server'Name folder to the server your
+character is on. Name it exactly as it shows in wow, for example: Kel'Thuzad
+
+-Inside the Server'Name folder, rename the Character name folder to your characters
+name exactly as it is in game.
+
+-Put the ActionBarSaver and AutoScript folders in your WTF->Interface->Addons folder if you want my binds/bars and if you want my scripts.
+
+-At the Enter World screen, click addons in the bottom left and make sure ActionBarSaver
+and AutoScript are enabled (you might have to enable out of date addons).
+
+-Log in, enter world, IN GAME type /abs restore dance    
+to restore all of my binds / button positions.

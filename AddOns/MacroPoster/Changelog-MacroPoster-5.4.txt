@@ -1,0 +1,26 @@
+------------------------------------------------------------------------
+r9 | zarillion | 2014-02-21 01:56:40 +0000 (Fri, 21 Feb 2014) | 1 line
+Changed paths:
+   A /tags/5.4 (from /trunk:8)
+
+Tagging as 5.4
+------------------------------------------------------------------------
+r8 | zarillion | 2014-02-21 01:46:32 +0000 (Fri, 21 Feb 2014) | 1 line
+Changed paths:
+   M /trunk/MacroPoster.toc
+
+Bump version to 1.1
+------------------------------------------------------------------------
+r7 | zarillion | 2014-02-21 01:43:42 +0000 (Fri, 21 Feb 2014) | 1 line
+Changed paths:
+   M /trunk/MacroPoster.lua
+   M /trunk/MacroPoster.toc
+
+Bump interface version and fix for alternate languages.
+------------------------------------------------------------------------
+r6 | frostedcheerios | 2013-06-11 03:23:53 +0000 (Tue, 11 Jun 2013) | 1 line
+Changed paths:
+   M /trunk/MacroPoster.lua
+
+Add comments for the TradeChatAvailable() method
+------------------------------------------------------------------------

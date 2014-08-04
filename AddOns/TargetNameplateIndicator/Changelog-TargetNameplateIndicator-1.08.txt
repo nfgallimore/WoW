@@ -1,0 +1,23 @@
+tag 1.08
+499589993c0369191eda57fdf846e198b3ac2066
+Choonster <Choonster.2010@gmail.com>
+2013-12-18 04:34:03 +1100
+
+1.08
+
+
+--------------------
+
+Choonster:
+	- Trim trailing spaces
+	- Add DEBUG flag to enable/disable debugging output
+	- Replace all debugging print() calls with debugprint() calls
+	- Wrap debugprint() calls in --@debug@/--@end-debug@ so CurseForge
+	packager comments them out
+	- Add FindGlobals tools-used reference in .pkgmeta
+	- Add OptionalDeps and X-Embeds tags to TOC as recommended by
+	LibNameplateRegistry
+	- Rewrite around LibNameplateRegistry-1.0
+	- Update for 5.4
+	- Add three new textures
+	- Initial commit (v1.07)

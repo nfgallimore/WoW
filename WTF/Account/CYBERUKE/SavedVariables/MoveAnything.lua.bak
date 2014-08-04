@@ -1,0 +1,21 @@
+
+MADB = {
+	["characters"] = {
+	},
+	["frameListRows"] = 18,
+	["tooltips"] = true,
+	["profiles"] = {
+		["default"] = {
+			["name"] = "default",
+			["frames"] = {
+				["TargetFrame"] = {
+					["name"] = "TargetFrame",
+				},
+				["PlayerFrame"] = {
+					["scale"] = 0.8380476236343384,
+					["name"] = "PlayerFrame",
+				},
+			},
+		},
+	},
+}

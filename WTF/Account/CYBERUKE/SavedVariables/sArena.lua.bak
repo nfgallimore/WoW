@@ -1,0 +1,18 @@
+
+sArenaDB = {
+	["firstrun"] = false,
+	["position"] = {
+		["y"] = 100.9999008178711,
+		["x"] = 178.9994964599609,
+		["point"] = "CENTER",
+		["relativePoint"] = "CENTER",
+	},
+	["scale"] = 1,
+	["Trinkets"] = {
+		["alwaysShow"] = false,
+		["scale"] = 1,
+		["enabled"] = true,
+	},
+	["version"] = 5,
+	["lock"] = true,
+}

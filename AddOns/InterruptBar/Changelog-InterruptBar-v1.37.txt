@@ -1,0 +1,12 @@
+tag v1.37
+db6002f469f4690b954a6da1514b3c8470864bd4
+Timothy Yen <yen.timothy@gmail.com>
+2013-01-20 00:56:47 -0800
+
+Tagging as v1.37
+
+
+--------------------
+
+Timothy Yen:
+	- Add another spellid for Optical Blast

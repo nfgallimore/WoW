@@ -1,0 +1,32 @@
+## Interface: 40200
+## X-Compatible-With: 40100
+## Title: Plate Buffs
+## Version: 1.11.0 (r215)
+## Notes: Show buffs on nameplates
+## Author: Cyprias
+## SavedVariables: PB_DB
+## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3, LibNameplate-1.0
+## X-Curse-Packaged-Version: 1.11.0
+## X-Curse-Project-Name: PlateBuffs
+## X-Curse-Project-ID: platebuffs
+## X-Curse-Repository-ID: wow/platebuffs/mainline
+
+## X-Bitcoin: 1PiGukwoA9iiSQMWZNDGGuPfwugGTNJfnL
+## X-Website: http://wow.curse.com/downloads/wow-addons/details/platebuffs.aspx
+## X-Donate: https://www.paypal.com/cgi-bin/webscr?hosted_button_id=VG3UNPDU69AG6&item_name=PlateBuffs+%28from+in+game%29&cmd=_s-xclick
+## X-License: All Rights Reserved
+
+## LoadManagers: AddonLoader
+## X-LoadOn-Always: true
+
+#@no-lib-strip@
+libs\embeds.xml
+#@end-no-lib-strip@
+
+locales\locales.xml
+
+func.lua
+core.lua
+frames.lua
+options.lua
+combatlog.lua

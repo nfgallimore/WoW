@@ -1,0 +1,74 @@
+VER 3 0100000000000003 " " "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cancelaura Treant Form
+/cast [flyable] Swift Flight Form
+/cast [flyable] Ironbound Proto-Drake
+/cast [swimming]Aquatic Form
+/use [noflyable] Black war wolf
+/script VehicleExit()
+/dismount [mounted]
+END
+VER 3 0100000000000009 "Bear" "INV_Misc_QuestionMark"
+/use !bear form
+END
+VER 3 0100000000000004 "Blink" "Spell_Arcane_Blink"
+#showtooltip Displacer Beast
+/use Displacer Beast
+END
+VER 3 010000000000000C "cancel" "INV_Misc_QuestionMark"
+/cancelform
+END
+VER 3 010000000000000A "Cat" "INV_Misc_QuestionMark"
+#show cat form
+/use !cat form
+END
+VER 3 0100000000000007 "Cyclone" "INV_Misc_QuestionMark"
+/focus [nomod]
+/cast [@focus] Cyclone
+END
+VER 3 0100000000000013 "focus" "INV_MISC_QUESTIONMARK"
+/use [@focus] Cyclone
+END
+VER 3 010000000000000D "hs" "INV_Stone_04"
+#show Healthstone
+/use Healthstone
+END
+VER 3 010000000000000F "iceblock" "INV_MISC_QUESTIONMARK"
+/cast !Symbiosis
+END
+VER 3 0100000000000012 "moon" "INV_MISC_QUESTIONMARK"
+/cast !Travel Form
+END
+VER 3 0100000000000005 "MOTW" "INV_Misc_QuestionMark"
+/cast Mark of the Wild
+/script a="player" b=UnitClass c="party" d={1,1,3,4,8,6,7,5,3,7,2,2} e=SetRaidTarget g = GetNumGroupMembers() _,_,f=b(a) e(a,d[f]) if g>1 then _,_,f=b(c.."1") e(c.."1",d[f]) end if g>2 then _,_,f=b(c.."2") e(c.."2",d[f]) end
+END
+VER 3 0100000000000008 "Root" "INV_Misc_QuestionMark"
+/focus
+/use [@focus] Entangling Roots
+END
+VER 3 0100000000000010 "skullbash" "INV_MISC_QUESTIONMARK"
+/cast Skullbash
+END
+VER 3 0100000000000014 "tar 1" "INV_MISC_QUESTIONMARK"
+/target party1
+/use Lifebloom
+END
+VER 3 0100000000000015 "tar 2" "INV_MISC_QUESTIONMARK"
+/target party2
+/use Lifebloom
+END
+VER 3 0100000000000006 "Tranq" "INV_Misc_QuestionMark"
+#show Tranquility
+/use Spiritwalker's Grace
+/use 13
+/use Tranquility
+END
+VER 3 010000000000000B "Travel" "INV_Misc_QuestionMark"
+/cancelaura bear form
+/cancelaura cat form
+/use !travel form
+END
+VER 3 0100000000000011 "vate" "INV_MISC_QUESTIONMARK"
+/cast [target=player] Innervate
+END

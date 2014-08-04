@@ -1,0 +1,111 @@
+VER 3 010000000000003E " blind" "INV_MISC_QUESTIONMARK"
+#show Blind
+/cast [mod:alt, target=focus] Blind; Blind
+END
+VER 3 0100000000000040 " cloak" "INV_MISC_QUESTIONMARK"
+#show Cloak of Shadows
+/cast [mod:ctrl] Feint
+/cast [mod:shift] Recuperate
+/cast [nomod] Cloak of Shadows
+END
+VER 3 010000000000000A " e" "INV_MISC_QUESTIONMARK"
+#show [mod:ctrl] Slice and Dice; Eviscerate
+/targetenemyplayer [notarget]
+/startattack [nostealth]
+/cast [mod:ctrl] Slice and Dice
+/cast [nomod] Eviscerate
+/cast [stealth] Premeditation
+/cast [mod:shift] Marked for Death
+END
+VER 3 010000000000003F " fan" "INV_MISC_QUESTIONMARK"
+#show [stealth] Shadow Walk; Fan of Knives
+/cast [nostealth, mod:ctrl] Crimson Tempest; [nomod,nostealth] Fan of Knives
+/cast [mod:ctrl, stealth] Shroud of Concealment
+/cast [stealth] Shadow Walk
+END
+VER 3 0100000000000029 " h" "INV_MISC_QUESTIONMARK"
+#show [mod:alt] Hemorrhage; [stealth][stance:3] Ambush; Backstab
+/cast [mod:alt] Hemorrhage
+/cast [stealth][stance:3] Ambush
+/cast [nostealth] Backstab
+/cast [stealth] Slice and Dice
+END
+VER 3 0100000000000012 " k" "INV_MISC_QUESTIONMARK"
+#show Kick
+/startattack
+/targetenemyplayer [notarget]
+/cast [mod:shift,target=focus] Kick; Kick
+/cancelaura Hand of Protection
+END
+VER 3 010000000000003C " ks" "INV_MISC_QUESTIONMARK"
+#show [mod:ctrl][stealth] Cheap Shot; Kidney Shot
+/cancelaura [nomod] Subterfuge
+/cast [mod:ctrl, nostealth] Shadow Dance
+/cast [mod:ctrl] Cheap Shot
+/cast [nomod] Kidney Shot
+/sw 23
+/sw pl
+END
+VER 3 0100000000000042 " prep" "INV_MISC_QUESTIONMARK"
+#show Preparation
+/cast Sprint
+/cast Evasion
+/cast Vanish
+/cast Preparation
+END
+VER 3 0100000000000041 " sb" "INV_MISC_QUESTIONMARK"
+#show Shadow blades
+/cast Shadow blades
+/cast Adrenaline Rush
+/use 13
+/cast [target=Tochi] Tricks of the Trade
+END
+VER 3 0100000000000014 " ss" "INV_MISC_QUESTIONMARK"
+#show Shadowstep
+/target [mod:ctrl] focus
+/targetenemyplayer [notarget]
+/cast [nomod] Shadowstep; [mod:ctrl, target=focus] Shadowstep
+END
+VER 3 0100000000000043 "AF" "INV_MISC_QUESTIONMARK"
+/run LoadAddOn("Blizzard_ArenaUI") ArenaEnemyFrames:Show() ArenaEnemyFrame1:Show() ArenaEnemyFrame2:Show() ArenaEnemyFrame3:Show() ArenaEnemyFrame1CastingBar:Show() ArenaEnemyFrame2CastingBar:Show() ArenaEnemyFrame3CastingBar:Show()
+END
+VER 3 0100000000000033 "d" "INV_MISC_QUESTIONMARK"
+#show Dismantle
+/cast [mod:shift,target=focus] Dismantle; Dismantle
+END
+VER 3 0100000000000031 "evade" "INV_MISC_QUESTIONMARK"
+#show Evasion
+/cast Evasion
+/castsequence reset=6 Feint, Recuperate 
+/cast Growl
+/use Healthstone
+/use Grievous Gladiator's Emblem of Tenacity
+/use Alliance Battle Standard
+END
+VER 3 0100000000000030 "g" "INV_MISC_QUESTIONMARK"
+#show Gouge
+/cast [nomod][mod:shift, target=focus] Gouge; Gouge
+END
+VER 3 0100000000000026 "rd k" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopattack
+/castsequence [@focus] reset=59 Shadowstep, Redirect, Kidney Shot; [mod:ctrl] reset=59 Redirect, Kidney Shot
+END
+VER 3 010000000000001D "s" "INV_MISC_QUESTIONMARK"
+#show [mod:alt] Vanish; Stealth
+/cast [nomod] Stealth
+/targetnearestenemyplayer [notarget]
+/stopattack [nostealth]
+/cast [mod:alt] Vanish
+/cancelaura Subterfuge
+END
+VER 3 0100000000000035 "shiv" "INV_MISC_QUESTIONMARK"
+#show Shiv
+/targetenemyplayer [notarget]
+/cast [nomod][mod:shift, target=focus] Shiv
+/cast [nomod][mod:shift, target=focus] Throw
+END
+VER 3 010000000000003B "Tricks" "INV_MISC_QUESTIONMARK"
+#show Tricks of the Trade
+/cast [target=Mouseover] Tricks of the Trade
+END

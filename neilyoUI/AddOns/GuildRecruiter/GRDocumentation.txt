@@ -1,0 +1,66 @@
+--0 Introduction--
+
+Guild Recruiter is precisely what the name suggests, a guild recruiter. A simple guild invite script with a robust search engine and anti-spam controller wrapped around it. I created this add-on with the intention of inviting many people to my guild that met my class and level requirements without re-inviting those who I knew didn't want to join. Therefore it is the goal of this add-on to invite the people you want less the people who don't want to join.
+
+
+--1 Installation--
+
+1. If World of Warcraft is open exit the program.
+2. Copy the GuildRecruiter Folder (NOT ZIP FILE) to the add-on’s directory of your World of Warcraft Directory. (See your World of  
+Warcraft documentation if you don't know where that is)
+3. Start World of Warcraft and login.
+4. Once you reach the character selection screen make sure that "Guild Recruiter" is loaded.
+5. Finish reading this documentation.
+6. Enjoy your new AddOn
+
+
+--2 Features & Usage--
+
+-2.1 Search Engine-
+
+The Search Engine uses the "Who" search protocols in World of Warcraft to find online players that meet your search criteria. Through a series of checkboxes you can select which races and classes you wish to recruit. Furthermore a textbox is included so you can further narrow your search by individual level or level range. You may notice that when you select certain races you cannot select certain classes. This is because a particular race may not be a particular class and searching for something that cannot exist is meaningless. That having been said this add-on was created before Cataclysm (4.0.3) but allows you to search for races and class combinations that don't exist yet. So use common sense when searching.
+
+-2.2 Invite Engine-
+
+The Invite Engine (activated when you hit the 'Recruit' button) will scan the results of your search and automatically send a message of your choosing (if set) and a guild invite (if checked) to guild-less players NOT on the Do Not Invite List. After which their names will be added to the Do Not Invite List.
+
+-2.2.1 "Invite to Guild" Button-
+
+An "Invite to Guild" button has been put in your popout menu. This menu is the same menu that pops out when your right-click a players portrait or name in chat. The button follows the same rules as the Invite Engine and will not send an invite if they are on the Do Not Invite List. Also just like the Invite Engine the button will add them to the Do Not Invite List after an invite is sent out.
+
+-2.3 Do Not Invite List-
+
+The Do Not Invite List is what the name suggests. It keeps you from inviting people you have already invited by recording their name on first invite. Every time an invite is sent it checks with the Do Not Invite List first.
+
+
+--3 Modifying the Do Not Invite List Manually--
+
+-3.1 Adding a Name-
+
+Adding a name is simple. Open Guild Recruiter on click the "Do Not Invite List" button. A new window will open up with two textboxes. Type the name you want to add in the textbox under the "Add Name" button and click "Add Name". If the name isn't already in the list you should get a message saying it was added. NOTE: Names are Case-Sensitive & Special-Character-Sensitive. If you do not type the name EXACTLY as it should be they will be able to get an invite from you.
+
+-3.2 Removing a Name-
+
+Removing a name is a bit more difficult. Because names are indexed by number, in order to remove a name you must specify a number and not a name. To find a name's number you must first get the list. To do that, click "Show List". The list of every name should print in the Chat Message window. You will notice that each name has a number beside it. Once you find the name you want to remove simply type the number in the textbox below the "Remove Name" button. After doing so you should see a message saying the name was removed. 
+
+-3.3 Purging the List-
+
+If for whatever reason you feel the need to purge the Do Not Invite List, you will need to enter a confirmation code BEFORE clicking the "Purge List" button. To do this, type "Delete" (NO Quotes & Case Sensitive) in the textbox below the "Add Name" button, and "666" (NO Quotes & Numerical) in the textbox below the "Remove Name" button. Then after you click the "Purge List" button you should get a message saying the list was purged.
+
+
+--4 Advanced Usage—-
+
+Guild Recruiter's settings are saved globally. So if you wish to recruit on multiple realms you will need to create another copy of this add-on in the add-on folder and do the following:
+
+Change Folder name from "GuildRecruiter" to "GuildRecruiter<RealmName>"
+Change TOC File name from "GuildRecruiter.toc" to "GuildRecruiter<RealmName>.toc"
+Open the TOC File in Notepad or Mac Equivalent and change the line "## Title: Guild Recruiter" to "## Title: Guild Recruiter <RealmName>"
+
+Repeat the process for every realm you wish to recruit on. Also remember to only load the copy of Guild Recruiter that matches the realm you are playing on at the time. Loading multiple copies or the wrong copy will lead to unexpected behavior.
+
+
+--5 Legal—-
+
+This add-on is provided free of charge and distributed as-is. There are no guarantees either written or implied to the quality of workmanship, usefulness, functionality or the like. As such this add-ons maker is NOT responsible for any damage this add-on may or may not do to you or your property through use, possession, or modification of the code.
+
+You (The User) are free to modify, distribute and use the code of this add-on so long as you do not modify, distribute or use it in any way that conflicts with applicable Law, this add-ons Host’s Policies, or Blizzards Policies. Furthermore you may not modify, distribute or use this add-on for financial gain.

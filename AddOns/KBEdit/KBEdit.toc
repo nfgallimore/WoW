@@ -1,0 +1,8 @@
+## Interface: 40300
+## Title: KBEdit
+## Author: Kraftman
+## Version 1.0 Release
+## Notes: Layout Editor for KeyBind
+## SavedVariables: KBEditLayouts
+
+KBEdit.lua

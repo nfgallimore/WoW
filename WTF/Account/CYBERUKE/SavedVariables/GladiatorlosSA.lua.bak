@@ -1,0 +1,10 @@
+
+GladiatorlosSADB = {
+	["profileKeys"] = {
+		["Darkrizen - Sargeras"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

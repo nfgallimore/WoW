@@ -1,0 +1,13 @@
+tag v2.3.2
+238766229e5e521568f4f7c4d72348ff2f87a167
+Shadowed <shadowed.wow@gmail.com>
+2012-09-13 12:57:39 -0700
+
+Tagging as release 2.3.2
+
+
+--------------------
+
+Shadowed:
+	- Permissions
+	- Fixed spell restoring (Thanks Morsker)

@@ -1,0 +1,14 @@
+## Interface: 40000
+## Title: ActionBindManager
+## Author: Fitzcairn
+## Notes: A library for modeling keybind to action relationships. Supports the default UI and several popular bind management addons.
+## Version: 1.0
+## X-Curse-Packaged-Version: r9
+## X-Curse-Project-Name: KeybindTrainer
+## X-Curse-Project-ID: keybindtrainer
+## X-Curse-Repository-ID: wow/keybindtrainer/mainline
+
+
+Localization.lua
+SlotPool.lua
+ActionBindManager.lua

@@ -1,0 +1,177 @@
+
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+    
+    <!--<Include file="locale\locale.xml" />-->
+    <Script file="WhisperInvite.lua" />
+     
+    <Frame name="WhisperInviteFrame" >
+         
+        <Scripts>
+            <OnLoad>
+                WhisperInvite:OnLoad(self);
+            </OnLoad>
+            <OnEvent>
+                WhisperInvite:OnEvent(self, event, ...);
+            </OnEvent>            
+            <OnUpdate>
+                WhisperInvite:OnUpdate(self, elapsed);
+            </OnUpdate>
+        </Scripts>
+    </Frame>
+    
+    <CheckButton name="WhisperInviteChannelCheckButton" virtual="true" inherits="UICheckButtonTemplate" >
+        <Size>
+            <AbsDimension x="27" y="27" />
+        </Size>
+        <Anchors>
+            <Anchor point="LEFT" relativeTo="$parentChannels" x="10" y="-75" />
+        </Anchors>
+        <Scripts>
+            <OnLoad>
+                self.channelname = "";
+            </OnLoad>
+            <OnClick>
+                WhisperInvite.Option:Channel(self);
+            </OnClick>
+        </Scripts>
+    </CheckButton>
+
+    
+    <Frame name="WhisperInviteOptionFrame" >
+        <Layers>
+            <Layer level="ARTWORK" >
+                <FontString name="$parentHead" inherits="GameFontNormalLarge">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" x="15" y="-15" />
+                    </Anchors>
+                </FontString>
+                
+                <FontString name="$parentKeywords" inherits="GameFontNormal" >
+                    <Anchors>
+                        <Anchor point="LEFT" relativeTo="$parentHead" x="0" y="-40" />
+                    </Anchors>
+                </FontString>
+                
+                <FontString name="$parentChannels" inherits="GameFontNormal" >
+                    <Anchors>
+                        <Anchor point="LEFT" relativeTo="$parentKeywords" x="0" y="-147" />
+                    </Anchors>
+                </FontString>
+                
+                <FontString name="$parentBlacklists" inherits="GameFontNormal" >
+                    <Anchors>
+                        <Anchor point="LEFT" relativeTo="$parentChannels" x="0" y="-110" />
+                    </Anchors>
+                </FontString>
+                
+                <FontString name="$parentBlacklistPlayer" inherits="GameFontNormalSmall" >
+                    <Anchors>
+                        <Anchor point="LEFT" relativeTo="$parentBlacklists" x="0" y="-20" />
+                    </Anchors>
+                </FontString>
+
+                <FontString name="$parentBlacklistBN" inherits="GameFontNormalSmall" >
+                    <Anchors>
+                        <Anchor point="LEFT" relativeTo="$parentBlacklistPlayer" x="0" y="-20" />
+                    </Anchors>
+                </FontString>
+
+            </Layer>            
+        </Layers>
+
+        <Frames>
+            <EditBox name="$parentKeywordsEditBox" letters="80">
+                <Size>
+                        <AbsDimension x="190" y="32"></AbsDimension>
+                </Size>
+                <Anchors>
+                        <Anchor point="LEFT" relativeTo="$parentKeywords" x="10" y="-35" />
+                </Anchors>
+                <Layers>
+                    <Layer level="BACKGROUND">
+                        <Texture file="Interface\ChatFrame\UI-ChatInputBorder-Left">
+                            <Size>
+                                    <AbsDimension x="105" y="32"></AbsDimension>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="LEFT">
+                                    <Offset>
+                                        <AbsDimension x="-10" y="0"></AbsDimension>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                            <TexCoords left="0" right="0.5" top="0" bottom="1.0"></TexCoords>
+                        </Texture>
+                        <Texture file="Interface\ChatFrame\UI-ChatInputBorder-Right">
+                            <Size>
+                                <AbsDimension x="105" y="32"></AbsDimension>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="RIGHT">
+                                    <Offset>
+                                        <AbsDimension x="10" y="0"></AbsDimension>
+                                        </Offset>
+                                </Anchor>
+                            </Anchors>
+                            <TexCoords left="0.7" right="1.0" top="0" bottom="1.0"></TexCoords>
+                        </Texture>
+                    </Layer>
+                </Layers>
+                <Scripts>
+                        <OnLoad>
+                            self:SetAutoFocus(false);
+                        </OnLoad>
+                        <OnEnterPressed>
+                            self:ClearFocus();
+                        </OnEnterPressed>
+                        <OnEditFocusLost>
+                            WhisperInvite.Option:KeywordOnEditFocusLost(self);
+                        </OnEditFocusLost>
+                </Scripts>
+                <FontString inherits="ChatFontNormal"></FontString>
+            </EditBox>
+
+            <CheckButton name="$parentFullMatchCheckButton" inherits="UICheckButtonTemplate" >
+                <Size>
+                    <AbsDimension x="27" y="27" />
+                </Size>
+                <Anchors>
+                    <Anchor point="LEFT" relativeTo="$parentKeywords" x="10" y="-75" />
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        WhisperInvite.Option:FullMatchClick(self);
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+
+            <CheckButton name="$parentCapitalizationCheckButton" inherits="UICheckButtonTemplate" >
+                <Size>
+                    <AbsDimension x="27" y="27" />
+                </Size>
+                <Anchors>
+                    <Anchor point="LEFT" relativeTo="$parentFullMatchCheckButton" x="0" y="-37" />
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        WhisperInvite.Option:CapitalizationClick(self);
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+
+        </Frames>
+
+        <Scripts>
+            <OnLoad>
+                WhisperInvite.Option:OnLoad(self);
+            </OnLoad>
+            <OnShow>
+                WhisperInvite.Option:OnShow(self)
+            </OnShow>
+        </Scripts>
+    </Frame>
+    
+
+</Ui>

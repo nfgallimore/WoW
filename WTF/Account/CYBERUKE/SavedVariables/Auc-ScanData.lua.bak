@@ -1,0 +1,17 @@
+
+AucScanData = {
+	["Version"] = 1.3,
+	["scans"] = {
+		["Sargeras"] = {
+			["Alliance"] = {
+				["scanstats"] = {
+					["ImageUpdated"] = 1390909738,
+				},
+				["image"] = "rope",
+				["ropes"] = {
+					"return {}", -- [1]
+				},
+			},
+		},
+	},
+}

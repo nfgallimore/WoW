@@ -1,0 +1,51 @@
+
+BeanCounterDB = {
+	["Sargeras"] = {
+		["Darkrizen"] = {
+			["vendorsell"] = {
+			},
+			["postedBids"] = {
+			},
+			["postedAuctions"] = {
+			},
+			["completedBidsBuyoutsNeutral"] = {
+			},
+			["vendorbuy"] = {
+			},
+			["failedAuctions"] = {
+			},
+			["failedBidsNeutral"] = {
+			},
+			["failedBids"] = {
+			},
+			["completedAuctions"] = {
+			},
+			["failedAuctionsNeutral"] = {
+			},
+			["completedAuctionsNeutral"] = {
+			},
+			["completedBidsBuyouts"] = {
+			},
+		},
+	},
+}
+BeanCounterDBSettings = {
+	["configator.left"] = 240.0000152587891,
+	["configator.top"] = 625,
+	["Sargeras"] = {
+		["Darkrizen"] = {
+			["tasks.sortArray"] = 1391074013,
+			["version"] = 3.03,
+			["faction"] = "Alliance",
+			["tasks.compactDB"] = 1391074013,
+			["wealth"] = 1824763,
+			["tasks.prunePostedDB"] = 1391074013,
+			["mailbox"] = {
+			},
+		},
+	},
+	["util.beancounter.ButtonuseDateCheck"] = false,
+}
+BeanCounterDBNames = {
+}
+BeanCounterAccountDB = nil

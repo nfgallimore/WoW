@@ -1,0 +1,88 @@
+
+SpellAlerterDB = {
+	["profileKeys"] = {
+		["Darkrísen - Tichondrius"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["FriendlyDebuffs"] = {
+			},
+			["Ignores"] = {
+				["Ice Trap"] = "Ice Trap",
+				["Summon Felhunter"] = "Summon Felhunter",
+				["Summon Felguard"] = "Summon Felguard",
+				["Spell Reflection"] = "Spell Reflection",
+				["Revive Pet"] = "Revive Pet",
+				["Summon Succubus"] = "Summon Succubus",
+				["Snake Trap"] = "Snake Trap",
+				["Summon Voidwalker"] = "Summon Voidwalker",
+				["Mana Tide Totem"] = "Mana Tide Totem",
+				["Grounding Totem"] = "Grounding Totem",
+			},
+			["SpellCasts"] = {
+				["Ice Trap"] = {
+					["Color"] = "PINK",
+				},
+				["Summon Felhunter"] = {
+					["Color"] = "GREY",
+				},
+				["Snake Trap"] = {
+					["Color"] = "PINK",
+				},
+				["Cyclone"] = {
+					["Color"] = "PINK",
+				},
+				["Spell Reflection"] = {
+					["Color"] = "PINK",
+				},
+				["Mana Burn"] = {
+					["Color"] = "RED",
+				},
+				["Grounding Totem"] = {
+					["Color"] = "GREEN",
+				},
+				["Binding Heal"] = {
+					["Color"] = "YELLOW",
+				},
+				["Summon Felguard"] = {
+					["Color"] = "GREY",
+				},
+				["Revive Pet"] = {
+					["Color"] = "GREY",
+				},
+				["Hex"] = {
+					["Color"] = "PINK",
+				},
+				["Dominate Mind"] = {
+					["Color"] = "PINK",
+				},
+				["Summon Voidwalker"] = {
+					["Color"] = "GREY",
+				},
+				["Summon Succubus"] = {
+					["Color"] = "GREY",
+				},
+				["Mana Tide Totem"] = {
+					["Color"] = "GREEN",
+				},
+			},
+			["EnemyBuffs"] = {
+				["Power Infusion"] = {
+					["Color"] = "PEACH",
+				},
+				["Innervate"] = {
+					["Color"] = "PEACH",
+				},
+				["Hand of Sacrifice"] = {
+					["Color"] = "VIOLET",
+				},
+				["Hand of Freedom"] = {
+					["Color"] = "VIOLET",
+				},
+				["Evocation"] = {
+					["Color"] = "PEACH",
+				},
+			},
+		},
+	},
+}

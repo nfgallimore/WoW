@@ -1,0 +1,41 @@
+Features:
+
+-- Hide's errors when spamming abilities
+
+
+-- Class icons instead of portraits in unit frames
+
+-- Class colors in HP bars
+
+-- Class colors behind names
+
+--Change the format of hp/mana text to absolute values ("140k"):
+
+-- Default Minimap relocation and clean up
+
+-- Focusframe inverter
+  
+  -- FocusCastRepos()
+  -- Corrects the X-offset of the FocusFrame castbar, to adapt it to the inverted focus.
+
+  -- Inverting FocusFrame textures and frames
+
+
+  -- Inverting Focus-target
+
+  -- Correcting castbar position in the next frame (when the anchor changes will be updated)
+
+  -- Adjusting buff/debuff positions
+
+-- Hides shit
+
+  -- disable portrait damage spam
+ 
+
+  -- disable group number frame
+
+-- casting bar colors
+
+
+  --disable damage spam
+
